@@ -3,6 +3,6 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div>sid12g.dev</div>
+    <div>sid12g.dev, comming soon!</div>
   )
 }
