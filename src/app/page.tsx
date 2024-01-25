@@ -5,6 +5,7 @@ import styles from "@/styles/page.module.css";
 export default function Home() {
   return (
     <div className={styles.wrap}>
+      <div className={styles.row}></div>
       <h1 className={styles.id}>sid12g</h1>
       <p className={styles.name}>조성민</p>
       <Portfolio />

@@ -1,7 +1,12 @@
 .wrap {
   display: flex;
+  margin-top: 28px;
 }
 
 .link {
   margin: 12px;
+}
+
+.link:hover {
+  color: #c5c5c5;
 }

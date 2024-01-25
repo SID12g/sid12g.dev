@@ -1,16 +1,26 @@
 .wrap {
   text-align: center;
 }
+
+.row {
+  width: 240px;
+
+  margin-top: 153px;
+  border-top: 1px dotted white;
+}
+
 .id {
   font-size: 70px;
   background: linear-gradient(180deg, #fff, #adadad);
   color: transparent;
   background-clip: text;
-  font-family: Geist-SemiBold;
+  font-family: GeistVariable-SemiBold;
+  margin-top: 25px;
 }
 
 .name {
   font-size: 32px;
   color: #888888;
-  font-family: Pretendard-SemiBold;
+  font-family: PretendardVariable-SemiBold;
+  margin-top: 36px;
 }
