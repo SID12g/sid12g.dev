@@ -1,0 +1,16 @@
+.wrap {
+  text-align: center;
+}
+.id {
+  font-size: 70px;
+  background: linear-gradient(180deg, #fff, #adadad);
+  color: transparent;
+  background-clip: text;
+  font-family: Geist-SemiBold;
+}
+
+.name {
+  font-size: 32px;
+  color: #888888;
+  font-family: Pretendard-SemiBold;
+}
