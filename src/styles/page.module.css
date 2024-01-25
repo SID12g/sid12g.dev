@@ -14,13 +14,13 @@
   background: linear-gradient(180deg, #fff, #adadad);
   color: transparent;
   background-clip: text;
-  font-family: GeistVariable-SemiBold;
+  font-family: "GeistVariable-SemiBold";
   margin-top: 25px;
 }
 
 .name {
   font-size: 32px;
   color: #888888;
-  font-family: PretendardVariable-SemiBold;
+  font-family: "PretendardVariable-SemiBold";
   margin-top: 36px;
 }
