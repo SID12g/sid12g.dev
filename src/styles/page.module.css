@@ -13,8 +13,9 @@
   font-size: 70px;
   background: linear-gradient(180deg, #fff, #adadad);
   color: transparent;
+  font-family: "Geist Sans";
+  font-weight: 800;
   background-clip: text;
-  font-family: "GeistVariable-SemiBold";
   margin-top: 25px;
 }
 
