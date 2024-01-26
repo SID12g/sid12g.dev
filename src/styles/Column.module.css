@@ -13,7 +13,7 @@
 
 .column {
   height: 195px;
-  border-left: 1px dashed #232323;
+  border-left: 2px dashed #232323;
   animation-name: columnintro;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -22,6 +22,7 @@
 @keyframes columnintro {
   0% {
     height: 0px;
+    border-left: 2px dashed white;
   }
   100% {
     height: 195px;

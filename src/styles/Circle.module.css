@@ -10,10 +10,10 @@
 .circle {
   width: 30px;
   height: 30px;
-  border: 1px dashed #232323;
+  border: 2px dashed #232323;
   border-radius: 100px;
   animation-name: circleintro;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
 }
 
@@ -27,9 +27,12 @@
 
 @keyframes circleintro {
   0% {
-    border: 1px dashed #000000;
+    border: 2px dashed #000000;
+  }
+  50% {
+    border: 2px dashed white;
   }
   100% {
-    border: 1px dashed #232323;
+    border: 2px dashed #232323;
   }
 }
