@@ -15,7 +15,7 @@ export default function Links() {
       <Link className={styles.link} href="https://github.com/SID12g">
         <Image src={github} alt="github" width={30} height={30} />
       </Link>
-      <Link className={styles.link} href="https://www.instagram.com">
+      <Link className={styles.link} href="https://www.instagram.com/clwm_222">
         <Image src={instagram} alt="instagram" width={30} height={30} />
       </Link>
       <Link className={styles.link} href="https://blog.sid12g.dev">

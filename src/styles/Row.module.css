@@ -1,0 +1,24 @@
+.wrap {
+  margin-top: "-24.5px";
+  margin-left: "auto";
+  margin-right: "auto";
+}
+
+.row {
+  width: 300px;
+  margin-top: 24.5px;
+  margin-bottom: 24.5px;
+  border-top: 1px dashed #232323;
+  animation-name: rowintro;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes rowintro {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 300px;
+  }
+}

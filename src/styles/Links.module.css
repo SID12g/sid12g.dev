@@ -1,6 +1,7 @@
 .wrap {
   display: flex;
   margin-top: 28px;
+  justify-content: center;
 }
 
 .link {

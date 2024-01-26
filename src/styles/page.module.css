@@ -1,12 +1,6 @@
-.wrap {
+.container {
   text-align: center;
-}
-
-.row {
-  width: 240px;
-
-  margin-top: 153px;
-  border-top: 1px dotted white;
+  margin-top: 154px;
 }
 
 .id {
@@ -17,6 +11,8 @@
   font-weight: 800;
   background-clip: text;
   margin-top: 25px;
+  width: 300px;
+  margin: 0;
 }
 
 .name {
