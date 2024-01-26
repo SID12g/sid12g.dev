@@ -1,3 +1,4 @@
+import Circle from "@/components/Circle";
 import Column from "@/components/Column";
 import Links from "@/components/Links";
 import Portfolio from "@/components/Portfolio";
@@ -9,6 +10,7 @@ export default function Home() {
     <div>
       <Column />
       <div className={styles.container}>
+        <Circle />
         <Row>
           <h1 className={styles.id}>sid12g</h1>
         </Row>

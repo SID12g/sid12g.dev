@@ -1,0 +1,35 @@
+.wrap {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 1000;
+  margin-top: -15px;
+  margin-left: 15px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 1px dashed #232323;
+  border-radius: 100px;
+  animation-name: circleintro;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.square {
+  width: 19px;
+  height: 16px;
+  background-color: black;
+  margin-top: -16px;
+  margin-left: 16px;
+}
+
+@keyframes circleintro {
+  0% {
+    border: 1px dashed #000000;
+  }
+  100% {
+    border: 1px dashed #232323;
+  }
+}
