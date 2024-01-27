@@ -18,11 +18,11 @@
 }
 
 .square {
-  width: 19px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-color: black;
-  margin-top: -16px;
-  margin-left: 16px;
+  margin-top: -17px;
+  margin-left: 17px;
 }
 
 @keyframes circleintro {
