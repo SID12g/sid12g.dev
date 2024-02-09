@@ -2,7 +2,23 @@
 @import url("https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/index.min.css");
 
 body {
-  background-color: #000;
+  background-color: var(--theme-color);
   display: flex;
   justify-content: center;
+}
+
+:root {
+  --theme-color: #fff;
+  --accent-color: #000;
+  --line-color: #787878;
+  --secondary-color: #888888;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-color: #000;
+    --accent-color: #fff;
+    --line-color: #232323;
+    --secondary-color: #888888;
+  }
 }

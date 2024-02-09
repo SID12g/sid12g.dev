@@ -8,7 +8,7 @@
   width: 300px;
   margin-top: 24.5px;
   margin-bottom: 24.5px;
-  border-top: 2px dashed #232323;
+  border-top: 2px dashed var(--line-color);
   animation-name: rowintro;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -17,7 +17,7 @@
 @keyframes rowintro {
   0% {
     width: 0px;
-    border-top: 2px dashed white;
+    border-top: 2px dashed var(--accent-color);
   }
   100% {
     width: 300px;

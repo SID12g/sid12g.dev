@@ -10,7 +10,7 @@
 .circle {
   width: 30px;
   height: 30px;
-  border: 2px dashed #232323;
+  border: 2px dashed var(--line-color);
   border-radius: 100px;
   animation-name: circleintro;
   animation-duration: 1s;
@@ -20,19 +20,19 @@
 .square {
   width: 20px;
   height: 20px;
-  background-color: black;
+  background-color: var(--theme-color);
   margin-top: -17px;
   margin-left: 17px;
 }
 
 @keyframes circleintro {
   0% {
-    border: 2px dashed #000000;
+    border: 2px dashed var(--theme-color);
   }
   50% {
-    border: 2px dashed white;
+    border: 2px dashed var(--accent-color);
   }
   100% {
-    border: 2px dashed #232323;
+    border: 2px dashed var(--line-color);
   }
 }

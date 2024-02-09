@@ -5,8 +5,7 @@
 
 .id {
   font-size: 70px;
-  background: linear-gradient(180deg, #fff, #adadad);
-  color: transparent;
+  color: var(--accent-color);
   font-family: "Geist Sans";
   font-weight: 800;
   background-clip: text;
@@ -15,9 +14,23 @@
   margin: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+  .id {
+    font-size: 70px;
+    background: linear-gradient(180deg, #fff, #adadad);
+    color: transparent;
+    font-family: "Geist Sans";
+    font-weight: 800;
+    background-clip: text;
+    margin-top: 25px;
+    width: 300px;
+    margin: 0;
+  }
+}
+
 .name {
   font-size: 32px;
-  color: #888888;
+  color: var(--secondary-color);
   font-family: "PretendardVariable-SemiBold";
   margin-top: 36px;
 }
