@@ -12,13 +12,7 @@
 }
 
 .button:hover {
-  background-color: var(--line-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  .button:hover {
-    background-color: #949494;
-  }
+  background-color: #949494;
 }
 
 .text {
