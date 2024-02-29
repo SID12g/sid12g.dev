@@ -1,10 +1,10 @@
 import Image from "next/image";
-import at from "./../../public/icons/at-icon.svg";
-import github from "./../../public/icons/github-icon.svg";
-import instagram from "./../../public/icons/instagram-icon.svg";
-import bookmark from "./../../public/icons/bookmark-icon.svg";
+import at from "@/../public/icons/at-icon.svg";
+import github from "@/../public/icons/github-icon.svg";
+import instagram from "@/../public/icons/instagram-icon.svg";
+import bookmark from "@/../public/icons/bookmark-icon.svg";
 import Link from "next/link";
-import styles from "@/styles/Links.module.css";
+import styles from "@/components/links/links.module.css";
 
 export default function Links() {
   return (

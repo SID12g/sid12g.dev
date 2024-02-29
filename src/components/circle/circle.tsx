@@ -1,4 +1,4 @@
-import styles from "@/styles/Circle.module.css";
+import styles from "@/components/circle/circle.module.css";
 
 export default function Circle() {
   return (

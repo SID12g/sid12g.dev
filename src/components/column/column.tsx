@@ -1,4 +1,4 @@
-import styles from "@/styles/Column.module.css";
+import styles from "@/components/column/column.module.css";
 
 export default function Column() {
   return (

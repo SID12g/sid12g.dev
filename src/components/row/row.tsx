@@ -1,4 +1,4 @@
-import styles from "@/styles/Row.module.css";
+import styles from "@/components/row/row.module.css";
 
 export default function Row({ children }: any) {
   return (

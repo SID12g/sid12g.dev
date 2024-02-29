@@ -1,4 +1,4 @@
-import styles from "@/styles/Portfolio.module.css";
+import styles from "@/components/portfolio/portfolio.module.css";
 import Link from "next/link";
 
 export default function Portfolio() {
