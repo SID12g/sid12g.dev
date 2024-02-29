@@ -1,8 +1,8 @@
-import Circle from "@/components/Circle";
-import Column from "@/components/Column";
-import Links from "@/components/Links";
-import Portfolio from "@/components/Portfolio";
-import Row from "@/components/Row";
+import Circle from "@/components/circle/Circle";
+import Column from "@/components/column/Column";
+import Links from "@/components/links/Links";
+import Portfolio from "@/components/portfolio/Portfolio";
+import Row from "@/components/row/Row";
 import styles from "@/styles/page.module.css";
 
 export default function Home() {

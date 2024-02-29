@@ -1,4 +1,5 @@
 import styles from "@/styles/Column.module.css";
+
 export default function Column() {
   return (
     <div className={styles.wrap}>
