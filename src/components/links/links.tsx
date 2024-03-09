@@ -18,7 +18,7 @@ export default function Links() {
       <Link className={styles.link} href="https://www.instagram.com/clwm_222">
         <Image src={instagram} alt="instagram" width={30} height={30} />
       </Link>
-      <Link className={styles.link} href="https://blog.sid12g.dev">
+      <Link className={styles.link} href="https://post.sid12g.dev">
         <Image src={bookmark} alt="bookmark" width={30} height={30} />
       </Link>
     </div>
