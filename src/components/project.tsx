@@ -15,7 +15,7 @@ export default function Project({
   description: string;
 }) {
   return (
-    <Link className="w-[90%] lg:w-[46%] mb-[40px] ml-auto mr-auto" href={href}>
+    <Link className="lg:w-[48%] mb-[40px]" href={href}>
       <div className="rounded-[16px] border-[1px] border-border-color overflow-hidden">
         <Image className="aspect-video" src={image} alt="project image" />
         <div className="flex h-[92px] items-center">
