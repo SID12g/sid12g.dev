@@ -5,9 +5,9 @@ import apple from "@/../public/images/apple.jpg";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col sm:flex-row">
+    <main className="w-full flex flex-col md:flex-row">
       <Profile />
-      <div className="sm:w-[calc(100%-350px)] sm:ml-[350px] mt-[40px] sm:mt-[60px] pl-[4%] pr-[4%]">
+      <div className="md:w-[calc(100%-350px)] md:ml-[350px] mt-[40px] md:mt-[60px] pl-[4%] pr-[4%]">
         <p className="mb-[20px] text-subtitle-color">projects</p>
         <div className="flex flex-wrap flex-col lg:flex-row justify-between">
           <Project

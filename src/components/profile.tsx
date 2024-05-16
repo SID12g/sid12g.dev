@@ -7,8 +7,8 @@ import nest from "@/../public/images/nest.svg";
 
 export default function Profile() {
   return (
-    <div className="min-w-[350px] h-full bg-primary-color sm:fixed">
-      <div className="min-w-[294px] ml-[56px] pt-[80px]">
+    <div className="min-w-[350px] h-full bg-primary-color md:fixed">
+      <div className="min-w-[294px] ml-[56px] pt-[60px] md:pt-[80px]">
         <Image
           className="w-[160px] h-[160px] rounded-full"
           src={profile}
