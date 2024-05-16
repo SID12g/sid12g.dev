@@ -12,6 +12,7 @@ const config: Config = {
         "font-color": "var(--font-color)",
         "border-color": "var(--border-color)",
         "primary-color": "var(--primary-color)",
+        "subtitle-color": "var(--subtitle-color)",
         "background-color": "var(--background-color)",
       },
       backgroundImage: {

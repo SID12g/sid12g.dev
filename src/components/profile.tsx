@@ -1,6 +1,9 @@
 import Image from "next/image";
 import profile from "@/../public/images/profile.jpg";
 import Info from "./info";
+import next from "@/../public/images/next.svg";
+import react from "@/../public/images/react.svg";
+import nest from "@/../public/images/nest.svg";
 
 export default function Profile() {
   return (
@@ -13,7 +16,8 @@ export default function Profile() {
         />
         <p className="text-[32px] mt-[32px]">Sungmin Cho</p>
         <p className="text-[16px] mt-[8px]">Frontend Developer</p>
-        <div className="mt-[16px]">
+        <div className="mt-[32px]">
+          <p className="mb-[12px] text-subtitle-color">info</p>
           <Info
             href="https://dimigo.hs.kr"
             icon="🎓"
@@ -26,6 +30,14 @@ export default function Profile() {
             icon="🔗"
             content="https://post.sid12g.dev"
           />
+        </div>
+        <div className="mt-[24px]">
+          <p className="mb-[12px] text-subtitle-color">skills</p>
+          <div className="flex items-center">
+            <Image className="mr-[12px]" src={next} alt="skill image" />
+            <Image className="mr-[12px]" src={react} alt="skill image" />
+            <Image className="mr-[12px]" src={nest} alt="skill image" />
+          </div>
         </div>
       </div>
       <div className="h-[40px]" />
