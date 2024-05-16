@@ -40,7 +40,7 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      <div className="h-[40px]" />
+      <div className="h-[60px]" />
     </div>
   );
 }
