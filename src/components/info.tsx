@@ -12,7 +12,7 @@ export default function Info({
 }) {
   return (
     <Link className="flex items-center" href={href}>
-      <p className="text-[24px] mr-[8px] font-['TossfaceFontMac']">{icon}</p>
+      <p className="text-[24px] mr-[8px] font-['Tossface']">{icon}</p>
       <p className="text-[14px]">{content}</p>
     </Link>
   );
