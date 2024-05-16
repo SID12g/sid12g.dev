@@ -4,8 +4,8 @@ import Info from "./info";
 
 export default function Profile() {
   return (
-    <div className="w-[350px] h-full bg-primary-color">
-      <div className="ml-[56px] pt-[80px]">
+    <div className="min-w-[350px] h-full bg-primary-color sm:fixed">
+      <div className="min-w-[294px] ml-[56px] pt-[80px]">
         <Image
           className="w-[160px] h-[160px] rounded-full"
           src={profile}
@@ -28,6 +28,7 @@ export default function Profile() {
           />
         </div>
       </div>
+      <div className="h-[40px]" />
     </div>
   );
 }
