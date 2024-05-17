@@ -2,6 +2,7 @@ import Profile from "@/components/profile";
 import Project from "@/components/project";
 import iphone from "@/../public/images/iphone.jpeg";
 import apple from "@/../public/images/apple.jpg";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -67,6 +68,7 @@ export default function Home() {
             description="새로운 혁신의 시작"
           />
         </div>
+        <Footer />
       </div>
     </main>
   );
