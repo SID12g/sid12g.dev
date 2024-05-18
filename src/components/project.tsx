@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense, use } from "react";
+import { use } from "react";
 
 interface Project {
   id: string;
@@ -10,6 +10,8 @@ interface Project {
   properties: {
     Name: { title: { plain_text: string }[] };
     Description: { rich_text: { plain_text: string }[] };
+    Date: { rich_text: { plain_text: string }[] };
+    Number: { number: number };
   };
 }
 
@@ -33,9 +35,14 @@ async function fetchProjects() {
 
 export default function Project() {
   const data = use(fetchProjects());
+  console.log(data.results);
+  const results = data.results.sort(
+    (a: Project, b: Project) =>
+      b.properties.Number.number - a.properties.Number.number
+  );
   return (
     <div className="flex flex-wrap flex-col lg:flex-row justify-between">
-      {data.results.map((project: Project, index: number) => (
+      {results.map((project: Project, index: number) => (
         <Link key={index} className="lg:w-[48%] mb-[40px]" href={"/"}>
           <div className="rounded-[16px] border-[1px] border-border-color overflow-hidden">
             <Image
@@ -53,7 +60,6 @@ export default function Project() {
                 width={256}
                 height={256}
               />
-
               <div className="ml-[12px]">
                 <p className="text-[18px]">
                   {project.properties.Name?.title[0].plain_text}
