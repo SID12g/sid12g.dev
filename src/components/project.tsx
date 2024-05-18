@@ -5,6 +5,7 @@ import { use } from "react";
 interface Project {
   id: string;
   public_url: string;
+  url: string;
   icon: { file: { url: string } };
   cover: { file: { url: string } };
   properties: {
@@ -42,7 +43,7 @@ export default function Project() {
   return (
     <div className="flex flex-wrap flex-col lg:flex-row justify-between">
       {results.map((project: Project, index: number) => (
-        <Link key={index} className="lg:w-[48%] mb-[40px]" href={"/"}>
+        <Link key={index} className="lg:w-[48%] mb-[40px]" href={project.url}>
           <div className="rounded-[16px] border-[1px] border-border-color overflow-hidden">
             <Image
               className="aspect-video"
