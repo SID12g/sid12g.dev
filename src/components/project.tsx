@@ -35,7 +35,6 @@ async function fetchProjects() {
 
 export default function Project() {
   const data = use(fetchProjects());
-  console.log(data.results);
   const results = data.results.sort(
     (a: Project, b: Project) =>
       b.properties.Number.number - a.properties.Number.number
