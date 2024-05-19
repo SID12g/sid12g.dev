@@ -34,9 +34,9 @@ export default function Profile() {
         <div className="mt-[24px]">
           <p className="mb-[12px] text-subtitle-color">skills</p>
           <div className="flex items-center">
-            <Image className="mr-[12px]" src={next} alt="skill image" />
-            <Image className="mr-[12px]" src={react} alt="skill image" />
-            <Image className="mr-[12px]" src={nest} alt="skill image" />
+            <Image className="mr-[16px]" src={next} alt="skill image" />
+            <Image className="mr-[16px]" src={react} alt="skill image" />
+            <Image className="mr-[16px]" src={nest} alt="skill image" />
           </div>
         </div>
       </div>
