@@ -17,3 +17,13 @@
   --subtitle-color: #4e515d;
   --background-color: #ffffff;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-color: #ffffff;
+    --border-color: #282828;
+    --primary-color: #161616;
+    --subtitle-color: #bcbcbc;
+    --background-color: #000000;
+  }
+}

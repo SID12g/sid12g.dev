@@ -41,13 +41,9 @@ export default function Project() {
       b.properties.number.number - a.properties.number.number
   );
   return (
-    <div className="flex flex-wrap flex-col lg:flex-row justify-between">
+    <div className="flex flex-wrap flex-col lg:flex-row justify-between text-font-color">
       {results.map((project: Project, index: number) => (
-        <Link
-          key={index}
-          className="lg:w-[48%] mb-[40px] bg-primary-color"
-          href={project.url}
-        >
+        <Link key={index} className="lg:w-[48%] mb-[40px]" href={project.url}>
           <div className="rounded-[16px] border-[1px] border-border-color overflow-hidden">
             <Image
               className="aspect-video"

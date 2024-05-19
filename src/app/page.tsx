@@ -1,7 +1,6 @@
 import Profile from "@/components/profile";
 import Project from "@/components/project";
 import Footer from "@/components/footer";
-import { Suspense } from "react";
 
 export default function Home() {
   return (
