@@ -52,7 +52,7 @@ export default function Project() {
               width={1920}
               height={1080}
             />
-            <div className="flex h-[92px] items-center">
+            <div className="flex h-[92px] items-center bg-primary-color">
               <Image
                 className="w-[52px] h-[52px] rounded-[10px] border-[1px] border-border-color ml-[20px]"
                 src={project.icon.file.url}
