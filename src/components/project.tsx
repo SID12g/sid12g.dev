@@ -9,10 +9,10 @@ interface Project {
   icon: { file: { url: string } };
   cover: { file: { url: string } };
   properties: {
-    Name: { title: { plain_text: string }[] };
-    Description: { rich_text: { plain_text: string }[] };
-    Date: { rich_text: { plain_text: string }[] };
-    Number: { number: number };
+    name: { title: { plain_text: string }[] };
+    description: { rich_text: { plain_text: string }[] };
+    date: { rich_text: { plain_text: string }[] };
+    number: { number: number };
   };
 }
 
@@ -38,7 +38,7 @@ export default function Project() {
   const data = use(fetchProjects());
   const results = data.results.sort(
     (a: Project, b: Project) =>
-      b.properties.Number.number - a.properties.Number.number
+      b.properties.number.number - a.properties.number.number
   );
   return (
     <div className="flex flex-wrap flex-col lg:flex-row justify-between">
@@ -66,10 +66,10 @@ export default function Project() {
               />
               <div className="ml-[12px]">
                 <p className="text-[18px]">
-                  {project.properties.Name?.title[0].plain_text}
+                  {project.properties.name?.title[0].plain_text}
                 </p>
                 <p className="text-[14px]">
-                  {project.properties.Description?.rich_text[0].plain_text}
+                  {project.properties.description?.rich_text[0].plain_text}
                 </p>
               </div>
             </div>
