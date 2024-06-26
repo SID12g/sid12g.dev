@@ -5,9 +5,14 @@ import next from "@/../public/images/next.svg";
 import react from "@/../public/images/react.svg";
 import nest from "@/../public/images/nest.svg";
 
-export default function Profile() {
+export default function Profile({ sticky }: { sticky: boolean }) {
   return (
-    <div className="min-w-[350px] h-full bg-primary-color md:fixed text-font-color">
+    <div
+      className={
+        "min-w-[350px] h-[100vh] top-0 bottom-0 bg-primary-color text-font-color" +
+        `${sticky ? " md:sticky" : ""}`
+      }
+    >
       <div className="min-w-[294px] ml-[56px] pt-[60px] md:pt-[80px]">
         <Image
           className="w-[160px] h-[160px] rounded-full"
