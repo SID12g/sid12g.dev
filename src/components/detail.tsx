@@ -10,7 +10,7 @@ import source from "@/../public/images/source.svg";
 export default function Detail() {
   return (
     <div className="overflow-scroll fixed inset-0 bg-black bg-opacity-50 flex justify-center pt-[60px] px-[28px] md:px-[60px]">
-      <div className="h-fit bg-background-color w-[100%] rounded-[60px] mb-[60px] pb-[44px]">
+      <div className="h-fit bg-primary-color w-[100%] rounded-[60px] mb-[60px] pb-[44px]">
         <div className="flex justify-end m-[44px]">
           <Link href={"/"}>
             <Image src={X} alt="X" />
@@ -31,8 +31,10 @@ export default function Detail() {
               height={60}
             />
             <div>
-              <p className="text-[24px] font-normal">advocate</p>
-              <p className="text-[12px] font-medium">
+              <p className="text-[24px] font-normal text-font-color">
+                advocate
+              </p>
+              <p className="text-[12px] font-medium text-font-color">
                 특수교육의 새로운 패러다임을 열다.
               </p>
             </div>
@@ -43,7 +45,7 @@ export default function Detail() {
             <Source content="https://github.com" />
           </div>
           <hr className="mb-[20px]" />
-          <p>테스트</p>
+          <p className="text-font-color">테스트</p>
         </article>
       </div>
     </div>
@@ -63,7 +65,7 @@ function Property({
     <div className="flex mb-[8px]">
       <Image className="mr-[6px]" src={image} alt="property-icon" />
       <p className="text-subtitle-color font-normal">{property}</p>
-      <p className="ml-[8px]">{content}</p>
+      <p className="ml-[8px] text-font-color">{content}</p>
     </div>
   );
 }
@@ -73,7 +75,7 @@ function Source({ content }: { content: string }) {
     <div className="flex mb-[20px]">
       <Image className="mr-[6px]" src={source} alt="property-icon" />
       <p className="text-subtitle-color font-normal">Source</p>
-      <Link className="ml-[8px]" href={content}>
+      <Link className="ml-[8px] text-font-color" href={content}>
         {content}
       </Link>
     </div>
