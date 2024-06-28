@@ -9,14 +9,14 @@ import source from "@/../public/images/source.svg";
 
 export default function Detail() {
   return (
-    <div className="overflow-scroll fixed inset-0 bg-black bg-opacity-50 flex justify-center pt-[60px] px-[28px] md:px-[60px]">
-      <div className="h-fit bg-primary-color w-[100%] rounded-[32px] md:rounded-[60px] mb-[60px] pb-[44px]">
+    <div className="overflow-scroll fixed inset-0 bg-neutral-800/50 flex justify-center pt-[60px] px-[28px] md:px-[60px]">
+      <div className="h-fit bg-primary-color w-[100%] rounded-[32px] md:rounded-[32px] mb-[60px] pb-[44px]">
         <div className="flex justify-end m-[44px]">
           <Link href={"/"}>
             <Image className="dark:invert" src={X} alt="X" />
           </Link>
         </div>
-        <article className="flex flex-col mx-[40px] md:mx-[100px]">
+        <article className="flex flex-col mx-[40px] md:mx-[auto] max-w-[600px]">
           <Image
             className="w-[100%] border border-border-color rounded-[20px]"
             src={advocate}
@@ -24,17 +24,17 @@ export default function Detail() {
           />
           <div className="flex w-[100%] px-[20px] py-[16px] border border-border-color bg-background-color rounded-[16px] mt-[28px] mb-[20px]">
             <Image
-              className="border border-border-color rounded-[12px] mr-[16px]"
+              className="border border-border-color rounded-[12px] mr-[16px] w-[60px] h-[60px]"
               src={logo}
               alt="project-logo"
               width={60}
               height={60}
             />
-            <div>
-              <p className="text-[24px] font-normal text-font-color">
+            <div className="flex flex-col justify-center">
+              <p className="text-[18px] sm:text-[20px] font-normal text-font-color">
                 advocate
               </p>
-              <p className="text-[12px] font-medium text-font-color">
+              <p className="text-[10px] sm:text-[12px] font-medium text-font-color">
                 특수교육의 새로운 패러다임을 열다.
               </p>
             </div>
