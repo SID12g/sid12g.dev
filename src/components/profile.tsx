@@ -9,7 +9,7 @@ export default function Profile({ sticky }: { sticky: boolean }) {
   return (
     <div
       className={
-        "min-w-[350px] h-[100vh] top-0 bottom-0 bg-primary-color text-font-color" +
+        "min-w-[350px] md:h-[100vh] top-0 bottom-0 bg-primary-color text-font-color" +
         `${sticky ? " md:sticky" : ""}`
       }
     >
