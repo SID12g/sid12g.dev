@@ -31,10 +31,10 @@ export default function Detail() {
               height={60}
             />
             <div className="flex flex-col justify-center">
-              <p className="text-[18px] sm:text-[20px] font-normal text-font-color">
+              <p className="text-[18px] sm:text-[22px] font-normal text-font-color">
                 advocate
               </p>
-              <p className="text-[10px] sm:text-[12px] font-medium text-font-color">
+              <p className="text-[10px] sm:text-[14px] font-medium text-font-color">
                 특수교육의 새로운 패러다임을 열다.
               </p>
             </div>
