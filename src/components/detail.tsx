@@ -10,10 +10,10 @@ import source from "@/../public/images/source.svg";
 export default function Detail() {
   return (
     <div className="overflow-scroll fixed inset-0 bg-black bg-opacity-50 flex justify-center pt-[60px] px-[28px] md:px-[60px]">
-      <div className="h-fit bg-primary-color w-[100%] rounded-[60px] mb-[60px] pb-[44px]">
+      <div className="h-fit bg-primary-color w-[100%] rounded-[32px] md:rounded-[60px] mb-[60px] pb-[44px]">
         <div className="flex justify-end m-[44px]">
           <Link href={"/"}>
-            <Image src={X} alt="X" />
+            <Image className="dark:invert" src={X} alt="X" />
           </Link>
         </div>
         <article className="flex flex-col mx-[40px] md:mx-[100px]">
@@ -22,7 +22,7 @@ export default function Detail() {
             src={advocate}
             alt="project-image"
           />
-          <div className="flex w-[100%] px-[20px] py-[16px] border border-border-color bg-primary-color rounded-[16px] mt-[28px] mb-[20px]">
+          <div className="flex w-[100%] px-[20px] py-[16px] border border-border-color bg-background-color rounded-[16px] mt-[28px] mb-[20px]">
             <Image
               className="border border-border-color rounded-[12px] mr-[16px]"
               src={logo}
