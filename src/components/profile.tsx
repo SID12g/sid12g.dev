@@ -1,9 +1,9 @@
 import Image from "next/image";
 import profile from "@/../public/images/profile.jpg";
 import Info from "./info";
-import next from "@/../public/images/next.svg";
-import react from "@/../public/images/react.svg";
-import nest from "@/../public/images/nest.svg";
+import next from "@/../public/icons/next.svg";
+import react from "@/../public/icons/react.svg";
+import nest from "@/../public/icons/nest.svg";
 
 export default function Profile({ sticky }: { sticky: boolean }) {
   return (

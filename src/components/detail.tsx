@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import X from "@/../public/images/x.svg";
+import X from "@/../public/icons/x.svg";
 import advocate from "@/../public/images/advocate.png";
 import logo from "@/../public/images/logo.png";
-import team from "@/../public/images/team.svg";
-import date from "@/../public/images/date.svg";
-import source from "@/../public/images/source.svg";
+import team from "@/../public/icons/team.svg";
+import date from "@/../public/icons/date.svg";
+import source from "@/../public/icons/source.svg";
 
 export default function Detail() {
   return (

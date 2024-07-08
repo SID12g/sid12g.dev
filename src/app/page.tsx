@@ -1,7 +1,6 @@
 import Profile from "@/components/profile";
 import Project from "@/components/project";
 import Footer from "@/components/footer";
-import Detail from "@/components/detail";
 
 export default function Home() {
   return (
