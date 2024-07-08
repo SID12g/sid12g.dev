@@ -16,7 +16,7 @@ export default function Detail() {
             <Image className="dark:invert" src={X} alt="X" />
           </Link>
         </div>
-        <article className="flex flex-col mx-[40px] md:mx-[auto] max-w-[600px]">
+        <article className="flex flex-col mx-[20px] sm:mx-[40px] md:mx-[auto] max-w-[600px]">
           <Image
             className="w-[100%] border border-border-color rounded-[20px]"
             src={advocate}
