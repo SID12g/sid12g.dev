@@ -9,7 +9,7 @@ import source from "@/../public/images/source.svg";
 
 export default function Detail() {
   return (
-    <div className="overflow-scroll fixed inset-0 bg-neutral-800/50 flex justify-center pt-[60px] px-[28px] md:px-[60px]">
+    <div className="overflow-scroll fixed inset-0 bg-primary-color sm:bg-neutral-800/50 flex justify-center sm:pt-[60px] px-[0px] sm:px-[16px] md:px-[60px]">
       <div className="h-fit bg-primary-color w-[100%] rounded-[32px] md:rounded-[32px] mb-[60px] pb-[44px]">
         <div className="flex justify-end m-[44px]">
           <Link href={"/"}>
