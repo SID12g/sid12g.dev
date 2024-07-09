@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
 @import url("https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css");
 
 @tailwind base;
@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 * {
-  font-family: "Pretendard";
+  font-family: "Wanted Sans Variable";
   font-weight: 500;
 }
 
@@ -24,6 +24,6 @@
     --border-color: #282828;
     --primary-color: #161616;
     --subtitle-color: #bcbcbc;
-    --background-color: #000000;
+    --background-color: #202020;
   }
 }
