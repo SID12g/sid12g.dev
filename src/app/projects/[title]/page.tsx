@@ -21,7 +21,6 @@ function getPost({ title }: { title: string }) {
 
 export default function Projects({ params }: { params: { title: string } }) {
   const props = getPost(params);
-  console.log(props);
   return (
     <main className="w-full flex flex-col md:flex-row fixed">
       <Detail

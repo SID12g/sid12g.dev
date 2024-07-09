@@ -65,7 +65,7 @@ export default function Detail({
             <Source content={source} />
           </div>
           <hr className="mb-[20px]" />
-          <div>
+          <div className="text-font-color">
             <MDXRemote source={content} />
           </div>
         </article>
