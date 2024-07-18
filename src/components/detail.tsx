@@ -5,7 +5,6 @@ import team_icon from "@/../public/icons/team.svg";
 import date_icon from "@/../public/icons/date.svg";
 import source_icon from "@/../public/icons/source.svg";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import matter from "gray-matter";
 
 export default function Detail({
   image,
@@ -29,12 +28,12 @@ export default function Detail({
   return (
     <div className="overflow-scroll fixed inset-0 bg-primary-color sm:bg-neutral-800/50 flex justify-center sm:pt-[60px] px-[0px] sm:px-[16px] md:px-[60px]">
       <div className="h-fit bg-primary-color w-[100%] rounded-[32px] md:rounded-[32px] mb-[60px] pb-[44px] max-w-[800px]">
-        <div className="flex justify-end m-[20px] mt-[40px] sm:m-[44px]">
+        <div className="flex justify-end m-[28px] mt-[40px] sm:m-[44px]">
           <Link href={"/"}>
             <Image className="dark:invert" src={X} alt="X" />
           </Link>
         </div>
-        <article className="flex flex-col mx-[20px] sm:mx-[40px] md:mx-[auto] max-w-[600px]">
+        <article className="flex flex-col mx-[28px] sm:mx-[40px] md:mx-[auto] max-w-[600px]">
           <Image
             width={1920}
             height={1080}
@@ -84,7 +83,7 @@ function Property({
   content: string;
 }) {
   return (
-    <div className="flex mb-[8px] w-[100%] overflow-scroll scrollbar-hide">
+    <div className="flex mb-[8px] w-[100%] h-[24px] overflow-scroll scrollbar-hide">
       <Image className="mr-[6px]" src={image} alt="property-icon" />
       <p className="text-subtitle-color font-normal">{property}</p>
       <p className="ml-[8px] text-font-color">{content}</p>
@@ -94,7 +93,7 @@ function Property({
 
 function Source({ content }: { content: string }) {
   return (
-    <div className="flex mb-[20px] w-[100%] overflow-scroll scrollbar-hide">
+    <div className="flex mb-[20px] w-[100%] h-[24px] overflow-scroll scrollbar-hide">
       <Image className="mr-[6px]" src={source_icon} alt="property-icon" />
       <p className="text-subtitle-color font-normal">Source</p>
       <Link className="ml-[8px] text-font-color" href={content}>
