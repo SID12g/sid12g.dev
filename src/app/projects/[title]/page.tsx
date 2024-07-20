@@ -5,6 +5,13 @@ import Project from "@/components/project";
 import Footer from "@/components/footer";
 import Detail from "@/components/detail";
 import matter from "gray-matter";
+import { sortProjects } from "@/utils/getProjects";
+
+export async function generateStaticParams() {
+  return sortProjects.map((project) => ({
+    title: project.meta.title,
+  }));
+}
 
 function getPost({ title }: { title: string }) {
   const markdownFile = fs.readFileSync(
@@ -35,7 +42,7 @@ export default function Projects({ params }: { params: { title: string } }) {
       />
       <Profile sticky={false} />
       <div className="md:w-[calc(100%-350px)] mt-[40px] md:mt-[60px] pl-[4%] pr-[4%]">
-        <p className="mb-[20px] text-subtitle-color">propss</p>
+        <p className="mb-[20px] text-subtitle-color">projects</p>
         <div className="flex flex-wrap flex-col lg:flex-row justify-between">
           <Project />
         </div>
