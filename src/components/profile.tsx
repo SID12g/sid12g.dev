@@ -4,6 +4,7 @@ import Info from "./info";
 import next from "@/../public/icons/next.svg";
 import react from "@/../public/icons/react.svg";
 import nest from "@/../public/icons/nest.svg";
+import spring from "@/../public/icons/spring.svg";
 
 export default function Profile({ sticky }: { sticky: boolean }) {
   return (
@@ -42,6 +43,7 @@ export default function Profile({ sticky }: { sticky: boolean }) {
             <Image className="mr-[16px]" src={next} alt="skill image" />
             <Image className="mr-[16px]" src={react} alt="skill image" />
             <Image className="mr-[16px]" src={nest} alt="skill image" />
+            <Image className="mr-[16px]" src={spring} alt="skill image" />
           </div>
         </div>
       </div>
