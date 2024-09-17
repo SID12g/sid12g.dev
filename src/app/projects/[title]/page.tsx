@@ -9,7 +9,7 @@ import { sortProjects } from "@/utils/getProjects";
 
 export async function generateStaticParams() {
   return sortProjects.map((project) => ({
-    title: project.meta.title,
+    slug: project.slug,
   }));
 }
 
