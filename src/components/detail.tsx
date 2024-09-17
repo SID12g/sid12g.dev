@@ -48,10 +48,10 @@ export default function Detail({
               height={60}
             />
             <div className="flex flex-col justify-center">
-              <p className="text-[20px] sm:text-[22px] font-normal text-font-color">
+              <p className="text-[20px] sm:text-[22px] text-font-color">
                 {title}
               </p>
-              <p className="text-[12px] sm:text-[14px] font-medium text-font-color">
+              <p className="text-[12px] sm:text-[14px] text-font-color">
                 {description}
               </p>
             </div>
