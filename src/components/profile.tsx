@@ -32,6 +32,11 @@ export default function Profile({ sticky }: { sticky: boolean }) {
           <Info href="mailto:ad@sid12g.dev" icon="✉️" content="ad@sid12g.dev" />
           <Info href="https://github.com/SID12g" icon="🐱" content="@SID12g" />
           <Info
+            href="https://discord.com/users/469102848840433664"
+            icon="💬"
+            content="@sid12g"
+          />
+          <Info
             href="https://post.sid12g.dev"
             icon="🔗"
             content="https://post.sid12g.dev"
