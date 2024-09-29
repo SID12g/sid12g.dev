@@ -21,6 +21,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      tossFace: "var(--font-toss-face)",
+    },
   },
   plugins: [require("tailwind-scrollbar-hide")],
 };
