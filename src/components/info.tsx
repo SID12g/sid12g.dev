@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function Info({
   href,
   icon,
-
   content,
 }: {
   href: string;
