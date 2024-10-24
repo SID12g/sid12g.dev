@@ -5,6 +5,7 @@ import date_icon from "@/../public/icons/date.svg";
 import source_icon from "@/../public/icons/source.svg";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Button from "./button";
+import Close from "./close";
 
 export default function Detail({
   image,
@@ -26,8 +27,8 @@ export default function Detail({
   content: string;
 }) {
   return (
-    <div className="overflow-y-scroll fixed inset-0 bg-primary-color sm:bg-neutral-800/50 flex justify-center sm:pt-[60px] px-[0px] sm:px-[16px] md:px-[60px]">
-      <div className="h-fit bg-primary-color w-[100%] rounded-[32px] md:rounded-[32px] mb-[60px] pb-[44px] max-w-[800px]">
+    <Close>
+      <div className="h-fit min-h-[100%] bg-primary-color w-[100%] sm:rounded-[32px] sm:mb-[60px] pb-[44px] max-w-[800px]">
         <div className="flex justify-end m-[28px] mt-[40px] sm:m-[44px]">
           <Button />
         </div>
@@ -67,7 +68,7 @@ export default function Detail({
           </div>
         </article>
       </div>
-    </div>
+    </Close>
   );
 }
 
