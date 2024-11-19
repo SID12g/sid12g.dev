@@ -1,5 +1,4 @@
 import Image from "next/image";
-import profile from "@/../public/images/profile.jpg";
 import Info from "./info";
 import next from "@/../public/icons/next.svg";
 import react from "@/../public/icons/react.svg";
@@ -17,7 +16,9 @@ export default function Profile({ sticky }: { sticky: boolean }) {
       <div className="min-w-[294px] ml-[56px] pt-[60px] md:pt-[80px]">
         <Image
           className="w-[160px] h-[160px] rounded-full"
-          src={profile}
+          src={"https://avatars.githubusercontent.com/u/119688507"}
+          width={160}
+          height={160}
           alt="profile image"
         />
         <p className="text-[32px] mt-[32px]">Sungmin Cho</p>
