@@ -57,7 +57,7 @@ const Button = styled.div<{ $draggable: boolean }>`
   padding: 8px 16px;
   border-radius: 12px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   position: relative;
   z-index: 1;
