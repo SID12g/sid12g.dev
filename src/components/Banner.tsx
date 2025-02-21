@@ -13,7 +13,7 @@ export default function Banner() {
       ) : (
         <Wrapper>
           현재 포트폴리오를 다시 개발하고 있습니다.
-          <Link href="https://previous.sid12g.dev">
+          <Link href="https://v2.sid12g.dev">
             <LinkText> (이전 버전으로 이동하기 ✨)</LinkText>
           </Link>
           <CloseIcon
