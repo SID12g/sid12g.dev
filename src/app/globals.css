@@ -1,26 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
-  font-family: var(--font-wanted-sans);
-  font-weight: 500;
+  font-family: var(--font-wanted-sans), var(--font-toss-face);
+  text-decoration: none;
 }
 
-:root {
-  --font-color: #000000;
-  --border-color: #ececec;
-  --primary-color: #fafafa;
-  --subtitle-color: #4e515d;
-  --background-color: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --font-color: #ffffff;
-    --border-color: #282828;
-    --primary-color: #161616;
-    --subtitle-color: #bcbcbc;
-    --background-color: #202020;
-  }
+body {
+  margin: 0;
 }
