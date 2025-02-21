@@ -1,15 +1,14 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import styled from "styled-components";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
 
   return (
-    <Wrap>
+    <Wrapper>
       <Button
         $draggable={pathname === "/"}
         draggable={pathname === "/"}
@@ -37,11 +36,11 @@ export default function Navbar() {
       >
         Craft
       </Button>
-    </Wrap>
+    </Wrapper>
   );
 }
 
-const Wrap = styled.div`
+const Wrapper = styled.div`
   padding: 6px;
   display: flex;
   border-radius: 16px;

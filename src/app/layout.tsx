@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import StyledComponentsRegistry from "@/lib/registry";
 import Navbar from "@/components/Navbar";
+import Banner from "@/components/Banner";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${wantedSans.variable} ${tossFace.variable}`}>
         <StyledComponentsRegistry>
+          <Banner />
           <Navbar />
           {children}
         </StyledComponentsRegistry>
