@@ -63,5 +63,5 @@ const Button = styled.div<{ $draggable: boolean }>`
   z-index: 1;
   background-color: ${(props) =>
     props.$draggable ? "#ededed" : "transparent"};
-  border: ${(props) => (props.$draggable ? "1px solid #ebebeb" : "")};
+  border: ${(props) => (props.$draggable ? "1px solid #e0e0e0" : "")};
 `;
