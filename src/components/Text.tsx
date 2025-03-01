@@ -7,11 +7,12 @@ const Text = styled.p<{
   lineHeight?: string;
   letterSpacing?: string;
 }>`
-  font-size: ${(props) => props.fontSize};
-  font-weight: ${(props) => props.fontWeight};
-  color: ${(props) => props.color};
-  line-height: ${(props) => props.lineHeight};
-  letter-spacing: ${(props) => props.letterSpacing};
+  font-size: ${(props) => props.fontSize || "16px"};
+  font-weight: ${(props) => props.fontWeight || "400"};
+  color: ${(props) => props.color || "#000000"};
+  line-height: ${(props) => props.lineHeight || "normal"};
+  letter-spacing: ${(props) => props.letterSpacing || "normal"};
+  margin: 0;
 `;
 
 export default Text;
