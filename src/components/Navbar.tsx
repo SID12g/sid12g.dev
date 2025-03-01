@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
 import Gap from "./Gap";
+import Text from "./Text";
 
 export default function Navbar() {
   const router = useRouter();
@@ -17,7 +18,9 @@ export default function Navbar() {
           router.push("/");
         }}
       >
-        Home
+        <Text fontSize="14px" fontWeight="400">
+          Home
+        </Text>
       </Button>
       <Gap width="6px" />
       <Button
@@ -27,7 +30,9 @@ export default function Navbar() {
           router.push("/project");
         }}
       >
-        Project
+        <Text fontSize="14px" fontWeight="400">
+          Project
+        </Text>
       </Button>
       <Gap width="6px" />
       <Button
@@ -37,7 +42,9 @@ export default function Navbar() {
           router.push("/post");
         }}
       >
-        Post
+        <Text fontSize="14px" fontWeight="400">
+          Post
+        </Text>
       </Button>
     </NavbarWrapper>
   );
@@ -59,8 +66,6 @@ const NavbarWrapper = styled.div`
 const Button = styled.div<{ $draggable: boolean }>`
   padding: 8px 12px;
   border-radius: 12px;
-  font-size: 14px;
-  font-weight: 400;
   cursor: pointer;
   position: relative;
   z-index: 1;
