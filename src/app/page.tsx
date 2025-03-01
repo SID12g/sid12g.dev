@@ -47,7 +47,12 @@ export default function Home() {
           </FlexBox>
         </InfoBox>
         <Box width="140px" height="140px" border_radius="1000px">
-          <Image src={ProfileImage} alt="Profile Image" />
+          <Image
+            src={ProfileImage}
+            alt="Profile Image"
+            width={140}
+            height={140}
+          />
         </Box>
       </ProfileBox>
       <Gap height="68px" />
