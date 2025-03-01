@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
+import Gap from "./Gap";
 
 export default function Navbar() {
   const router = useRouter();
@@ -18,7 +19,7 @@ export default function Navbar() {
       >
         Home
       </Button>
-      <Gap />
+      <Gap width="6px" />
       <Button
         $draggable={pathname === "/project"}
         draggable={pathname === "/project"}
@@ -28,7 +29,7 @@ export default function Navbar() {
       >
         Project
       </Button>
-      <Gap />
+      <Gap width="6px" />
       <Button
         $draggable={pathname === "/post"}
         draggable={pathname === "/post"}
@@ -65,8 +66,4 @@ const Button = styled.div<{ $draggable: boolean }>`
   z-index: 1;
   background-color: ${(props) => (props.$draggable ? "#ededed" : "")};
   border: ${(props) => (props.$draggable ? "1px solid #e0e0e0" : "")};
-`;
-
-const Gap = styled.div`
-  width: 6px;
 `;
