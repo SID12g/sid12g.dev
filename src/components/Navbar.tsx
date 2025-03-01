@@ -8,7 +8,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <Wrapper>
+    <NavbarWrapper>
       <Button
         $draggable={pathname === "/"}
         draggable={pathname === "/"}
@@ -38,11 +38,11 @@ export default function Navbar() {
       >
         Post
       </Button>
-    </Wrapper>
+    </NavbarWrapper>
   );
 }
 
-const Wrapper = styled.div`
+const NavbarWrapper = styled.div`
   padding: 6px;
   display: flex;
   border-radius: 16px;

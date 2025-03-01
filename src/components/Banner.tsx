@@ -7,13 +7,13 @@ export default function Banner() {
   return (
     <div>
       {
-        <Wrapper>
+        <BannerWrapper>
           <Text>현재 포트폴리오를 다시 개발하고 있습니다.</Text>{" "}
           <HyperLink
             text="(이전 버전으로 이동하기 ✨)"
             href="https://v2.sid12g.dev"
           />
-        </Wrapper>
+        </BannerWrapper>
       }
     </div>
   );
@@ -27,7 +27,7 @@ function HyperLink({ text, href }: { text: string; href: string }) {
   );
 }
 
-const Wrapper = styled.div`
+const BannerWrapper = styled.div`
   background-color: #000000;
   padding: 12px;
   text-align: center;
