@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Gap = styled.p<{
+const Gap = styled.div<{
   width?: string;
   height?: string;
 }>`
