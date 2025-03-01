@@ -16,25 +16,27 @@ export default function Navbar() {
           router.push("/");
         }}
       >
-        Intro
+        Home
       </Button>
+      <Gap />
       <Button
-        $draggable={pathname === "/info"}
-        draggable={pathname === "/info"}
+        $draggable={pathname === "/project"}
+        draggable={pathname === "/project"}
         onClick={() => {
-          router.push("/info");
+          router.push("/project");
         }}
       >
-        Info
+        Project
       </Button>
+      <Gap />
       <Button
-        $draggable={pathname === "/craft"}
-        draggable={pathname === "/craft"}
+        $draggable={pathname === "/post"}
+        draggable={pathname === "/post"}
         onClick={() => {
-          router.push("/craft");
+          router.push("/post");
         }}
       >
-        Craft
+        Post
       </Button>
     </Wrapper>
   );
@@ -54,14 +56,17 @@ const Wrapper = styled.div`
 `;
 
 const Button = styled.div<{ $draggable: boolean }>`
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 12px;
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
   position: relative;
   z-index: 1;
-  background-color: ${(props) =>
-    props.$draggable ? "#ededed" : "transparent"};
+  background-color: ${(props) => (props.$draggable ? "#ededed" : "")};
   border: ${(props) => (props.$draggable ? "1px solid #e0e0e0" : "")};
+`;
+
+const Gap = styled.div`
+  width: 6px;
 `;
