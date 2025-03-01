@@ -9,7 +9,7 @@ export default function Banner() {
     <div>
       {
         <BannerWrapper>
-          <Text fontSize="14px" color="#ffffff">
+          <Text font_size="14px" color="#ffffff">
             현재 포트폴리오를 다시 개발하고 있습니다.
           </Text>{" "}
           <HyperLink
@@ -25,7 +25,7 @@ export default function Banner() {
 function HyperLink({ text, href }: { text: string; href: string }) {
   return (
     <Link href={href}>
-      <Text fontSize="14px" color="#ffffff">
+      <Text font_size="14px" color="#ffffff">
         {text}
       </Text>
     </Link>
