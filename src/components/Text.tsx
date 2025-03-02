@@ -13,6 +13,7 @@ const Text = styled.p<{
   line-height: ${(props) => props.line_height || "normal"};
   letter-spacing: ${(props) => props.letter_spacing || "normal"};
   margin: 0;
+  text-decoration: none;
 `;
 
 export default Text;

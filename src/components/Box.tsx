@@ -5,11 +5,21 @@ const Box = styled.div<{
   height?: string;
   background_color?: string;
   border_radius?: string;
+  display?: string;
+  justify_content?: string;
+  align_items?: string;
+  flex_direction?: string;
+  flex_grow?: number;
 }>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   background-color: ${(props) => props.background_color};
   border-radius: ${(props) => props.border_radius};
+  display: ${(props) => props.display};
+  justify-content: ${(props) => props.justify_content};
+  align-items: ${(props) => props.align_items};
+  flex-direction: ${(props) => props.flex_direction};
+  flex-grow: ${(props) => props.flex_grow};
   overflow: hidden;
 `;
 
