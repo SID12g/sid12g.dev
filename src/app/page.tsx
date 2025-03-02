@@ -13,6 +13,7 @@ import MailIcon from "@/../public/icons/mail.svg";
 import BackgroundImage from "@/../public/images/background.svg";
 import PostIcon from "@/../public/icons/post.svg";
 import LinkedinIcon from "@/../public/icons/linkedin.svg";
+import HyperLink from "@/components/HyperLink";
 
 export default function Home() {
   return (
@@ -139,19 +140,21 @@ export default function Home() {
           </Box>
           <Gap width="20px" />
           <Box flex_grow={1}>
-            <Box display="flex" align_items="center">
-              <Image src={PostIcon} alt="Post Icon" />
-              <Gap width="4px" />
-              <Text font_size="14px">https://post.sid12g.dev</Text>
-            </Box>
+            <HyperLink href="https://post.sid12g.dev">
+              <Box width="fit-content" display="flex" align_items="center">
+                <Image src={PostIcon} alt="Post Icon" />
+                <Gap width="4px" />
+                <Text font_size="14px">https://post.sid12g.dev</Text>
+              </Box>
+            </HyperLink>
             <Gap height="8px" />
-            <Box display="flex" align_items="center">
-              <Image src={LinkedinIcon} alt="Linkedin Icon" />
-              <Gap width="4px" />
-              <Text font_size="14px">
-                https://www.linkedin.com/in/ac-undefined-65a6a9299
-              </Text>
-            </Box>
+            <HyperLink href="https://www.linkedin.com/in">
+              <Box display="flex" align_items="center">
+                <Image src={LinkedinIcon} alt="Linkedin Icon" />
+                <Gap width="4px" />
+                <Text font_size="14px">https://www.linkedin.com/in</Text>
+              </Box>
+            </HyperLink>
           </Box>
         </Box>
         <Gap height="32px" />
@@ -177,23 +180,29 @@ function ProfileBox() {
         <Gap height="16px" />
         <Box width="100px" height="1px" background_color="#000000" />
         <Gap height="16px" />
-        <Box display="flex" align_items="center">
-          <Image src={EducationIcon} alt="Education Icon" />
-          <Gap width="4px" />
-          <Text font_size="14px">Korea Digital Media High School</Text>
-        </Box>
+        <HyperLink href="https://dimigo.hs.kr">
+          <Box display="flex" align_items="center">
+            <Image src={EducationIcon} alt="Education Icon" />
+            <Gap width="4px" />
+            <Text font_size="14px">Korea Digital Media High School</Text>
+          </Box>
+        </HyperLink>
         <Gap height="4px" />
-        <Box display="flex" align_items="center">
-          <Image src={GithubIcon} alt="Github Icon" />
-          <Gap width="4px" />
-          <Text font_size="14px">@SID12g</Text>
-        </Box>
+        <HyperLink href="https://github.com/SID12g">
+          <Box display="flex" align_items="center">
+            <Image src={GithubIcon} alt="Github Icon" />
+            <Gap width="4px" />
+            <Text font_size="14px">@SID12g</Text>
+          </Box>
+        </HyperLink>
         <Gap height="4px" />
-        <Box display="flex" align_items="center">
-          <Image src={MailIcon} alt="Mail Icon" />
-          <Gap width="4px" />
-          <Text font_size="14px">ad@sid12g.dev</Text>
-        </Box>
+        <HyperLink href="mailto:ad@sid12g.dev">
+          <Box display="flex" align_items="center">
+            <Image src={MailIcon} alt="Mail Icon" />
+            <Gap width="4px" />
+            <Text font_size="14px">ad@sid12g.dev</Text>
+          </Box>
+        </HyperLink>
       </Box>
       <Box width="140px" height="140px" border_radius="1000px">
         <Image
@@ -229,14 +238,16 @@ function WorkPropertyChildren() {
   return (
     <Box>
       <Box display="flex" justify_content="space-between" align_items="center">
-        <Text
-          font_size="20px"
-          font_weight="500"
-          line_height="24px"
-          letter_spacing="-0.4px"
-        >
-          Korea Digital Media High School
-        </Text>
+        <HyperLink href="https://dimigo.hs.kr">
+          <Text
+            font_size="20px"
+            font_weight="500"
+            line_height="24px"
+            letter_spacing="-0.4px"
+          >
+            Korea Digital Media High School
+          </Text>
+        </HyperLink>
         <Text font_size="16px" letter_spacing="-0.32px">
           2021.01 ~ 재직 중
         </Text>
@@ -265,14 +276,17 @@ function EducationPropertyChildren() {
   return (
     <Box>
       <Box display="flex" justify_content="space-between" align_items="center">
-        <Text
-          font_size="20px"
-          font_weight="500"
-          line_height="24px"
-          letter_spacing="-0.4px"
-        >
-          Korea Digital Media High School
-        </Text>
+        {" "}
+        <HyperLink href="https://dimigo.hs.kr">
+          <Text
+            font_size="20px"
+            font_weight="500"
+            line_height="24px"
+            letter_spacing="-0.4px"
+          >
+            Korea Digital Media High School
+          </Text>
+        </HyperLink>
         <Text font_size="16px" letter_spacing="-0.32px">
           2021.01 ~ 재직 중
         </Text>
