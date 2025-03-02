@@ -14,6 +14,7 @@ import BackgroundImage from "@/../public/images/background.svg";
 import PostIcon from "@/../public/icons/post.svg";
 import LinkedinIcon from "@/../public/icons/linkedin.svg";
 import HyperLink from "@/components/HyperLink";
+import ColorHighlight from "@/components/ColorHighlight";
 
 export default function Home() {
   return (
@@ -249,7 +250,7 @@ function WorkPropertyChildren() {
           </Text>
         </HyperLink>
         <Text font_size="16px" letter_spacing="-0.32px">
-          2021.01 ~ 재직 중
+          2021.01 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
         </Text>
       </Box>
       <Gap height="4px" />
@@ -276,7 +277,6 @@ function EducationPropertyChildren() {
   return (
     <Box>
       <Box display="flex" justify_content="space-between" align_items="center">
-        {" "}
         <HyperLink href="https://dimigo.hs.kr">
           <Text
             font_size="20px"
@@ -288,7 +288,7 @@ function EducationPropertyChildren() {
           </Text>
         </HyperLink>
         <Text font_size="16px" letter_spacing="-0.32px">
-          2021.01 ~ 재직 중
+          2021.01 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
         </Text>
       </Box>
       <Gap height="8px" />
