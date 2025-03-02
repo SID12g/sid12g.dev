@@ -41,7 +41,9 @@ export default function Home() {
         </Foreground>
       </Wrapper>
       <Background>
-        <Image src={BackgroundImage} alt="Background Image" />
+        <RotateImageWrapper>
+          <Image src={BackgroundImage} alt="Background Image" />
+        </RotateImageWrapper>
       </Background>
     </>
   );
@@ -50,6 +52,18 @@ export default function Home() {
 const Foreground = styled.div`
   position: relative;
   z-index: 1;
+`;
+
+const Background = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 360px;
+  z-index: -1;
 `;
 
 const rotate = keyframes`
@@ -61,13 +75,6 @@ const rotate = keyframes`
   }
 `;
 
-const Background = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 360px;
-  z-index: -1;
+const RotateImageWrapper = styled.div`
   animation: ${rotate} 60s linear infinite;
 `;
