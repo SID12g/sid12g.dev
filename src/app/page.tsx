@@ -239,16 +239,14 @@ function WorkPropertyChildren() {
   return (
     <Box>
       <Box display="flex" justify_content="space-between" align_items="center">
-        <HyperLink href="https://dimigo.hs.kr">
-          <Text
-            font_size="20px"
-            font_weight="500"
-            line_height="24px"
-            letter_spacing="-0.4px"
-          >
-            Korea Digital Media High School
-          </Text>
-        </HyperLink>
+        <Text
+          font_size="20px"
+          font_weight="500"
+          line_height="24px"
+          letter_spacing="-0.4px"
+        >
+          Korea Digital Media High School
+        </Text>
         <Text font_size="16px" letter_spacing="-0.32px">
           2021.01 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
         </Text>
@@ -277,16 +275,14 @@ function EducationPropertyChildren() {
   return (
     <Box>
       <Box display="flex" justify_content="space-between" align_items="center">
-        <HyperLink href="https://dimigo.hs.kr">
-          <Text
-            font_size="20px"
-            font_weight="500"
-            line_height="24px"
-            letter_spacing="-0.4px"
-          >
-            Korea Digital Media High School
-          </Text>
-        </HyperLink>
+        <Text
+          font_size="20px"
+          font_weight="500"
+          line_height="24px"
+          letter_spacing="-0.4px"
+        >
+          Korea Digital Media High School
+        </Text>
         <Text font_size="16px" letter_spacing="-0.32px">
           2021.01 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
         </Text>
@@ -337,7 +333,7 @@ const SkillPropertyChildren = styled.div`
 const BoxWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 200px);
-  gap: 20px;
+  gap: 32px;
   right: 0px;
   position: relative;
 `;

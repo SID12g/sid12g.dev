@@ -26,7 +26,7 @@ const ChildrenWrapper = styled.span`
   border: 1px solid transparent;
 
   &:hover {
-    background-color: rgba(216, 216, 216, 0.2);
+    background-color: rgba(216, 216, 216, 0.1);
     border: 1px solid rgba(184, 184, 184, 0.2);
     padding: 4px 6px;
   }
