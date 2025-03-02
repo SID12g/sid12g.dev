@@ -31,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${wantedSans.variable} ${tossFace.variable}`}>
+      <body
+        className={`${wantedSans.variable} ${tossFace.variable}`}
+        style={{ overflowX: "hidden" }}
+      >
         <StyledComponentsRegistry>
           <Banner />
           <Navbar />

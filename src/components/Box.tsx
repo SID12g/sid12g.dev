@@ -12,6 +12,7 @@ const Box = styled.div<{
   align_items?: string;
   flex_direction?: string;
   flex_grow?: number;
+  flex_flow?: string;
   gap?: string;
 }>`
   width: ${(props) => props.width};
@@ -23,6 +24,7 @@ const Box = styled.div<{
   align-items: ${(props) => props.align_items};
   flex-direction: ${(props) => props.flex_direction};
   flex-grow: ${(props) => props.flex_grow};
+  flex-flow: ${(props) => props.flex_flow};
   gap: ${(props) => props.gap};
   overflow: hidden;
 `;
