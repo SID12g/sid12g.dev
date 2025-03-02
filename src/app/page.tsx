@@ -10,8 +10,9 @@ import ProfileImage from "@/../public/images/profile.png";
 import EducationIcon from "@/../public/icons/education.svg";
 import GithubIcon from "@/../public/icons/github.svg";
 import MailIcon from "@/../public/icons/mail.svg";
-import FlexBox from "@/components/FlexBox";
 import BackgroundImage from "@/../public/images/background.svg";
+import PostIcon from "@/../public/icons/post.svg";
+import LinkedinIcon from "@/../public/icons/linkedin.svg";
 
 export default function Home() {
   return (
@@ -121,6 +122,39 @@ export default function Home() {
             <Box width="200px" height="200px" background_color="blue" />
           </BoxWrapper>
         </Box>
+        <Gap height="32px" />
+        <Box width="1024px" height="2px" background_color="#000000" />
+        <Gap height="32px" />
+        <Box display="flex">
+          <Box width="200px">
+            <Text
+              font_size="20px"
+              font_weight="500"
+              line_height="24px"
+              letter_spacing="-0.4px"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              Link
+            </Text>
+          </Box>
+          <Gap width="20px" />
+          <Box flex_grow={1}>
+            <Box display="flex" align_items="center">
+              <Image src={PostIcon} alt="Post Icon" />
+              <Gap width="4px" />
+              <Text font_size="14px">https://post.sid12g.dev</Text>
+            </Box>
+            <Gap height="8px" />
+            <Box display="flex" align_items="center">
+              <Image src={LinkedinIcon} alt="Linkedin Icon" />
+              <Gap width="4px" />
+              <Text font_size="14px">
+                https://www.linkedin.com/in/ac-undefined-65a6a9299
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+        <Gap height="32px" />
         <Background>
           <Image src={BackgroundImage} alt="Background Image" />
         </Background>
@@ -143,23 +177,23 @@ function ProfileBox() {
         <Gap height="16px" />
         <Box width="100px" height="1px" background_color="#000000" />
         <Gap height="16px" />
-        <FlexBox>
+        <Box display="flex" align_items="center">
           <Image src={EducationIcon} alt="Education Icon" />
           <Gap width="4px" />
           <Text font_size="14px">Korea Digital Media High School</Text>
-        </FlexBox>
+        </Box>
         <Gap height="4px" />
-        <FlexBox>
+        <Box display="flex" align_items="center">
           <Image src={GithubIcon} alt="Github Icon" />
           <Gap width="4px" />
           <Text font_size="14px">@SID12g</Text>
-        </FlexBox>
+        </Box>
         <Gap height="4px" />
-        <FlexBox>
+        <Box display="flex" align_items="center">
           <Image src={MailIcon} alt="Mail Icon" />
           <Gap width="4px" />
           <Text font_size="14px">ad@sid12g.dev</Text>
-        </FlexBox>
+        </Box>
       </Box>
       <Box width="140px" height="140px" border_radius="1000px">
         <Image
@@ -292,5 +326,5 @@ const BoxWrapper = styled.div`
   grid-template-columns: repeat(4, 200px);
   gap: 20px;
   right: 0px;
-  position: absolute;
+  position: relative;
 `;

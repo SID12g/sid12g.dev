@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import StyledComponentsRegistry from "@/lib/registry";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Banner />
           <Navbar />
           {children}
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>
