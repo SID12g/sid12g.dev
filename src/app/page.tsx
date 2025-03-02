@@ -73,7 +73,7 @@ export default function Home() {
         <Box width="1024px" height="2px" background_color="#000000" />
         <Gap height="32px" />
         <Box display="flex">
-          <Box width="200px">
+          <Box width="200px" display="flex" align_items="center">
             <Text
               font_size="20px"
               font_weight="500"
@@ -93,6 +93,33 @@ export default function Home() {
             <SkillPropertyChildren>Spring Boot</SkillPropertyChildren>
             <SkillPropertyChildren>Swift</SkillPropertyChildren>
           </Box>
+        </Box>
+        <Gap height="32px" />
+        <Box width="1024px" height="2px" background_color="#000000" />
+        <Gap height="32px" />
+        <Box display="flex">
+          <Box width="200px" display="flex">
+            <Text
+              font_size="20px"
+              font_weight="500"
+              line_height="24px"
+              letter_spacing="-0.4px"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              Project
+            </Text>
+          </Box>
+          <Gap width="20px" />
+          <BoxWrapper>
+            <Box width="200px" height="200px" background_color="red" />
+            <Box width="200px" height="200px" background_color="blue" />
+            <Box width="200px" height="200px" background_color="red" />
+            <Box width="200px" height="200px" background_color="blue" />
+            <Box width="200px" height="200px" background_color="red" />
+            <Box width="200px" height="200px" background_color="blue" />
+            <Box width="200px" height="200px" background_color="red" />
+            <Box width="200px" height="200px" background_color="blue" />
+          </BoxWrapper>
         </Box>
         <Background>
           <Image src={BackgroundImage} alt="Background Image" />
@@ -258,4 +285,12 @@ const SkillPropertyChildren = styled.div`
   letter-spacing: -0.32px;
   padding: 10px 16px;
   border-radius: 100px;
+`;
+
+const BoxWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 20px;
+  right: 0px;
+  position: absolute;
 `;
