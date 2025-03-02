@@ -5,7 +5,7 @@ import Image from "next/image";
 import PostIcon from "@/../public/icons/post.svg";
 import LinkedinIcon from "@/../public/icons/linkedin.svg";
 import HyperLink from "@/components/HyperLink";
-import ContentFrame from "../ContentFrame";
+import ContentFrame from "@/components/ContentFrame";
 
 export default function Link() {
   return (

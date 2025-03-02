@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import Box from "@/components/Box";
-import ContentFrame from "../ContentFrame";
+import ContentFrame from "@/components/ContentFrame";
 
 export default function Skill() {
   return (

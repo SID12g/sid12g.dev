@@ -2,8 +2,8 @@
 
 import styled from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
-import Gap from "./Gap";
-import Text from "./Text";
+import Gap from "@/components/Gap";
+import Text from "@/components/Text";
 
 export default function Navbar() {
   const router = useRouter();

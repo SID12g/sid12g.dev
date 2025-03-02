@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import Gap from "./Gap";
+import Gap from "@/components/Gap";
 
 const ResponsiveGap = styled(Gap)<{
   width?: string;

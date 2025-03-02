@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import Link from "next/link";
-import Text from "./Text";
+import Text from "@/components/Text";
 
 export default function Banner() {
   return (

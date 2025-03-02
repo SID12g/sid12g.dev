@@ -6,8 +6,8 @@ import Text from "@/components/Text";
 import Box from "@/components/Box";
 import ColorHighlight from "@/components/ColorHighlight";
 import React from "react";
-import ResponsiveGap from "../ResponsiveGap";
-import ContentFrame from "../ContentFrame";
+import ResponsiveGap from "@/components/ResponsiveGap";
+import ContentFrame from "@/components/ContentFrame";
 
 export default function WorkExperience() {
   return (

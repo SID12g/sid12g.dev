@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import React from "react";
 import styled from "styled-components";
+import React from "react";
+import Link from "next/link";
 
 export default function HyperLink({
   href,
