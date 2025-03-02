@@ -330,7 +330,6 @@ const SkillPropertyChildren = styled.div`
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: -0.32px;
   padding: 10px 16px;
   border-radius: 100px;
 `;
