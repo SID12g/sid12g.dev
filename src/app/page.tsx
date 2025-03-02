@@ -56,13 +56,13 @@ const Foreground = styled.div`
 
 const Background = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 1100px;
   overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 360px;
+  top: 460px;
   z-index: -1;
 `;
 
