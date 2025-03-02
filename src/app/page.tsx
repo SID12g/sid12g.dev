@@ -25,20 +25,49 @@ export default function Home() {
         <Box width="1024px" height="2px" background_color="#000000" />
         <Gap height="32px" />
         <Box display="flex">
-          <Text
-            font_size="20px"
-            font_weight="500"
-            line_height="24px"
-            letter_spacing="-0.4px"
-            style={{ whiteSpace: "nowrap" }}
-          >
-            Work Experience
-          </Text>
+          <Box width="200px">
+            <Text
+              font_size="20px"
+              font_weight="500"
+              line_height="24px"
+              letter_spacing="-0.4px"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              Work Experience
+            </Text>
+          </Box>
           <Gap width="20px" />
           <Box flex_grow={1}>
             <WorkPropertyChildren />
-            <Gap height="32px" />
+            <Gap height="16px" />
+            <Box width="100%" height="1px" background_color="#000000" />
+            <Gap height="16px" />
             <WorkPropertyChildren />
+          </Box>
+        </Box>
+        <Gap height="32px" />
+        <Box width="1024px" height="2px" background_color="#000000" />
+        <Gap height="32px" />
+        <Box display="flex">
+          {" "}
+          <Box width="200px">
+            <Text
+              font_size="20px"
+              font_weight="500"
+              line_height="24px"
+              letter_spacing="-0.4px"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              Education
+            </Text>
+          </Box>
+          <Gap width="20px" />
+          <Box flex_grow={1}>
+            <EducationPropertyChildren />
+            <Gap height="16px" />
+            <Box width="100%" height="1px" background_color="#000000" />
+            <Gap height="16px" />
+            <EducationPropertyChildren />
           </Box>
         </Box>
         <Background>
@@ -142,6 +171,30 @@ function WorkPropertyChildren() {
       <Gap height="4px" />
       <Text font_size="16px" line_height="20px" letter_spacing="-0.32px">
         - 커리어 관리 서비스의 UX 리서치, 디자인 컨셉, UX Flow 설계
+      </Text>
+    </Box>
+  );
+}
+
+function EducationPropertyChildren() {
+  return (
+    <Box>
+      <Box display="flex" justify_content="space-between" align_items="center">
+        <Text
+          font_size="20px"
+          font_weight="500"
+          line_height="24px"
+          letter_spacing="-0.4px"
+        >
+          Korea Digital Media High School
+        </Text>
+        <Text font_size="16px" letter_spacing="-0.32px">
+          2021.01 ~ 재직중
+        </Text>
+      </Box>
+      <Gap height="8px" />
+      <Text font_size="16px" line_height="20px" letter_spacing="-0.32px">
+        웹프로그래밍과
       </Text>
     </Box>
   );
