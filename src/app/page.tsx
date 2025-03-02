@@ -49,7 +49,6 @@ export default function Home() {
         <Box width="1024px" height="2px" background_color="#000000" />
         <Gap height="32px" />
         <Box display="flex">
-          {" "}
           <Box width="200px">
             <Text
               font_size="20px"
@@ -68,6 +67,31 @@ export default function Home() {
             <Box width="100%" height="1px" background_color="#000000" />
             <Gap height="16px" />
             <EducationPropertyChildren />
+          </Box>
+        </Box>
+        <Gap height="32px" />
+        <Box width="1024px" height="2px" background_color="#000000" />
+        <Gap height="32px" />
+        <Box display="flex">
+          <Box width="200px">
+            <Text
+              font_size="20px"
+              font_weight="500"
+              line_height="24px"
+              letter_spacing="-0.4px"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              Skill
+            </Text>
+          </Box>
+          <Gap width="20px" />
+          <Box display="flex" flex_grow={1} gap="8px">
+            <SkillPropertyChildren>Next.js</SkillPropertyChildren>
+            <SkillPropertyChildren>React</SkillPropertyChildren>
+            <SkillPropertyChildren>React Native</SkillPropertyChildren>
+            <SkillPropertyChildren>Nest.js</SkillPropertyChildren>
+            <SkillPropertyChildren>Spring Boot</SkillPropertyChildren>
+            <SkillPropertyChildren>Swift</SkillPropertyChildren>
           </Box>
         </Box>
         <Background>
@@ -153,7 +177,7 @@ function WorkPropertyChildren() {
           Korea Digital Media High School
         </Text>
         <Text font_size="16px" letter_spacing="-0.32px">
-          2021.01 ~ 재직중
+          2021.01 ~ 재직 중
         </Text>
       </Box>
       <Gap height="4px" />
@@ -189,7 +213,7 @@ function EducationPropertyChildren() {
           Korea Digital Media High School
         </Text>
         <Text font_size="16px" letter_spacing="-0.32px">
-          2021.01 ~ 재직중
+          2021.01 ~ 재직 중
         </Text>
       </Box>
       <Gap height="8px" />
@@ -223,4 +247,15 @@ const Background = styled.div`
   top: 360px;
   z-index: -1;
   animation: ${rotate} 60s linear infinite;
+`;
+
+const SkillPropertyChildren = styled.div`
+  width: fit-content;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  padding: 10px 16px;
+  border-radius: 100px;
 `;
