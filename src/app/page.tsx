@@ -56,7 +56,7 @@ const Foreground = styled.div`
 
 const Background = styled.div`
   width: 100%;
-  height: 100%;
+  height: fit-content;
   overflow-x: hidden;
   display: flex;
   align-items: center;
