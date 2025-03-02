@@ -14,7 +14,6 @@ import HyperLink from "@/components/HyperLink";
 export default function Profile() {
   return (
     <ProfileWrapper>
-      {/* <Box display="flex" justify_content="space-between"> */}
       <Box display="flex" flex_direction="column">
         <Text font_size="40px" font_weight="600" letter_spacing="0.8px">
           조성민
@@ -65,7 +64,6 @@ export default function Profile() {
         />
         <Gap height="32px" />
       </ProfileImageWrapper>
-      {/* </Box> */}
     </ProfileWrapper>
   );
 }
