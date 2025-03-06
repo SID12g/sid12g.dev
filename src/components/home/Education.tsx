@@ -13,7 +13,7 @@ export default function Education() {
   return (
     <ContentFrame title="Education">
       <Box flex_grow={1}>
-        <EducationPropertyChildren
+        <EducationChildren
           title="Korea Digital Media High School"
           date={
             <Text font_size="16px" letter_spacing="-0.32px">
@@ -25,7 +25,7 @@ export default function Education() {
         <ResponsiveGap height="32px" r_height="20px" />
         <Box width="100%" height="1px" background_color="#000000" />
         <ResponsiveGap height="32px" r_height="20px" />
-        <EducationPropertyChildren
+        <EducationChildren
           title="Another Experience"
           date={
             <Text font_size="16px" letter_spacing="-0.32px">
@@ -39,7 +39,7 @@ export default function Education() {
   );
 }
 
-function EducationPropertyChildren({
+function EducationChildren({
   title,
   date,
   status,

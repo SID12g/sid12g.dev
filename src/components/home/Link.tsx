@@ -11,26 +11,24 @@ export default function Link() {
   return (
     <ContentFrame title="Link">
       <Box flex_grow={1}>
-        <HyperLink href="https://post.sid12g.dev">
-          <Box width="fit-content" display="flex" align_items="center">
-            <Image src={PostIcon} alt="Post Icon" />
-            <Gap width="4px" />
-            <Text font_size="14px" letter_spacing="-0.14px">
-              https://post.sid12g.dev
-            </Text>
-          </Box>
-        </HyperLink>
+        <LinkChildren href="https://post.sid12g.dev" image={PostIcon} />
         <Gap height="8px" />
-        <HyperLink href="https://www.linkedin.com/in">
-          <Box display="flex" align_items="center">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
-            <Gap width="4px" />
-            <Text font_size="14px" letter_spacing="-0.14px">
-              https://www.linkedin.com/in
-            </Text>
-          </Box>
-        </HyperLink>
+        <LinkChildren href="https://www.linkedin.com/in" image={LinkedinIcon} />
       </Box>
     </ContentFrame>
+  );
+}
+
+function LinkChildren({ href, image }: { href: string; image: string }) {
+  return (
+    <HyperLink href={href}>
+      <Box width="fit-content" display="flex" align_items="center">
+        <Image src={image} alt="Post Icon" />
+        <Gap width="4px" />
+        <Text font_size="14px" letter_spacing="-0.14px">
+          {href}
+        </Text>
+      </Box>
+    </HyperLink>
   );
 }

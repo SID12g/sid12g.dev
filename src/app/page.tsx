@@ -13,6 +13,7 @@ import Skill from "@/components/home/Skill";
 import Intro from "@/components/home/Intro";
 import Project from "@/components/home/Project";
 import Link from "@/components/home/Link";
+import Contribute from "@/components/home/Contribute";
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
           <Gap height="32px" />
           <ResponsiveGap height="0" r_height="32px" />
           <Project />
+          <Gap height="32px" />
+          <ResponsiveGap height="0" r_height="32px" />
+          <Contribute />
           <Gap height="32px" />
           <ResponsiveGap height="0" r_height="32px" />
           <Link />

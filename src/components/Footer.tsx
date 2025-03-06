@@ -13,7 +13,7 @@ export default function Footer() {
           Copyright ⓒ {date.getFullYear()} sid12g All rights reserved.
         </Text>
       </Box>
-      <Gap height="16px" />
+      <Gap height="24px" />
     </>
   );
 }
