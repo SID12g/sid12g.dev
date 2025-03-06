@@ -54,7 +54,7 @@ export default function ContentFrame({
 }
 
 const ResponsiveOuterSubject = styled(Text)`
-  @media (min-width: 800px) {
+  @media (min-width: 801px) {
     display: none;
   }
 `;
