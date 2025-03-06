@@ -5,7 +5,7 @@ import Box from "@/components/Box";
 export default function Intro() {
   return (
     <Box display="flex" flex_direction="column">
-      <Text font_size="20px" line_height="28px">
+      <Text font_weight="500" font_size="24px" line_height="32px">
         안녕하세요 😀
         <br />
         개발자 조성민입니다.
