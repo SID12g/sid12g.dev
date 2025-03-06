@@ -8,6 +8,7 @@ const ResponsiveGap = styled(Gap)<{
   min_width?: string;
   height?: string;
   r_width?: string;
+  r_min_width?: string;
   r_height?: string;
 }>`
   width: ${(props) => props.width};
@@ -16,6 +17,7 @@ const ResponsiveGap = styled(Gap)<{
 
   @media (max-width: 800px) {
     width: ${(props) => props.r_width};
+    min-width: ${(props) => props.r_min_width};
     height: ${(props) => props.r_height};
   }
 `;

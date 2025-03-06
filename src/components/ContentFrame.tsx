@@ -40,7 +40,12 @@ export default function ContentFrame({
               {title}
             </Text>
           </ResponsiveInnerSubject>
-          <ResponsiveGap width="20px" min_width="20px" r_width="0px" />
+          <ResponsiveGap
+            width="20px"
+            min_width="20px"
+            r_width="0px"
+            r_min_width="0"
+          />
           {children}
         </Box>
       </>
