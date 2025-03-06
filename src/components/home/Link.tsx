@@ -24,10 +24,12 @@ function LinkChildren({ href, image }: { href: string; image: string }) {
     <HyperLink href={href}>
       <Box width="fit-content" display="flex" align_items="center">
         <Image src={image} alt="Post Icon" />
-        <Gap width="4px" />
-        <Text font_size="14px" letter_spacing="-0.14px">
-          {href}
-        </Text>
+        <Gap width="8px" />
+        <Box width="fit-content">
+          <Text font_size="14px" letter_spacing="-0.14px">
+            {href}
+          </Text>
+        </Box>
       </Box>
     </HyperLink>
   );

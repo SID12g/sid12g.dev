@@ -53,10 +53,12 @@ function ContributeChildren({
             objectFit="cover"
           />
         </Box>
-        <Gap width="4px" />
-        <Text font_size="14px" letter_spacing="-0.14px">
-          {content}
-        </Text>
+        <Gap width="8px" />
+        <Box width="fit-content">
+          <Text font_size="14px" letter_spacing="-0.14px">
+            {content}
+          </Text>
+        </Box>
       </Box>
     </HyperLink>
   );
