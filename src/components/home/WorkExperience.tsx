@@ -13,7 +13,7 @@ export default function WorkExperience() {
   return (
     <ContentFrame title="Work Experience">
       <Box flex_grow={1}>
-        <WorkPropertyChildren
+        <WorkChildren
           title="Korea Digital Media High School"
           date={
             <Text font_size="16px" letter_spacing="-0.32px">
@@ -29,7 +29,7 @@ export default function WorkExperience() {
         <ResponsiveGap height="32px" r_height="20px" />
         <Box width="100%" height="1px" background_color="#000000" />
         <ResponsiveGap height="32px" r_height="20px" />
-        <WorkPropertyChildren
+        <WorkChildren
           title="Another Experience"
           date={
             <Text font_size="16px" letter_spacing="-0.32px">
@@ -59,7 +59,7 @@ const PointWrapper = styled.div`
   }
 `;
 
-function WorkPropertyChildren({
+function WorkChildren({
   title,
   date,
   status,

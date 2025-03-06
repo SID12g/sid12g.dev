@@ -8,18 +8,18 @@ export default function Skill() {
   return (
     <ContentFrame title="Skill">
       <Box display="flex" flex_grow={1} flex_flow="wrap" gap="8px">
-        <SkillPropertyChildren>Next.js</SkillPropertyChildren>
-        <SkillPropertyChildren>React</SkillPropertyChildren>
-        <SkillPropertyChildren>React Native</SkillPropertyChildren>
-        <SkillPropertyChildren>Nest.js</SkillPropertyChildren>
-        <SkillPropertyChildren>Spring Boot</SkillPropertyChildren>
-        <SkillPropertyChildren>Swift</SkillPropertyChildren>
+        <SkillChildren>Next.js</SkillChildren>
+        <SkillChildren>React</SkillChildren>
+        <SkillChildren>React Native</SkillChildren>
+        <SkillChildren>Nest.js</SkillChildren>
+        <SkillChildren>Spring Boot</SkillChildren>
+        <SkillChildren>Swift</SkillChildren>
       </Box>
     </ContentFrame>
   );
 }
 
-const SkillPropertyChildren = styled.div`
+const SkillChildren = styled.div`
   width: fit-content;
   background-color: #007bff;
   color: #ffffff;
