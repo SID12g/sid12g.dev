@@ -20,8 +20,12 @@ const tossFace = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sid12g.dev"),
   title: "sid12g • 조성민",
   description: "안녕하세요 조성민입니다.",
+  openGraph: {
+    images: "https://sid12g.dev/images/og-image.png",
+  },
 };
 
 export default function RootLayout({
