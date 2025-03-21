@@ -14,32 +14,33 @@ export default function WorkExperience() {
     <ContentFrame title="Work Experience">
       <Box flex_grow={1}>
         <WorkChildren
-          title="Korea Digital Media High School"
+          title="A team"
           date={
             <Text font_size="16px" letter_spacing="-0.32px">
-              2021.01 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
+              2024.12 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
             </Text>
           }
-          status="Principal"
+          status="FullStack Developer"
           content={[
-            "- 커리어 관리 서비스의 UX 리서치, 디자인 컨셉, UX Flow 설계",
-            "- 커리어 관리 서비스의 UX 리서치, 디자인 컨셉, UX Flow 설계",
+            "- React Native를 이용한 앱 구조 설계 및 개발",
+            "- Nest.js 및 Socket을 활용한 실시간 채팅 서비스 개발",
+            "- Next.js를 이용한 관리자 대시보드 및 상담 서비스 개발",
           ]}
         />
         <ResponsiveGap height="32px" r_height="20px" />
         <Box width="100%" height="1px" background_color="#000000" />
         <ResponsiveGap height="32px" r_height="20px" />
         <WorkChildren
-          title="Another Experience"
+          title="B team"
           date={
             <Text font_size="16px" letter_spacing="-0.32px">
-              2021.01 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
+              2023.08 ~ 2024.08
             </Text>
           }
-          status="Developer"
+          status="FullStack Developer"
           content={[
-            "- Another project description",
-            "- Another project description",
+            "- Next.js를 이용한 풀스택 웹 서비스 개발",
+            "- GPT Fine-tuning을 통한 커리큘럼 제공 서비스 구현",
           ]}
         />
       </Box>
