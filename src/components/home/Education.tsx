@@ -66,12 +66,16 @@ function EducationChildren({
             {title}
           </Text>
         </Link>
-        {date}
+        <DesktopOnly>{date}</DesktopOnly>
       </PointWrapper>
       <Gap $height="4px" />
       <Text $font_size="18px" $line_height="22px" $letter_spacing="-0.36px">
         {status}
       </Text>
+      <MobileOnly>
+        <Gap $height="8px" />
+        {date}
+      </MobileOnly>
     </Box>
   );
 }
@@ -85,5 +89,19 @@ const PointWrapper = styled.div`
     flex-direction: column;
     align-items: start;
     gap: 8px;
+  }
+`;
+
+const DesktopOnly = styled.div`
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+
+const MobileOnly = styled.div`
+  display: none;
+
+  @media (max-width: 800px) {
+    display: block;
   }
 `;

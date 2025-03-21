@@ -38,4 +38,9 @@ const PostWrapper = styled.div`
   border: 1px solid #ededed;
   padding: 24px;
   border-radius: 16px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba(216, 216, 216, 0.1);
+  }
 `;
