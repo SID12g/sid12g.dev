@@ -7,13 +7,13 @@ export default function Footer() {
 
   return (
     <>
-      <Gap height="40px" />
-      <Box display="flex" justify_content="center">
-        <Text font_size="16px">
+      <Gap $height="40px" />
+      <Box $display="flex" $justify_content="center">
+        <Text $font_size="16px">
           Copyright ⓒ {date.getFullYear()} sid12g All rights reserved.
         </Text>
       </Box>
-      <Gap height="24px" />
+      <Gap $height="24px" />
     </>
   );
 }

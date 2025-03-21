@@ -12,14 +12,14 @@ export default function Project() {
     <ContentFrame title="Project">
       project
       {/* <BoxWrapper>
-        <Box width="200px" height="200px" background_color="red" />
-        <Box width="200px" height="200px" background_color="blue" />
-        <Box width="200px" height="200px" background_color="red" />
-        <Box width="200px" height="200px" background_color="blue" />
-        <Box width="200px" height="200px" background_color="red" />
-        <Box width="200px" height="200px" background_color="blue" />
-        <Box width="200px" height="200px" background_color="red" />
-        <Box width="200px" height="200px" background_color="blue" />
+        <Box $width="200px" $height="200px" $background_color="red" />
+        <Box $width="200px" $height="200px" $background_color="blue" />
+        <Box $width="200px" $height="200px" $background_color="red" />
+        <Box $width="200px" $height="200px" $background_color="blue" />
+        <Box $width="200px" $height="200px" $background_color="red" />
+        <Box $width="200px" $height="200px" $background_color="blue" />
+        <Box $width="200px" $height="200px" $background_color="red" />
+        <Box $width="200px" $height="200px" $background_color="blue" />
       </BoxWrapper> */}
     </ContentFrame>
   );

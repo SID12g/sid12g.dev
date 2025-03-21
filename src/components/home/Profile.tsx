@@ -14,42 +14,42 @@ import HyperLink from "@/components/HyperLink";
 export default function Profile() {
   return (
     <ProfileWrapper>
-      <Box display="flex" flex_direction="column">
-        <Text font_size="40px" font_weight="600" letter_spacing="0.8px">
+      <Box $display="flex" $flex_direction="column">
+        <Text $font_size="40px" $font_weight="600" $letter_spacing="0.8px">
           조성민
         </Text>
-        <Gap height="8px" />
-        <Text font_size="20px" letter_spacing="-0.04px">
+        <Gap $height="8px" />
+        <Text $font_size="20px" $letter_spacing="-0.04px">
           Fullstack Developer
         </Text>
-        <Gap height="16px" />
-        <Box width="100px" height="1px" background_color="#000000" />
-        <Gap height="16px" />
+        <Gap $height="16px" />
+        <Box $width="100px" $height="1px" $background_color="#000000" />
+        <Gap $height="16px" />
         <HyperLink href="https://dimigo.hs.kr">
-          <Box display="flex" align_items="center">
+          <Box $display="flex" $align_items="center">
             <Image src={EducationIcon} alt="Education Icon" />
-            <Gap width="4px" />
-            <Text font_size="14px" letter_spacing="-0.14px">
+            <Gap $width="4px" />
+            <Text $font_size="14px" $letter_spacing="-0.14px">
               Korea Digital Media High School
             </Text>
           </Box>
         </HyperLink>
-        <Gap height="4px" />
+        <Gap $height="4px" />
         <HyperLink href="https://github.com/SID12g">
-          <Box display="flex" align_items="center">
+          <Box $display="flex" $align_items="center">
             <Image src={GithubIcon} alt="Github Icon" />
-            <Gap width="4px" />
-            <Text font_size="14px" letter_spacing="-0.14px">
+            <Gap $width="4px" />
+            <Text $font_size="14px" $letter_spacing="-0.14px">
               @SID12g
             </Text>
           </Box>
         </HyperLink>
-        <Gap height="4px" />
+        <Gap $height="4px" />
         <HyperLink href="mailto:ad@sid12g.dev">
-          <Box display="flex" align_items="center">
+          <Box $display="flex" $align_items="center">
             <Image src={MailIcon} alt="Mail Icon" />
-            <Gap width="4px" />
-            <Text font_size="14px" letter_spacing="-0.14px">
+            <Gap $width="4px" />
+            <Text $font_size="14px" $letter_spacing="-0.14px">
               ad@sid12g.dev
             </Text>
           </Box>
@@ -62,7 +62,7 @@ export default function Profile() {
           width={140}
           height={140}
         />
-        <Gap height="32px" />
+        <Gap $height="32px" />
       </ProfileImageWrapper>
     </ProfileWrapper>
   );

@@ -10,9 +10,9 @@ import ContentFrame from "@/components/ContentFrame";
 export default function Link() {
   return (
     <ContentFrame title="Link">
-      <Box flex_grow={1}>
+      <Box $flex_grow={1}>
         <LinkChildren href="https://post.sid12g.dev" image={PostIcon} />
-        <Gap height="8px" />
+        <Gap $height="8px" />
         <LinkChildren href="https://www.linkedin.com/in" image={LinkedinIcon} />
       </Box>
     </ContentFrame>
@@ -22,11 +22,11 @@ export default function Link() {
 function LinkChildren({ href, image }: { href: string; image: string }) {
   return (
     <HyperLink href={href}>
-      <Box width="fit-content" display="flex" align_items="center">
+      <Box $width="fit-content" $display="flex" $align_items="center">
         <Image src={image} alt="Post Icon" />
-        <Gap width="8px" />
-        <Box width="fit-content">
-          <Text font_size="14px" letter_spacing="-0.14px">
+        <Gap $width="8px" />
+        <Box $width="fit-content">
+          <Text $font_size="14px" $letter_spacing="-0.14px">
             {href}
           </Text>
         </Box>

@@ -18,11 +18,11 @@ export default function Navbar() {
           router.push("/");
         }}
       >
-        <Text font_size="14px" font_weight="400">
+        <Text $font_size="14px" $font_weight="400">
           Home
         </Text>
       </Button>
-      <Gap width="6px" />
+      <Gap $width="6px" />
       <Button
         $draggable={pathname === "/project"}
         draggable={pathname === "/project"}
@@ -30,9 +30,9 @@ export default function Navbar() {
           router.push("/project");
         }}
       >
-        <Text font_size="14px">Project</Text>
+        <Text $font_size="14px">Project</Text>
       </Button>
-      <Gap width="6px" />
+      <Gap $width="6px" />
       <Button
         $draggable={pathname === "/post"}
         draggable={pathname === "/post"}
@@ -40,7 +40,7 @@ export default function Navbar() {
           router.push("/post");
         }}
       >
-        <Text font_size="14px">Post</Text>
+        <Text $font_size="14px">Post</Text>
       </Button>
     </NavbarWrapper>
   );

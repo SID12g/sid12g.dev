@@ -12,12 +12,13 @@ import ContentFrame from "@/components/ContentFrame";
 export default function WorkExperience() {
   return (
     <ContentFrame title="Work Experience">
-      <Box flex_grow={1}>
+      <Box $flex_grow={1}>
         <WorkChildren
           title="A team"
           date={
-            <Text font_size="16px" letter_spacing="-0.32px">
-              2024.12 ~ <ColorHighlight color="#007BFF">재직 중</ColorHighlight>
+            <Text $font_size="16px" $letter_spacing="-0.32px">
+              2024.12 ~{" "}
+              <ColorHighlight $color="#007BFF">재직 중</ColorHighlight>
             </Text>
           }
           status="FullStack Developer"
@@ -27,13 +28,13 @@ export default function WorkExperience() {
             "- Next.js를 이용한 관리자 대시보드 및 상담 서비스 개발",
           ]}
         />
-        <ResponsiveGap height="32px" r_height="20px" />
-        <Box width="100%" height="1px" background_color="#000000" />
-        <ResponsiveGap height="32px" r_height="20px" />
+        <ResponsiveGap $height="32px" $r_height="20px" />
+        <Box $width="100%" $height="1px" $background_color="#000000" />
+        <ResponsiveGap $height="32px" $r_height="20px" />
         <WorkChildren
           title="B team"
           date={
-            <Text font_size="16px" letter_spacing="-0.32px">
+            <Text $font_size="16px" $letter_spacing="-0.32px">
               2023.08 ~ 2024.08
             </Text>
           }
@@ -75,26 +76,26 @@ function WorkChildren({
     <Box>
       <PointWrapper>
         <Text
-          font_size="20px"
-          font_weight="500"
-          line_height="24px"
-          letter_spacing="-0.4px"
+          $font_size="20px"
+          $font_weight="500"
+          $line_height="24px"
+          $letter_spacing="-0.4px"
         >
           {title}
         </Text>
         {date}
       </PointWrapper>
-      <Gap height="4px" />
-      <Text font_size="18px" line_height="22px" letter_spacing="-0.36px">
+      <Gap $height="4px" />
+      <Text $font_size="18px" $line_height="22px" $letter_spacing="-0.36px">
         {status}
       </Text>
-      <Gap height="12px" />
+      <Gap $height="12px" />
       {content.map((item, index) => (
         <React.Fragment key={index}>
-          <Text font_size="16px" line_height="20px" letter_spacing="-0.32px">
+          <Text $font_size="16px" $line_height="20px" $letter_spacing="-0.32px">
             {item}
           </Text>
-          {index < content.length - 1 && <Gap height="4px" />}
+          {index < content.length - 1 && <Gap $height="4px" />}
         </React.Fragment>
       ))}
     </Box>

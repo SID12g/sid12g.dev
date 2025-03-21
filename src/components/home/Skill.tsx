@@ -7,7 +7,7 @@ import ContentFrame from "@/components/ContentFrame";
 export default function Skill() {
   return (
     <ContentFrame title="Skill">
-      <Box display="flex" flex_grow={1} flex_flow="wrap" gap="8px">
+      <Box $display="flex" $flex_grow={1} $flex_flow="wrap" $gap="8px">
         <SkillChildren>Next.js</SkillChildren>
         <SkillChildren>React</SkillChildren>
         <SkillChildren>React Native</SkillChildren>

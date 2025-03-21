@@ -11,22 +11,22 @@ export default function Post({ post }: { post: PostType }) {
     <Link href={post.url}>
       <PostWrapper>
         <Text
-          font_size="14px"
-          color="#4E5968"
-          line_height="22px"
-          letter_spacing="-0.28px"
+          $font_size="14px"
+          $color="#4E5968"
+          $line_height="22px"
+          $letter_spacing="-0.28px"
         >{`${post.meta.date} · ${post.meta.tag}`}</Text>
-        <Gap height="4px" />
+        <Gap $height="4px" />
         <Text
-          font_size="16px"
-          font_weight="500"
-          line_height="24px"
-          letter_spacing="-0.32px"
+          $font_size="16px"
+          $font_weight="500"
+          $line_height="24px"
+          $letter_spacing="-0.32px"
         >
           {post.meta.title}
         </Text>
-        <Gap height="4px" />
-        <Text font_size="14px" line_height="22px" letter_spacing="-0.28px">
+        <Gap $height="4px" />
+        <Text $font_size="14px" $line_height="22px" $letter_spacing="-0.28px">
           {post.meta.description}
         </Text>
       </PostWrapper>

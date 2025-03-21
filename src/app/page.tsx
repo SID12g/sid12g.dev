@@ -20,28 +20,28 @@ export default function Home() {
     <>
       <Wrapper>
         <Foreground>
-          <Gap height="100px" />
+          <Gap $height="100px" />
           <Profile />
-          <Gap height="68px" />
+          <Gap $height="68px" />
           <Intro />
-          <Gap height="32px" />
+          <Gap $height="32px" />
           <WorkExperience />
-          <Gap height="32px" />
-          <ResponsiveGap height="0" r_height="32px" />
+          <Gap $height="32px" />
+          <ResponsiveGap $height="0" $r_height="32px" />
           <Education />
-          <Gap height="32px" />
-          <ResponsiveGap height="0" r_height="32px" />
+          <Gap $height="32px" />
+          <ResponsiveGap $height="0" $r_height="32px" />
           <Skill />
-          <Gap height="32px" />
-          <ResponsiveGap height="0" r_height="32px" />
+          <Gap $height="32px" />
+          <ResponsiveGap $height="0" $r_height="32px" />
           <Project />
-          <Gap height="32px" />
-          <ResponsiveGap height="0" r_height="32px" />
+          <Gap $height="32px" />
+          <ResponsiveGap $height="0" $r_height="32px" />
           <Contribute />
-          <Gap height="32px" />
-          <ResponsiveGap height="0" r_height="32px" />
+          <Gap $height="32px" />
+          <ResponsiveGap $height="0" $r_height="32px" />
           <Link />
-          <Gap height="100px" />
+          <Gap $height="100px" />
         </Foreground>
       </Wrapper>
       <Background>
