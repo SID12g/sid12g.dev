@@ -40,7 +40,6 @@ export default function RootLayout({
         style={{ overflowX: "hidden" }}
       >
         <StyledComponentsRegistry>
-          <Banner />
           <Navbar />
           {children}
           <Footer />

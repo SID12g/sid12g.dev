@@ -56,8 +56,7 @@ const NavbarWrapper = styled.div`
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  /* top: 24px; */
-  top: 68px;
+  top: 24px;
   z-index: 10;
   background-color: white;
 `;
