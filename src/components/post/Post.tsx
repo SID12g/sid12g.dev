@@ -36,7 +36,7 @@ export default function Post({ post }: { post: PostType }) {
 
 const PostWrapper = styled.div`
   border: 1px solid #ededed;
-  padding: 24px;
+  padding: 20px;
   border-radius: 16px;
   transition: all 0.3s;
 
