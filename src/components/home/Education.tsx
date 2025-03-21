@@ -6,7 +6,7 @@ import Text from "@/components/Text";
 import Box from "@/components/Box";
 import ColorHighlight from "@/components/ColorHighlight";
 import React from "react";
-import ResponsiveGap from "@/components/ResponsiveGap";
+// import ResponsiveGap from "@/components/ResponsiveGap";
 import ContentFrame from "@/components/ContentFrame";
 import Link from "next/link";
 
