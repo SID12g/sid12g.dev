@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Wrapper>
         <Foreground>
-          <Gap height="52px" />
+          <Gap height="100px" />
           <Profile />
           <Gap height="68px" />
           <Intro />

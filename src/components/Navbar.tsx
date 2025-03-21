@@ -53,10 +53,13 @@ const NavbarWrapper = styled.div`
   border: 1px solid #ebebeb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 24px;
-  position: relative;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  /* top: 24px; */
+  top: 68px;
+  z-index: 10;
+  background-color: white;
 `;
 
 const Button = styled.div<{ $draggable: boolean }>`
