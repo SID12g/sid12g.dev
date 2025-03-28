@@ -7,13 +7,13 @@ import Text from "@/components/Text";
 
 export default function Navbar() {
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname().split("/")[1];
 
   return (
     <NavbarWrapper>
       <Button
-        $draggable={pathname === "/"}
-        draggable={pathname === "/"}
+        $draggable={pathname === ""}
+        draggable={pathname === ""}
         onClick={() => {
           router.push("/");
         }}
@@ -24,8 +24,8 @@ export default function Navbar() {
       </Button>
       <Gap $width="6px" />
       <Button
-        $draggable={pathname === "/project"}
-        draggable={pathname === "/project"}
+        $draggable={pathname === "project"}
+        draggable={pathname === "project"}
         onClick={() => {
           router.push("/project");
         }}
@@ -34,8 +34,8 @@ export default function Navbar() {
       </Button>
       <Gap $width="6px" />
       <Button
-        $draggable={pathname === "/post"}
-        draggable={pathname === "/post"}
+        $draggable={pathname === "post"}
+        draggable={pathname === "post"}
         onClick={() => {
           router.push("/post");
         }}
