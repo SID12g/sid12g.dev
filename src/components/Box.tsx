@@ -14,6 +14,7 @@ const Box = styled.div<{
   $flex_grow?: number;
   $flex_flow?: string;
   $gap?: string;
+  $aspect_ratio?: string;
 }>`
   width: ${(props) => props.$width};
   height: ${(props) => props.$height};
@@ -26,6 +27,7 @@ const Box = styled.div<{
   flex-grow: ${(props) => props.$flex_grow};
   flex-flow: ${(props) => props.$flex_flow};
   gap: ${(props) => props.$gap};
+  aspect-ratio: ${(props) => props.$aspect_ratio};
   overflow: hidden;
 `;
 

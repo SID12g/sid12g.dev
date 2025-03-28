@@ -1,6 +1,3 @@
-"use client";
-
-import styled, { keyframes } from "styled-components";
 import Wrapper from "@/components/Wrapper";
 import Gap from "@/components/Gap";
 import Image from "next/image";
@@ -14,8 +11,13 @@ import Intro from "@/components/home/Intro";
 import Project from "@/components/home/Project";
 import Link from "@/components/home/Link";
 import Contribute from "@/components/home/Contribute";
+import Foreground from "@/components/home/Foreground";
+import Background from "@/components/home/Background";
+import RotateImageWrapper from "@/components/home/RotateImageWrapper";
+import { sortProjects } from "@/utils/getProject";
 
 export default function Home() {
+  console.log(sortProjects);
   return (
     <>
       <Wrapper>
@@ -52,33 +54,3 @@ export default function Home() {
     </>
   );
 }
-
-const Foreground = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-
-const Background = styled.div`
-  width: 100%;
-  height: 1100px;
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 460px;
-  z-index: -1;
-`;
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const RotateImageWrapper = styled.div`
-  animation: ${rotate} 60s linear infinite;
-`;

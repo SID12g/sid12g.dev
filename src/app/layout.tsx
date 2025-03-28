@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import StyledComponentsRegistry from "@/lib/registry";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { sortProjects } from "@/utils/getProject";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",

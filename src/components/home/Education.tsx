@@ -9,6 +9,8 @@ import React from "react";
 // import ResponsiveGap from "@/components/ResponsiveGap";
 import ContentFrame from "@/components/ContentFrame";
 import Link from "next/link";
+import DesktopOnly from "../DesktopOnly";
+import MobileOnly from "../MobileOnly";
 
 export default function Education() {
   return (
@@ -16,14 +18,14 @@ export default function Education() {
       <Box $flex_grow={1}>
         <EducationChildren
           href="https://dimigo.hs.kr/"
-          title="Korea Digital Media High School"
+          title="한국디지털미디어고등학교"
           date={
             <Text $font_size="16px" $letter_spacing="-0.32px">
               2023.03 ~{" "}
               <ColorHighlight $color="#007BFF">재학 중</ColorHighlight>
             </Text>
           }
-          status="Web Programming"
+          status="웹프로그래밍과"
         />
         {/* <ResponsiveGap $height="32px" $r_height="20px" />
         <Box $width="100%" $height="1px" $background_color="#000000" />
@@ -66,13 +68,13 @@ function EducationChildren({
             {title}
           </Text>
         </Link>
-        <DesktopOnly>{date}</DesktopOnly>
+        <DesktopOnly $max_width="800px">{date}</DesktopOnly>
       </PointWrapper>
       <Gap $height="4px" />
       <Text $font_size="18px" $line_height="22px" $letter_spacing="-0.36px">
         {status}
       </Text>
-      <MobileOnly>
+      <MobileOnly $max_width="800px">
         <Gap $height="8px" />
         {date}
       </MobileOnly>
@@ -89,19 +91,5 @@ const PointWrapper = styled.div`
     flex-direction: column;
     align-items: start;
     gap: 8px;
-  }
-`;
-
-const DesktopOnly = styled.div`
-  @media (max-width: 800px) {
-    display: none;
-  }
-`;
-
-const MobileOnly = styled.div`
-  display: none;
-
-  @media (max-width: 800px) {
-    display: block;
   }
 `;

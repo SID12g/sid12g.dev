@@ -1,34 +1,65 @@
-"use client";
-
-// import styled from "styled-components";
-// import Gap from "@/components/Gap";
-// import Text from "@/components/Text";
-// import Box from "@/components/Box";
-// import ResponsiveGap from "@/components/ResponsiveGap";
+import Text from "@/components/Text";
+import Box from "@/components/Box";
 import ContentFrame from "@/components/ContentFrame";
+import Link from "next/link";
+import { sortProjects } from "@/utils/getProject";
+import GridContainer from "@/components/home/GridContainer";
+import Image from "next/image";
 
 export default function Project() {
   return (
     <ContentFrame title="Project">
-      project
-      {/* <BoxWrapper>
-        <Box $width="200px" $height="200px" $background_color="red" />
-        <Box $width="200px" $height="200px" $background_color="blue" />
-        <Box $width="200px" $height="200px" $background_color="red" />
-        <Box $width="200px" $height="200px" $background_color="blue" />
-        <Box $width="200px" $height="200px" $background_color="red" />
-        <Box $width="200px" $height="200px" $background_color="blue" />
-        <Box $width="200px" $height="200px" $background_color="red" />
-        <Box $width="200px" $height="200px" $background_color="blue" />
-      </BoxWrapper> */}
+      <GridContainer>
+        {sortProjects.slice(0, 8).map((project, index) => (
+          <Link key={index} href={`/project/${project.slug}`}>
+            <Box
+              key={index}
+              $width="100%"
+              $height="100%"
+              $border_radius="8px"
+              $aspect_ratio="1"
+            >
+              <Image
+                src={project.meta.preview}
+                width={512}
+                height={512}
+                alt="preview"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+          </Link>
+        ))}
+        {/* <MobileOnly $max_width="580px">
+          <Box
+            $width="100%"
+            $height="100%"
+            $background_color="red"
+            // $border_radius="8px"
+            $aspect_ratio="1"
+          ></Box>
+        </MobileOnly> */}
+        <Link href="/project">
+          <Box
+            $width="100%"
+            $height="100%"
+            $background_color="#000000"
+            $border_radius="8px"
+            $aspect_ratio="1"
+            $display="flex"
+            $justify_content="center"
+            $align_items="center"
+          >
+            <Text
+              $font_size="16px"
+              $line_height="20px"
+              $color="#ffffff"
+              $letter_spacing="-0.32px"
+            >
+              더보기
+            </Text>
+          </Box>
+        </Link>
+      </GridContainer>
     </ContentFrame>
   );
 }
-
-// const BoxWrapper = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(4, 200px);
-//   gap: 32px;
-//   right: 0;
-//   position: relative;
-// `;

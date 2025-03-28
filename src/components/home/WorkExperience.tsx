@@ -8,6 +8,8 @@ import ColorHighlight from "@/components/ColorHighlight";
 import React from "react";
 import ResponsiveGap from "@/components/ResponsiveGap";
 import ContentFrame from "@/components/ContentFrame";
+import DesktopOnly from "@/components/DesktopOnly";
+import MobileOnly from "@/components/MobileOnly";
 
 export default function WorkExperience() {
   return (
@@ -61,20 +63,6 @@ const PointWrapper = styled.div`
   }
 `;
 
-const DesktopOnly = styled.div`
-  @media (max-width: 800px) {
-    display: none;
-  }
-`;
-
-const MobileOnly = styled.div`
-  display: none;
-
-  @media (max-width: 800px) {
-    display: block;
-  }
-`;
-
 function WorkChildren({
   title,
   date,
@@ -97,13 +85,13 @@ function WorkChildren({
         >
           {title}
         </Text>
-        <DesktopOnly>{date}</DesktopOnly>
+        <DesktopOnly $max_width="800px">{date}</DesktopOnly>
       </PointWrapper>
       <Gap $height="4px" />
       <Text $font_size="18px" $line_height="22px" $letter_spacing="-0.36px">
         {status}
       </Text>
-      <MobileOnly>
+      <MobileOnly $max_width="800px">
         <Gap $height="8px" />
         {date}
       </MobileOnly>
