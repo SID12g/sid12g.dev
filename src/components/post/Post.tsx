@@ -35,12 +35,12 @@ export default function Post({ post }: { post: PostType }) {
 }
 
 const PostWrapper = styled.div`
-  border: 1px solid #ededed;
+  border: 1px solid #e0e0e0;
   padding: 20px;
   border-radius: 16px;
   transition: all 0.3s;
 
   &:hover {
-    background-color: rgba(216, 216, 216, 0.1);
+    background-color: rgba(216, 216, 216, 0.3);
   }
 `;

@@ -1,3 +1,6 @@
+import ProjectList from "@/components/project/ProjectList";
+import { sortProjects } from "@/utils/getProject";
+
 export default function Project() {
-  return <div>Project</div>;
+  return <ProjectList projects={sortProjects} />;
 }
