@@ -14,10 +14,8 @@ import Contribute from "@/components/home/Contribute";
 import Foreground from "@/components/home/Foreground";
 import Background from "@/components/home/Background";
 import RotateImageWrapper from "@/components/home/RotateImageWrapper";
-import { sortProjects } from "@/utils/getProject";
 
 export default function Home() {
-  console.log(sortProjects);
   return (
     <>
       <Wrapper>

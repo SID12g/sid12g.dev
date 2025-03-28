@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import StyledComponentsRegistry from "@/lib/registry";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { sortProjects } from "@/utils/getProject";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",
@@ -37,7 +36,7 @@ export default function RootLayout({
     <html lang="ko">
       <body
         className={`${wantedSans.variable} ${tossFace.variable}`}
-        style={{ overflowX: "hidden" }}
+        style={{ overflowX: "hidden", backgroundColor: "#fafafa" }}
       >
         <StyledComponentsRegistry>
           <Navbar />
