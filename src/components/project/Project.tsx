@@ -11,12 +11,17 @@ export default function Project({ project }: { project: ProjectType }) {
   return (
     <ProjectWrapper>
       <Link href={`https://v2.sid12g.dev/project/${project.slug}`}>
-        <Image
-          src={project.meta.image}
-          alt="project"
-          width={512}
-          height={292}
-        />
+        <ImageWrapper>
+          <Image
+            src={project.meta.image}
+            alt="project"
+            fill
+            style={{
+              transition: "all 0.3s",
+              objectFit: "cover",
+            }}
+          />
+        </ImageWrapper>
         <ProjectProperty>
           <Text
             $font_size="14px"
@@ -44,7 +49,7 @@ export default function Project({ project }: { project: ProjectType }) {
 }
 
 const ProjectWrapper = styled.div`
-  width: 512px;
+  width: 100%;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   transition: all 0.3s;
@@ -53,6 +58,18 @@ const ProjectWrapper = styled.div`
   &:hover {
     background-color: rgba(216, 216, 216, 0.3);
   }
+
+  &:hover img {
+    filter: brightness(90%);
+    transform: scale(1.02);
+  }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 `;
 
 const ProjectProperty = styled.div`
