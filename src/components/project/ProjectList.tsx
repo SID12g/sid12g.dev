@@ -14,7 +14,7 @@ const ProjectGrid = styled.div`
   gap: 20px;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     grid-template-columns: 1fr 1fr;
   }
 `;

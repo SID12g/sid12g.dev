@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Project({ project }: { project: ProjectType }) {
   return (
     <ProjectWrapper>
-      <Link href={`https://v2.sid12g.dev/project/${project.slug}`}>
+      <Link href={`https://v2.sid12g.dev/projects/${project.slug}`}>
         <ImageWrapper>
           <Image
             src={project.meta.image}
