@@ -13,8 +13,14 @@ const Box = styled.div<{
   $flex_direction?: string;
   $flex_grow?: number;
   $flex_flow?: string;
+  $position?: string;
   $gap?: string;
   $aspect_ratio?: string;
+  $top?: string;
+  $right?: string;
+  $bottom?: string;
+  $left?: string;
+  $z_index?: string;
 }>`
   width: ${(props) => props.$width};
   height: ${(props) => props.$height};
@@ -26,9 +32,15 @@ const Box = styled.div<{
   flex-direction: ${(props) => props.$flex_direction};
   flex-grow: ${(props) => props.$flex_grow};
   flex-flow: ${(props) => props.$flex_flow};
+  position: ${(props) => props.$position};
   gap: ${(props) => props.$gap};
   aspect-ratio: ${(props) => props.$aspect_ratio};
   overflow: hidden;
+  top: ${(props) => props.$top};
+  right: ${(props) => props.$right};
+  bottom: ${(props) => props.$bottom};
+  left: ${(props) => props.$left};
+  z-index: ${(props) => props.$z_index};
 `;
 
 export default Box;

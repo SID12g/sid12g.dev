@@ -1,18 +1,21 @@
 import Wrapper from "@/components/Wrapper";
 import Gap from "@/components/Gap";
-import Text from "@/components/Text";
 import Box from "@/components/Box";
 import Post from "@/components/post/Post";
 import { PostType } from "@/types/post.interface";
+import Banner from "@/components/Banner";
+import background from "@/../public/images/post-background.jpg";
 
 export default function PostList({ posts }: { posts: PostType[] }) {
   return (
     <Wrapper>
       <Gap $height="100px" />
-      <Text $font_size="24px" $font_weight="500" $line_height="32px">
-        Posts
-      </Text>
-      <Gap $height="20px" />
+      <Banner
+        background={background}
+        title="Post"
+        description="기술, 경험 그리고 다양한 이야기"
+      />
+      <Gap $height="40px" />
       {posts.map((post: PostType, index: number) => (
         <Box key={index}>
           <Post post={post} />
