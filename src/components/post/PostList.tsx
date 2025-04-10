@@ -1,4 +1,4 @@
-import Wrapper from "@/components/Wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import Gap from "@/components/Gap";
 import Box from "@/components/Box";
 import Post from "@/components/post/Post";
@@ -8,7 +8,7 @@ import background from "@/../public/images/post-background.jpg";
 
 export default function PostList({ posts }: { posts: PostType[] }) {
   return (
-    <Wrapper>
+    <PageWrapper>
       <Gap $height="100px" />
       <Banner
         background={background}
@@ -22,6 +22,6 @@ export default function PostList({ posts }: { posts: PostType[] }) {
           <Gap $height="12px" />
         </Box>
       ))}
-    </Wrapper>
+    </PageWrapper>
   );
 }

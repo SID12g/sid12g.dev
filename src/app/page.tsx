@@ -1,4 +1,4 @@
-import Wrapper from "@/components/Wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import Gap from "@/components/Gap";
 import Image from "next/image";
 import BackgroundImage from "@/../public/images/background.svg";
@@ -18,7 +18,7 @@ import RotateImageWrapper from "@/components/home/RotateImageWrapper";
 export default function Home() {
   return (
     <>
-      <Wrapper>
+      <PageWrapper>
         <Foreground>
           <Gap $height="100px" />
           <Profile />
@@ -43,7 +43,7 @@ export default function Home() {
           <Link />
           <Gap $height="100px" />
         </Foreground>
-      </Wrapper>
+      </PageWrapper>
       <Background>
         <RotateImageWrapper>
           <Image src={BackgroundImage} alt="Background Image" />

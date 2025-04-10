@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const PageWrapper = styled.div`
   width: 1024px;
   margin-left: auto;
   margin-right: auto;
@@ -16,4 +16,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default Wrapper;
+export default PageWrapper;

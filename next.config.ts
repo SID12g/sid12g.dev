@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["avatars.githubusercontent.com", "post.sid12g.dev"],
   },
+  transpilePackages: ["next-mdx-remote"],
 };
 
 export default nextConfig;

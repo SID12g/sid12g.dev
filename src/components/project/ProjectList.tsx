@@ -1,4 +1,4 @@
-import Wrapper from "@/components/Wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import Gap from "@/components/Gap";
 import { ProjectType } from "@/types/project.interface";
 import Project from "@/components/project/Project";
@@ -8,7 +8,7 @@ import ProjectGrid from "./ProjectGrid";
 
 export default function ProjectList({ projects }: { projects: ProjectType[] }) {
   return (
-    <Wrapper>
+    <PageWrapper>
       <Gap $height="100px" />
       <Banner
         background={background}
@@ -21,6 +21,6 @@ export default function ProjectList({ projects }: { projects: ProjectType[] }) {
           <Project key={index} project={project} />
         ))}
       </ProjectGrid>
-    </Wrapper>
+    </PageWrapper>
   );
 }
