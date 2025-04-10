@@ -33,7 +33,7 @@ async function getPost(title: string) {
 export default async function Project({
   params,
 }: {
-  params: { title: string };
+  params: Promise<{ title: string }>;
 }) {
   const resolvedParams = await params;
   const title = resolvedParams.title;
