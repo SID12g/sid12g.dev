@@ -35,6 +35,7 @@ export default function Banner({
           objectFit: "cover",
           zIndex: 0,
         }}
+        placeholder="blur"
       />
       <Box
         $position="absolute"

@@ -61,6 +61,7 @@ export default function Profile() {
           alt="Profile Image"
           width={140}
           height={140}
+          placeholder="blur"
         />
         <Gap $height="32px" />
       </ProfileImageWrapper>

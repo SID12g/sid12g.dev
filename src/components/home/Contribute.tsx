@@ -4,6 +4,7 @@ import Box from "@/components/Box";
 import Image from "next/image";
 import HyperLink from "@/components/HyperLink";
 import ContentFrame from "@/components/ContentFrame";
+import getBlurImg from "@/utils/getBlurImg";
 
 export default function Contribute() {
   return (
@@ -31,7 +32,7 @@ export default function Contribute() {
   );
 }
 
-function ContributeChildren({
+async function ContributeChildren({
   href,
   image,
   content,
@@ -40,6 +41,7 @@ function ContributeChildren({
   image: string;
   content: string;
 }) {
+  const blurImage = await getBlurImg(image);
   return (
     <HyperLink href={href}>
       <Box $width="fit-content" $display="flex" $align_items="center">
@@ -50,6 +52,8 @@ function ContributeChildren({
             width={128}
             height={128}
             style={{ width: "24px", height: "24px" }}
+            placeholder="blur"
+            blurDataURL={blurImage}
           />
         </Box>
         <Gap $width="8px" />

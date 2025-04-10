@@ -1,23 +1,10 @@
-"use client";
-
-import styled from "styled-components";
 import Wrapper from "@/components/Wrapper";
 import Gap from "@/components/Gap";
 import { ProjectType } from "@/types/project.interface";
 import Project from "@/components/project/Project";
 import Banner from "@/components/Banner";
 import background from "@/../public/images/project-background.jpg";
-
-const ProjectGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  width: 100%;
-
-  @media (min-width: 780px) {
-    grid-template-columns: 1fr 1fr;
-  }
-`;
+import ProjectGrid from "./ProjectGrid";
 
 export default function ProjectList({ projects }: { projects: ProjectType[] }) {
   return (
