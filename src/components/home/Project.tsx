@@ -11,10 +11,7 @@ export default function Project() {
     <ContentFrame title="Project">
       <GridContainer>
         {sortProjects.slice(0, 8).map((project, index) => (
-          <Link
-            key={index}
-            href={`https://v2.sid12g.dev/projects/${project.slug}`}
-          >
+          <Link key={index} href={`/project/${project.slug}`}>
             <Box
               key={index}
               $width="100%"
