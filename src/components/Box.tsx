@@ -6,6 +6,7 @@ const Box = styled.div<{
   $width?: string;
   $height?: string;
   $background_color?: string;
+  $border?: string;
   $border_radius?: string;
   $display?: string;
   $justify_content?: string;
@@ -21,11 +22,13 @@ const Box = styled.div<{
   $bottom?: string;
   $left?: string;
   $z_index?: string;
+  $overflow_x?: string;
 }>`
   width: ${(props) => props.$width};
   height: ${(props) => props.$height};
   background-color: ${(props) => props.$background_color};
   border-radius: ${(props) => props.$border_radius};
+  border: ${(props) => props.$border};
   display: ${(props) => props.$display};
   justify-content: ${(props) => props.$justify_content};
   align-items: ${(props) => props.$align_items};
@@ -35,7 +38,10 @@ const Box = styled.div<{
   position: ${(props) => props.$position};
   gap: ${(props) => props.$gap};
   aspect-ratio: ${(props) => props.$aspect_ratio};
+  overflow-x: ${(props) => props.$overflow_x};
   overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   top: ${(props) => props.$top};
   right: ${(props) => props.$right};
   bottom: ${(props) => props.$bottom};
