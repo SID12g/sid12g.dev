@@ -37,9 +37,10 @@ async function getPost(title: string) {
 export default async function Project({
   params,
 }: {
-  params: { title: string };
+  params: Promise<{ title: string }> | undefined;
 }) {
-  const title = params.title;
+  const resolvedParams = await Promise.resolve(params || { title: "" });
+  const title = resolvedParams.title;
   const props = await getPost(title);
   const blurImg = await getBlurImg(props.frontMatter.image);
   return (
