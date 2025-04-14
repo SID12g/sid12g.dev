@@ -39,8 +39,7 @@ export default async function Project({
 }: {
   params: { title: string };
 }) {
-  const resolvedParams = await params;
-  const title = resolvedParams.title;
+  const title = params.title;
   const props = await getPost(title);
   const blurImg = await getBlurImg(props.frontMatter.image);
   return (
