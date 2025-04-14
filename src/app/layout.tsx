@@ -18,6 +18,11 @@ const tossFace = localFont({
   variable: "--font-toss-face",
 });
 
+const menlo = localFont({
+  src: "./fonts/Menlo-Regular.ttf",
+  variable: "--font-menlo",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://sid12g.dev"),
   title: "sid12g • 조성민",
@@ -35,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${wantedSans.variable} ${tossFace.variable}`}
+        className={`${wantedSans.variable} ${tossFace.variable} ${menlo.variable}`}
         style={{ overflowX: "hidden", backgroundColor: "#fafafa" }}
       >
         <StyledComponentsRegistry>

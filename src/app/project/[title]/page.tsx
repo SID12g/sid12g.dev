@@ -166,7 +166,7 @@ export default async function Project({
         </Box>
         <Gap $height="20px" />
         <Box $width="100%" $height="1px" $background_color="#e5e7eb;" />
-        <Gap $height="20px" />
+        {/* <Gap $height="20px" /> */}
         <MDXRemoteWrapper>
           <MDXRemote source={props.content} />
         </MDXRemoteWrapper>

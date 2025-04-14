@@ -20,13 +20,13 @@ const MDXRemoteWrapper = styled.div`
   & img + em {
     font-size: 16px;
     text-align: center;
-    color: var(--text-grey-color);
+    color: #4e5968;
     display: block;
     font-style: normal;
   }
 
   & p {
-    color: var(--text-grey-color);
+    color: #4e5968;
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
@@ -42,7 +42,7 @@ const MDXRemoteWrapper = styled.div`
   }
 
   & li {
-    color: var(--text-grey-color);
+    color: #4e5968;
     font-size: 18px;
     line-height: 32px;
   }
@@ -133,7 +133,7 @@ const MDXRemoteWrapper = styled.div`
     margin: 40px 0;
     padding: 8px 32px;
     border-radius: 24px;
-    background-color: var(--background-grey-color);
+    background-color: #f2f4f6;
     display: flex;
     align-items: center;
   }
@@ -146,7 +146,7 @@ const MDXRemoteWrapper = styled.div`
   }
 
   & blockquote::before {
-    content: url("/docs.svg");
+    content: url("/icons/docs.svg");
     display: flex;
     align-items: center;
     margin-right: 16px;
@@ -164,14 +164,14 @@ const MDXRemoteWrapper = styled.div`
 
   & code span {
     font-size: 14px;
-    font-family: var(--font-menlo);
-    color: var(--text-black-color);
+    font-family: var(--font-menlo) !important;
+    color: var(#000000);
   }
 
   & code span span {
     font-size: 14px;
-    font-family: var(--font-menlo);
-    color: var(--text-black-color);
+    font-family: var(--font-menlo) !important;
+    color: var(#000000);
   }
 
   & pre::-webkit-scrollbar {
@@ -180,13 +180,13 @@ const MDXRemoteWrapper = styled.div`
 
   & div {
     font-size: 14px;
-    font-family: var(--font-menlo);
+    font-family: var(--font-menlo) !important;
     color: #666666;
     background-color: #fafafa;
     padding: 16px 20px;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
-    border: 1.6px solid var(--border-grey-color);
+    border: 1.6px solid #ededed;
     border-bottom: none;
   }
 
@@ -198,7 +198,7 @@ const MDXRemoteWrapper = styled.div`
     padding: 16px 24px;
     margin: 0;
     margin-bottom: 20px;
-    border: 1.6px solid var(--border-grey-color);
+    border: 1.6px solid #ededed;
   }
 
   & figure {
@@ -206,7 +206,7 @@ const MDXRemoteWrapper = styled.div`
     padding: 16px 24px;
     margin: 0;
     margin-bottom: 20px;
-    border: 1.6px solid var(--border-grey-color);
+    border: 1.6px solid #ededed;
   }
 
   & h2[id="contents"] {
@@ -214,16 +214,16 @@ const MDXRemoteWrapper = styled.div`
     margin-bottom: 0;
     padding: 28px 0 0 32px;
     font-size: 28px;
-    background-color: var(--background-color);
-    border: 1px solid var(--border-grey-color);
+    background-color: #fafafa;
+    border: 1px solid #ededed;
     border-bottom: none;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
   }
 
   & h2[id="contents"] + ul {
-    background-color: var(--background-color);
-    border: 1px solid var(--border-grey-color);
+    background-color: #fafafa;
+    border: 1px solid #ededed;
     border-top: none;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
@@ -237,7 +237,7 @@ const MDXRemoteWrapper = styled.div`
   }
 
   & h2[id="contents"] + ul a {
-    color: var(--text-grey-color);
+    color: #4e5968;
     text-decoration: none;
     transition: color 0.2s ease;
   }
