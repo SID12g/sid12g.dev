@@ -14,6 +14,36 @@ import TeamIcon from "@/../public/icons/team.svg";
 import DateIcon from "@/../public/icons/date.svg";
 import SourceIcon from "@/../public/icons/source.svg";
 import Link from "next/link";
+import rehypeSlug from "rehype-slug";
+import remarkToc from "remark-toc";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeCodeTitles from "rehype-code-titles";
+
+const options: any = {
+  mdxOptions: {
+    remarkPlugins: [remarkToc],
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeCodeTitles,
+      [
+        rehypePrettyCode,
+        {
+          theme: "github-light",
+        },
+      ],
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          properties: {
+            className: ["anchor"],
+          },
+        },
+      ],
+    ],
+  },
+};
 
 export async function generateStaticParams() {
   return sortProjects.map((project) => ({
@@ -168,7 +198,7 @@ export default async function Project({
         <Box $width="100%" $height="1px" $background_color="#e5e7eb;" />
         {/* <Gap $height="20px" /> */}
         <MDXRemoteWrapper>
-          <MDXRemote source={props.content} />
+          <MDXRemote source={props.content} options={options} />
         </MDXRemoteWrapper>
       </ProjectPageWrapper>
     </>

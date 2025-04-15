@@ -206,6 +206,7 @@ const MDXRemoteWrapper = styled.div`
     padding: 16px 24px;
     margin: 0;
     margin-bottom: 20px;
+    background-color: #ffffff;
     border: 1.6px solid #ededed;
   }
 
