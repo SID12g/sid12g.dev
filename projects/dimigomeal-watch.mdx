@@ -10,4 +10,66 @@ source: https://github.com/SID12g/dimigomeal-watch
 order: "500"
 ---
 
-[디미고 급식](https://github.com/dimigomeal)의 웹 페이지, iOS 앱을 참고하여 만든 애플워치용 디미고 급식입니다.
+> 본 프로젝트는 [디미고 급식](https://github.com/dimigomeal)의 웹 페이지, iOS 앱을 참고하여 만든 [디미고 급식](https://github.com/dimigomeal)과 별개의 프로젝트입니다.
+
+### 프로젝트 소개
+
+[디미고 급식](https://github.com/dimigomeal)은 한국디지털미디어고등학교 급식을 조회할 수 있는 서비스로 [웹](https://디미고급식.com)과 [iOS 앱](https://github.com/dimigomeal/ios)을 통해 제공되고 있습니다. 저는 이를 Apple Watch용 앱으로도 제공한다면, Apple Watch를 차고 있는 학생이 많은 본교 특성 상 Apple Watch의 활용도 및 학생들의 편의가 높아질 것이라고 생각하여 제작하였습니다.
+
+### 프로젝트 준비
+
+우선 저는 원래 Frontend(Web, Mobile)과 Backend 능력만을 가지고 있었기에, Apple Watch용 앱을 제작하기 위해서, Swift와 SwiftUI를 학습해야 했습니다. 이를 학습하기 위해 남는 시간마다 Swift 관련 문서와 강좌를 보면서 학습하였습니다.
+
+### 프로젝트 구현
+
+가장 중요한 급식 내용을 가져오기 위해 [디미고 급식](https://github.com/dimigomeal)에서 제공하고 있는 [디미고 급식 API](https://api.xn--299a1v27nvthhjj.com/)를 사용하였습니다.
+
+[https://api.디미고급식.com/meal/YYYY-MM-DD](https://api.디미고급식.com/meal/2025-04-15) 형식으로 요청을 보낸다면 아래와 같은 응답이 반환됩니다.
+
+```json:response.json
+{
+  "breakfast": "미니새우버거/쌀밥/순두부찌개/비엔나소세지케찹조림/들깨궁채나물볶음/포기김치/망고그린샐러드/크런치오트,콘푸레이크/우유,저지방우유,락토프리우유,두유,엑티비아유산균음료1택/비타씨",
+  "date": "2025-04-15",
+  "dinner": "콘치즈떡갈비오븐구이/들기름묵은지곤드레밥/쌀밥/소고기무국/진미채쪽파무침/파래금구이&양념장/갓김치/수정과/바나나/샐러드바/비빔코너/훈제오리샐러드+고구마/닭가슴살찜닭맛/선식",
+  "lunch": "어묵국/백미밥/로제순살찜닭/당면만두튀김&고구마튀김/마늘쫑버섯볶음/배추겉절이/토핑요거트"
+}
+```
+
+이와 같은 응답을 SwiftUI를 통해 표시할 수 있도록 하였습니다.
+
+```swift
+  func fetchMeal() {
+        let formattedDate = formatDateToYYYYMMDD(date: date)
+        guard let url = URL(string: "https://api.xn--299a1v27nvthhjj.com/meal/\(formattedDate)") else {
+            print("잘못된 Request")
+            return
+        }
+
+        isLoading = true
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                do {
+                    let decodedData = try JSONDecoder().decode(MealData.self, from: data)
+                    DispatchQueue.main.async {
+                        self.meal = decodedData
+                        self.isLoading = false
+                    }
+                } catch {
+                    print("JSON 변환 실패: \(error.localizedDescription)")
+                    DispatchQueue.main.async {
+                        self.isLoading = false
+                    }
+                }
+            } else if let error = error {
+                print("오류: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
+            }
+        }.resume()
+    }
+}
+```
+
+![MealView](/projects/dimigomeal-watch/meal-view.png) _Apple Watch 앱 화면_
