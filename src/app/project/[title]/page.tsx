@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { sortProjects } from "@/utils/getProject";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import MDXRemoteWrapper from "@/components/project/MDXRemoteWrapper";
 import Image from "next/image";
 import Gap from "@/components/Gap";
@@ -20,31 +20,24 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeCodeTitles from "rehype-code-titles";
 
-const options: any = {
+const options = {
   mdxOptions: {
-    remarkPlugins: [remarkToc],
+    remarkPlugins: [[remarkToc]],
     rehypePlugins: [
       rehypeSlug,
       rehypeCodeTitles,
-      [
-        rehypePrettyCode,
-        {
-          theme: "github-light",
+      [rehypePrettyCode, {
+        theme: "github-light",
+      }],
+      [rehypeAutolinkHeadings, {
+        behavior: "wrap",
+        properties: {
+          className: ["anchor"],
         },
-      ],
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-          properties: {
-            className: ["anchor"],
-          },
-        },
-      ],
+      }],
     ],
   },
 };
-
 export async function generateStaticParams() {
   return sortProjects.map((project) => ({
     slug: project.slug,
@@ -198,7 +191,10 @@ export default async function Project({
         <Box $width="100%" $height="1px" $background_color="#e5e7eb;" />
         {/* <Gap $height="20px" /> */}
         <MDXRemoteWrapper>
-          <MDXRemote source={props.content} options={options} />
+          <MDXRemote
+            source={props.content}
+            options={options as MDXRemoteProps['options']}
+          />
         </MDXRemoteWrapper>
       </ProjectPageWrapper>
     </>
