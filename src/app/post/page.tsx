@@ -1,8 +1,6 @@
 import PostList from "@/components/post/PostList";
 import { PostType } from "@/types/post.interface";
 
-export const dynamic = "force-dynamic";
-
 export default async function Post() {
   try {
     const response = await fetch("https://post.sid12g.dev/api/posts/latest");

@@ -26,15 +26,21 @@ const options = {
     rehypePlugins: [
       rehypeSlug,
       rehypeCodeTitles,
-      [rehypePrettyCode, {
-        theme: "github-light",
-      }],
-      [rehypeAutolinkHeadings, {
-        behavior: "wrap",
-        properties: {
-          className: ["anchor"],
+      [
+        rehypePrettyCode,
+        {
+          theme: "github-light",
         },
-      }],
+      ],
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          properties: {
+            className: ["anchor"],
+          },
+        },
+      ],
     ],
   },
 };
@@ -193,7 +199,7 @@ export default async function Project({
         <MDXRemoteWrapper>
           <MDXRemote
             source={props.content}
-            options={options as MDXRemoteProps['options']}
+            options={options as MDXRemoteProps["options"]}
           />
         </MDXRemoteWrapper>
       </ProjectPageWrapper>
