@@ -40,6 +40,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <meta
+          name="naver-site-verification"
+          content="5fb50fe340c9be3669bda9c08d5e5bcd59f7d40a"
+        />
+      </head>
       <body
         className={`${wantedSans.variable} ${tossFace.variable} ${menlo.variable}`}
         style={{ overflowX: "hidden", backgroundColor: "#fafafa" }}
