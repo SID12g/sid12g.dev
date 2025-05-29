@@ -6,12 +6,15 @@ import { sortProjects } from "@/utils/getProject";
 import GridContainer from "@/components/home/GridContainer";
 import Image from "next/image";
 import getBlurImg from "@/utils/getBlurImg";
+import MobileOnly from "../MobileOnly";
 
-export default function Project() {
+export default async function Project() {
+  const blurImg = await getBlurImg(sortProjects[7].meta.preview);
+
   return (
     <ContentFrame title="Project">
       <GridContainer>
-        {sortProjects.slice(0, 8).map(async (project, index) => {
+        {sortProjects.slice(0, 7).map(async (project, index) => {
           const blurImg = await getBlurImg(project.meta.preview);
           return (
             <Link key={index} href={`/project/${project.slug}`}>
@@ -35,15 +38,26 @@ export default function Project() {
             </Link>
           );
         })}
-        {/* <MobileOnly $max_width="580px">
-          <Box
-            $width="100%"
-            $height="100%"
-            $background_color="red"
-            // $border_radius="8px"
-            $aspect_ratio="1"
-          ></Box>
-        </MobileOnly> */}
+        <MobileOnly $max_width="580px">
+          <Link href={`/project/${sortProjects[7].slug}`}>
+            <Box
+              $width="100%"
+              $height="100%"
+              $border_radius="8px"
+              $aspect_ratio="1"
+            >
+              <Image
+                src={sortProjects[7].meta.preview}
+                width={512}
+                height={512}
+                alt="preview"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                placeholder="blur"
+                blurDataURL={blurImg}
+              />
+            </Box>
+          </Link>
+        </MobileOnly>
         <Link href="/project">
           <Box
             $width="100%"
