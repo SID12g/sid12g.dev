@@ -45,12 +45,12 @@ export default function Profile() {
           </Box>
         </HyperLink>
         <Gap $height="4px" />
-        <HyperLink href="mailto:ad@sid12g.dev">
+        <HyperLink href="mailto:i@sid12g.dev">
           <Box $display="flex" $align_items="center">
             <Image src={MailIcon} alt="Mail Icon" />
             <Gap $width="4px" />
             <Text $font_size="14px" $letter_spacing="-0.14px">
-              ad@sid12g.dev
+              i@sid12g.dev
             </Text>
           </Box>
         </HyperLink>
