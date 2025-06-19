@@ -1,47 +1,35 @@
 "use client";
 
+import Link from "next/link";
 import styled from "styled-components";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Gap from "@/components/Gap";
 import Text from "@/components/Text";
 
 export default function Navbar() {
-  const router = useRouter();
   const pathname = usePathname().split("/")[1];
 
   return (
     <NavbarWrapper>
-      <Button
-        $draggable={pathname === ""}
-        draggable={pathname === ""}
-        onClick={() => {
-          router.push("/");
-        }}
-      >
-        <Text $font_size="14px" $font_weight="400">
-          Home
-        </Text>
-      </Button>
+      <Link href="/">
+        <Button $draggable={pathname === ""}>
+          <Text $font_size="14px" $font_weight="400">
+            Home
+          </Text>
+        </Button>
+      </Link>
       <Gap $width="6px" />
-      <Button
-        $draggable={pathname === "project"}
-        draggable={pathname === "project"}
-        onClick={() => {
-          router.push("/project");
-        }}
-      >
-        <Text $font_size="14px">Project</Text>
-      </Button>
+      <Link href="/project">
+        <Button $draggable={pathname === "project"}>
+          <Text $font_size="14px">Project</Text>
+        </Button>
+      </Link>
       <Gap $width="6px" />
-      <Button
-        $draggable={pathname === "post"}
-        draggable={pathname === "post"}
-        onClick={() => {
-          router.push("/post");
-        }}
-      >
-        <Text $font_size="14px">Post</Text>
-      </Button>
+      <Link href="/post">
+        <Button $draggable={pathname === "post"}>
+          <Text $font_size="14px">Post</Text>
+        </Button>
+      </Link>
     </NavbarWrapper>
   );
 }
