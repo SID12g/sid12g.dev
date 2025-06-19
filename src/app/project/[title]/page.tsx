@@ -19,8 +19,6 @@ import remarkToc from "remark-toc";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeCodeTitles from "rehype-code-titles";
-import CustomVideo from "@/components/common/CustomVideo";
-import CustomPdf from "@/components/common/CustomPdf";
 
 const options = {
   mdxOptions: {
@@ -201,10 +199,6 @@ export default async function Project({
         <MDXRemoteWrapper>
           <MDXRemote
             source={props.content}
-            components={{
-              Video: CustomVideo,
-              Pdf: CustomPdf,
-            }}
             options={options as MDXRemoteProps["options"]}
           />
         </MDXRemoteWrapper>
