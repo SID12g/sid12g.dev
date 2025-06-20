@@ -20,7 +20,7 @@ export default function Profile() {
         </Text>
         <Gap $height="8px" />
         <Text $font_size="20px" $letter_spacing="-0.04px">
-          Fullstack Developer
+          Frontend Developer
         </Text>
         <Gap $height="16px" />
         <Box $width="100px" $height="1px" $background_color="#000000" />

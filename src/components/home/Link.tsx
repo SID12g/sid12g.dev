@@ -13,7 +13,10 @@ export default function Link() {
       <Box $flex_grow={1}>
         <LinkChildren href="https://post.sid12g.dev" image={PostIcon} />
         <Gap $height="8px" />
-        <LinkChildren href="https://www.linkedin.com/in" image={LinkedinIcon} />
+        <LinkChildren
+          href="https://www.linkedin.com/in/sid12g"
+          image={LinkedinIcon}
+        />
       </Box>
     </ContentFrame>
   );
