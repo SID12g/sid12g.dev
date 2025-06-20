@@ -72,6 +72,7 @@ export default async function Project({
   const title = resolvedParams.title;
   const props = await getPost(title);
   const blurImg = await getBlurImg(props.frontMatter.image);
+  const blurLogoImg = await getBlurImg(props.frontMatter.logo);
   return (
     <>
       <ProjectPageWrapper>
@@ -109,6 +110,8 @@ export default async function Project({
                 border: "1px solid #e0e0e0",
                 borderRadius: 8,
               }}
+              placeholder="blur"
+              blurDataURL={blurLogoImg}
             />
             <Gap $width="16px" />
             <Box>
