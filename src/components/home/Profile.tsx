@@ -59,8 +59,8 @@ export default function Profile() {
         <Image
           src={ProfileImage}
           alt="Profile Image"
-          width={140}
-          height={140}
+          width={256}
+          height={256}
           placeholder="blur"
         />
         <Gap $height="32px" />
@@ -83,6 +83,12 @@ const ProfileImageWrapper = styled.div`
   height: 140px;
   border-radius: 1000px;
   overflow: hidden;
+
+  img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
 
   @media (max-width: 824px) {
     margin-bottom: 52px;
