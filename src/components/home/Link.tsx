@@ -4,7 +4,8 @@ import Box from "@/components/Box";
 import Image from "next/image";
 import PostIcon from "@/../public/icons/post.svg";
 import LinkedinIcon from "@/../public/icons/linkedin.svg";
-import PortfolioIcon from "@/../public/icons/portfolio.svg"
+import RocketIcon from "@/../public/icons/rocket.svg";
+import PortfolioIcon from "@/../public/icons/portfolio.svg";
 import HyperLink from "@/components/HyperLink";
 import ContentFrame from "@/components/ContentFrame";
 
@@ -17,6 +18,11 @@ export default function Link() {
         <LinkChildren
           href="https://www.linkedin.com/in/sid12g"
           image={LinkedinIcon}
+        />
+        <Gap $height="8px" />
+        <LinkChildren
+          href="https://www.rocketpunch.com/@sid12g"
+          image={RocketIcon}
         />
         <Gap $height="8px" />
         <LinkChildren

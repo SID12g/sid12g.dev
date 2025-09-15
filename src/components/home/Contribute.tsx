@@ -45,7 +45,12 @@ async function ContributeChildren({
   return (
     <HyperLink href={href}>
       <Box $width="fit-content" $display="flex" $align_items="center">
-        <Box $width="24px" $height="24px" $border_radius="100px">
+        <Box
+          $width="24px"
+          $height="24px"
+          $border_radius="100px"
+          style={{ minWidth: "24px", minHeight: "24px" }}
+        >
           <Image
             src={image}
             alt="Contribute Icon"
