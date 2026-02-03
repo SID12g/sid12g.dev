@@ -3,7 +3,7 @@ import Gap from "@/components/Gap";
 import Image from "next/image";
 import BackgroundImage from "@/../public/images/background.svg";
 import Profile from "@/components/home/Profile";
-import WorkExperience from "@/components/home/WorkExperience";
+// import WorkExperience from "@/components/home/WorkExperience";
 import Education from "@/components/home/Education";
 import ResponsiveGap from "@/components/ResponsiveGap";
 import Skill from "@/components/home/Skill";
@@ -24,8 +24,8 @@ export default function Home() {
           <Profile />
           <Gap $height="68px" />
           <Intro />
-          <Gap $height="32px" />
-          <WorkExperience />
+          {/* <Gap $height="32px" /> */}
+          {/* <WorkExperience /> */}
           <Gap $height="32px" />
           <ResponsiveGap $height="0" $r_height="32px" />
           <Education />
