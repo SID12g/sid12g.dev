@@ -25,12 +25,12 @@ export default function Profile() {
         <Gap $height="16px" />
         <Box $width="100px" $height="1px" $background_color="#000000" />
         <Gap $height="16px" />
-        <HyperLink href="https://dimigo.hs.kr">
+        <HyperLink href="https://uos.ac.kr">
           <Box $display="flex" $align_items="center">
             <Image src={EducationIcon} alt="Education Icon" />
             <Gap $width="4px" />
             <Text $font_size="14px" $letter_spacing="-0.14px">
-              Korea Digital Media High School
+              University of Seoul
             </Text>
           </Box>
         </HyperLink>
