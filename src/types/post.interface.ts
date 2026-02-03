@@ -1,11 +1,9 @@
 export interface PostType {
-  meta: {
+  metadata: {
     title: string;
-    date: string;
-    description: string;
-    image: string;
-    tag: string;
+    publishedAt: string;
+    summary: string;
+    tag: string[];
   };
   slug: string;
-  url: string;
 }

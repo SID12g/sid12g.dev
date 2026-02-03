@@ -5,7 +5,11 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ["avatars.githubusercontent.com", "post.sid12g.dev"],
+    domains: [
+      "avatars.githubusercontent.com",
+      "post.sid12g.dev",
+      "blog.sid12g.dev",
+    ],
   },
   transpilePackages: ["next-mdx-remote"],
 };

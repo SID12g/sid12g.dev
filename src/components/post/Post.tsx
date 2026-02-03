@@ -8,14 +8,14 @@ import { PostType } from "@/types/post.interface";
 
 export default function Post({ post }: { post: PostType }) {
   return (
-    <Link href={post.url}>
+    <Link href={`https://blog.sid12g.dev/${post.slug}`}>
       <PostWrapper>
         <Text
           $font_size="14px"
           $color="#4E5968"
           $line_height="22px"
           $letter_spacing="-0.28px"
-        >{`${post.meta.date} · ${post.meta.tag}`}</Text>
+        >{`${post.metadata.publishedAt} · ${post.metadata.tag}`}</Text>
         <Gap $height="4px" />
         <Text
           $font_size="16px"
@@ -23,11 +23,11 @@ export default function Post({ post }: { post: PostType }) {
           $line_height="24px"
           $letter_spacing="-0.32px"
         >
-          {post.meta.title}
+          {post.metadata.title}
         </Text>
         <Gap $height="4px" />
         <Text $font_size="14px" $line_height="22px" $letter_spacing="-0.28px">
-          {post.meta.description}
+          {post.metadata.summary}
         </Text>
       </PostWrapper>
     </Link>
