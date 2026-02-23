@@ -9,30 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.74.4",
-    "@tanstack/react-query-devtools": "^5.74.4",
+    "@tanstack/react-query": "^5.90.21",
+    "@tanstack/react-query-devtools": "^5.91.3",
     "gray-matter": "^4.0.3",
     "next": "15.2.8",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "plaiceholder": "^3.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "rehype-autolink-headings": "^7.1.0",
-    "rehype-code-titles": "^1.2.0",
+    "rehype-code-titles": "^1.2.1",
     "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",
     "remark-toc": "^9.0.0",
-    "sharp": "^0.34.1",
-    "shiki": "^3.2.2",
-    "styled-components": "^6.1.15"
+    "sharp": "^0.34.5",
+    "shiki": "^3.22.0",
+    "styled-components": "^6.3.11"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.3",
+    "@types/node": "^20.19.33",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.3",
     "eslint-config-next": "15.1.7",
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   }
 }
