@@ -17,6 +17,9 @@ importers:
       next:
         specifier: 16.1.6
         version: 16.1.6(@babel/core@7.29.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      next-image-blur:
+        specifier: ^1.0.2
+        version: 1.0.2(next@16.1.6(@babel/core@7.29.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(plaiceholder@3.0.0(sharp@0.34.5))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sharp@0.34.5)
       next-mdx-remote:
         specifier: ^6.0.0
         version: 6.0.0(@types/react@19.2.14)(react@19.2.3)
@@ -1857,6 +1860,15 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
+  next-image-blur@1.0.2:
+    resolution: {integrity: sha512-ty7mZXSCo5AfEMPUfJP+duMWnY0ojNEjOYbVKDSPwQZoOru7VlBBN/31RNN1iPMeXoxyODWW7Hrt/OM817Ggyg==}
+    peerDependencies:
+      next: '>=10.0.0'
+      plaiceholder: ^3.0.0
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      sharp: ^0.34.1
+
   next-mdx-remote@6.0.0:
     resolution: {integrity: sha512-cJEpEZlgD6xGjB4jL8BnI8FaYdN9BzZM4NwadPe1YQr7pqoWjg9EBCMv3nXBkuHqMRfv2y33SzUsuyNh9LFAQQ==}
     engines: {node: '>=14', npm: '>=7'}
@@ -1967,6 +1979,11 @@ packages:
   picomatch@4.0.3:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
+
+  plaiceholder@3.0.0:
+    resolution: {integrity: sha512-jwHxxHPnr1BwRzPCeZgEK2BMsEy2327sWynw3qb6XC/oGgGDUTPtR8pFxFQmNArhMBwhkUbUr5OPhhIJpCa8eQ==}
+    peerDependencies:
+      sharp: '>= 0.30.6'
 
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
@@ -4621,6 +4638,14 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
+  next-image-blur@1.0.2(next@16.1.6(@babel/core@7.29.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(plaiceholder@3.0.0(sharp@0.34.5))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sharp@0.34.5):
+    dependencies:
+      next: 16.1.6(@babel/core@7.29.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      plaiceholder: 3.0.0(sharp@0.34.5)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      sharp: 0.34.5
+
   next-mdx-remote@6.0.0(@types/react@19.2.14)(react@19.2.3):
     dependencies:
       '@babel/code-frame': 7.29.0
@@ -4759,6 +4784,10 @@ snapshots:
   picomatch@2.3.1: {}
 
   picomatch@4.0.3: {}
+
+  plaiceholder@3.0.0(sharp@0.34.5):
+    dependencies:
+      sharp: 0.34.5
 
   possible-typed-array-names@1.1.0: {}
 

@@ -12,6 +12,7 @@
     "geist": "^1.7.0",
     "gray-matter": "^4.0.3",
     "next": "16.1.6",
+    "next-image-blur": "^1.0.2",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",

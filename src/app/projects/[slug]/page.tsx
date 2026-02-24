@@ -7,6 +7,7 @@ import Link from "next/link";
 import { getProjects } from "@/lib/projects";
 import { notFound } from "next/navigation";
 import remarkGfm from "remark-gfm";
+import { getBlurDataUrl } from "next-image-blur";
 
 export async function generateStaticParams() {
   const projects = getProjects();
@@ -50,6 +51,9 @@ export default async function ProjectDetailPage({
 
   const { frontMatter, content } = project;
 
+  const thumbnailBlurDataURL = await getBlurDataUrl(frontMatter.image);
+  const iconBlurDataURL = await getBlurDataUrl(frontMatter.logo);
+
   return (
     <section>
       {/* Thumbnail */}
@@ -61,6 +65,8 @@ export default async function ProjectDetailPage({
           height={675}
           className="w-full h-auto object-cover"
           priority
+          placeholder="blur"
+          blurDataURL={thumbnailBlurDataURL}
         />
       </div>
 
@@ -73,6 +79,8 @@ export default async function ProjectDetailPage({
             width={48}
             height={48}
             className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+            placeholder="blur"
+            blurDataURL={iconBlurDataURL}
           />
           <div>
             <h1 className="text-lg font-medium text-neutral-900 dark:text-neutral-100">
