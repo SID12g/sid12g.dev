@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/nav";
+import Providers from "@/components/providers";
 
 export const metadata: Metadata = {
   title: "sid12g • 조성민",
@@ -44,11 +45,13 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased max-w-2xl mx-auto mt-8 px-4">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
-        </main>
+        <Providers>
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+            <Navbar />
+            {children}
+            <Footer />
+          </main>
+        </Providers>
       </body>
     </html>
   );

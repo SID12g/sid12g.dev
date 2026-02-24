@@ -3,6 +3,7 @@ import Intro from "@/components/intro";
 import Education from "@/components/education";
 import Skill from "@/components/skill";
 import ProjectPreview from "@/components/project-preview";
+import PostPreview from "@/components/post-preview";
 import Contribute from "@/components/contribute";
 import Links from "@/components/links";
 
@@ -16,6 +17,7 @@ export default function Page() {
       <Education />
       <Skill />
       <ProjectPreview />
+      <PostPreview />
       <Contribute />
       <Links />
     </section>
