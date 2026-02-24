@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getProjects } from "@/lib/projects";
 
 export const metadata = {
-  title: "Project",
+  title: "Projects",
   description: "혼자, 함께 해왔던 프로젝트",
 };
 
@@ -13,7 +13,7 @@ export default function ProjectsPage() {
   return (
     <section>
       <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 mb-2">
-        Project
+        Projects
       </h1>
       <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-8">
         혼자, 함께 해왔던 프로젝트

@@ -9,7 +9,7 @@ export default function ProjectPreview() {
   const mobileMoreBg = projects[8];
 
   return (
-    <Section title="Project">
+    <Section title="Projects">
       <div className="grid grid-cols-4 gap-3 max-[580px]:grid-cols-3 max-[480px]:gap-2">
         {projects.slice(0, 8).map((project, index) => (
           <Link
