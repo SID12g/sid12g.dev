@@ -20,7 +20,7 @@ function EducationItem({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg font-medium text-neutral-900 dark:text-neutral-100 hover:underline"
+          className="text-lg font-medium text-neutral-900 dark:text-neutral-100 rounded px-1 -mx-1 transition hover:bg-neutral-100 dark:hover:bg-neutral-900"
         >
           {title}
         </a>
