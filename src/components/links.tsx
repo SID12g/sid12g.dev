@@ -21,7 +21,7 @@ const links = [
 
 export default function Links() {
   return (
-    <Section title="Link">
+    <Section title="Links">
       <div className="flex flex-col gap-2.5">
         {links.map((link) => (
           <a

@@ -9,9 +9,9 @@ const skills = [
   "Swift",
 ];
 
-export default function Skill() {
+export default function Skills() {
   return (
-    <Section title="Skill">
+    <Section title="Skills">
       <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
           <span

@@ -1,11 +1,11 @@
 import Profile from "@/components/profile";
 import Intro from "@/components/intro";
 import Education from "@/components/education";
-import Skill from "@/components/skill";
 import ProjectPreview from "@/components/project-preview";
 import PostPreview from "@/components/post-preview";
-import Contribute from "@/components/contribute";
 import Links from "@/components/links";
+import Skills from "@/components/skills";
+import Contributions from "@/components/contributions";
 
 export default function Page() {
   return (
@@ -15,10 +15,10 @@ export default function Page() {
       <Intro />
       <div className="mt-10" />
       <Education />
-      <Skill />
+      <Skills />
       <ProjectPreview />
       <PostPreview />
-      <Contribute />
+      <Contributions />
       <Links />
     </section>
   );

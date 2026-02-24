@@ -31,9 +31,9 @@ const contributes = [
   },
 ];
 
-export default function Contribute() {
+export default function Contributions() {
   return (
-    <Section title="Contribute">
+    <Section title="Contributions">
       <div className="flex flex-col gap-2.5">
         {contributes.map((item) => (
           <a
