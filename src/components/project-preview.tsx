@@ -5,6 +5,8 @@ import { getProjects } from "@/lib/projects";
 
 export default function ProjectPreview() {
   const projects = getProjects();
+  const desktopMoreBg = projects[7];
+  const mobileMoreBg = projects[8];
 
   return (
     <Section title="Project">
@@ -27,8 +29,26 @@ export default function ProjectPreview() {
           </Link>
         ))}
         <Link href="/projects">
-          <div className="aspect-square rounded-lg bg-neutral-900 dark:bg-neutral-100 flex items-center justify-center hover:opacity-80 transition-opacity">
-            <span className="text-sm text-white dark:text-black">더보기</span>
+          <div className="aspect-square rounded-lg overflow-hidden relative flex items-center justify-center hover:opacity-80 transition-opacity bg-neutral-900 dark:bg-neutral-100">
+            {desktopMoreBg && (
+              <Image
+                src={desktopMoreBg.meta.preview}
+                width={256}
+                height={256}
+                alt="더보기"
+                className="absolute inset-0 w-full h-full object-cover brightness-[0.3] max-[580px]:hidden"
+              />
+            )}
+            {mobileMoreBg && (
+              <Image
+                src={mobileMoreBg.meta.preview}
+                width={256}
+                height={256}
+                alt="더보기"
+                className="absolute inset-0 w-full h-full object-cover brightness-[0.3] hidden max-[580px]:block"
+              />
+            )}
+            <span className="text-sm text-white relative z-10">더보기</span>
           </div>
         </Link>
       </div>
