@@ -1,62 +1,54 @@
+import "./global.css";
 import type { Metadata } from "next";
-import "./globals.css";
-import localFont from "next/font/local";
-import StyledComponentsRegistry from "@/lib/registry";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Providers from "./providers";
-
-const wantedSans = localFont({
-  src: "./fonts/WantedSansVariable.woff2",
-  variable: "--font-wanted-sans",
-  weight: "100 900",
-  style: "normal",
-  display: "swap",
-});
-
-const tossFace = localFont({
-  src: "./fonts/TossFaceFontMac.ttf",
-  variable: "--font-toss-face",
-});
-
-const menlo = localFont({
-  src: "./fonts/Menlo-Regular.ttf",
-  variable: "--font-menlo",
-});
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import Footer from "@/components/footer";
+import { Navbar } from "@/components/nav";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sid12g.dev"),
   title: "sid12g • 조성민",
   description: "안녕하세요 조성민입니다.",
   openGraph: {
-    images: "https://sid12g.dev/images/og-image.png",
+    title: "sid12g • 조성민",
+    description: "안녕하세요 조성민입니다.",
+    locale: "ko_KR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const cx = (...classes: string[]) => classes.filter(Boolean).join(" ");
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="ko">
-      <head>
-        <meta
-          name="naver-site-verification"
-          content="5fb50fe340c9be3669bda9c08d5e5bcd59f7d40a"
-        />
-      </head>
-      <body
-        className={`${wantedSans.variable} ${tossFace.variable} ${menlo.variable}`}
-        style={{ overflowX: "hidden", backgroundColor: "#fafafa" }}
-      >
-        <Providers>
-          <StyledComponentsRegistry>
-            <Navbar />
-            {children}
-            <Footer />
-          </StyledComponentsRegistry>
-        </Providers>
+    <html
+      lang="ko"
+      className={cx(
+        "text-black bg-white dark:text-white dark:bg-black",
+        GeistSans.variable,
+        GeistMono.variable,
+      )}
+    >
+      <body className="antialiased max-w-2xl mx-auto mt-8 px-4">
+        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
