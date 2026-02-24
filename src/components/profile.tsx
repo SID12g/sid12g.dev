@@ -16,23 +16,29 @@ export default function Profile() {
             href="https://uos.ac.kr"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            className="flex gap-2.5 group"
           >
-            🎓 University of Seoul
+            <span className="text-base shrink-0">🎓</span>
+            <span className="text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+              University of Seoul
+            </span>
           </a>
           <a
             href="https://github.com/SID12g"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            className="flex gap-2.5 group"
           >
-            💻 @SID12g
+            <span className="text-base shrink-0">🐱</span>
+            <span className="text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+              @SID12g
+            </span>
           </a>
-          <a
-            href="mailto:i@sid12g.dev"
-            className="flex items-center gap-1.5 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
-          >
-            ✉️ i@sid12g.dev
+          <a href="mailto:i@sid12g.dev" className="flex gap-2.5 group">
+            <span className="text-base shrink-0">✉️</span>
+            <span className="text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+              i@sid12g.dev
+            </span>
           </a>
         </div>
       </div>

@@ -30,7 +30,7 @@ export default function Contribute() {
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 group"
+            className="flex gap-2.5 group"
           >
             <img
               src={item.avatar}

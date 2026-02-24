@@ -29,7 +29,7 @@ export default function Links() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 group"
+            className="flex gap-2.5 group"
           >
             <span className="text-base shrink-0">{link.emoji}</span>
             <span className="text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
