@@ -9,8 +9,12 @@ export default function ProjectPreview() {
   return (
     <Section title="Project">
       <div className="grid grid-cols-4 gap-3 max-[580px]:grid-cols-3 max-[480px]:gap-2">
-        {projects.slice(0, 7).map((project) => (
-          <Link key={project.slug} href={`/projects/${project.slug}`}>
+        {projects.slice(0, 8).map((project, index) => (
+          <Link
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            className={index === 7 ? "hidden max-[580px]:block" : ""}
+          >
             <div className="aspect-square rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-900 hover:opacity-80 transition-opacity">
               <Image
                 src={project.meta.preview}
