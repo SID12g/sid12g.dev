@@ -1,3 +1,4 @@
+import React from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -38,6 +39,27 @@ export async function generateMetadata({
     description: project.frontMatter.description,
   };
 }
+
+function MdxImage(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  const caption = props.alt;
+  return (
+    <span className="block my-4">
+      <span className="flex justify-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img alt={props.alt} className="rounded-lg m-0" {...props} />
+      </span>
+      {caption ? (
+        <span className="mt-2 block text-center text-sm text-neutral-500 dark:text-neutral-400">
+          {caption}
+        </span>
+      ) : null}
+    </span>
+  );
+}
+
+const mdxComponents = {
+  img: MdxImage,
+};
 
 export default async function ProjectDetailPage({
   params,
@@ -119,6 +141,7 @@ export default async function ProjectDetailPage({
               remarkPlugins: [remarkGfm],
             },
           }}
+          components={mdxComponents}
         />
       </article>
     </section>
