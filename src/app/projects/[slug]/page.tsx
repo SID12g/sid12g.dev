@@ -100,7 +100,7 @@ export default async function ProjectDetailPage({
           <Link
             href={frontMatter.source}
             target="_blank"
-            className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors underline underline-offset-2"
+            className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
           >
             {frontMatter.source}
           </Link>
