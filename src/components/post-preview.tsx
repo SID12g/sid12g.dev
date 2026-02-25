@@ -87,6 +87,28 @@ export default function PostPreview() {
               </div>
             </Link>
           ))}
+          <Link
+            href="https://blog.sid12g.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-1 mt-1 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-800 text-sm text-neutral-500 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-900 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
+          >
+            더보기
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       )}
     </section>
