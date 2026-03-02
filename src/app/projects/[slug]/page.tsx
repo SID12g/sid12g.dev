@@ -37,6 +37,11 @@ export async function generateMetadata({
   return {
     title: `${project.frontMatter.title} | sid12g`,
     description: project.frontMatter.description,
+    images: [
+      {
+        url: project.frontMatter.image,
+      },
+    ],
   };
 }
 

@@ -14,7 +14,13 @@ export const metadata: Metadata = {
     description: "안녕하세요 조성민입니다.",
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: "https://sid12g.dev/images/og-image.png",
+      },
+    ],
   },
+
   robots: {
     index: true,
     follow: true,

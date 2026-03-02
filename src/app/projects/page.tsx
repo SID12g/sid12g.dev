@@ -6,6 +6,11 @@ import { getBlurDataUrl } from "next-image-blur";
 export const metadata = {
   title: "Projects",
   description: "혼자, 함께 해왔던 프로젝트",
+  images: [
+    {
+      url: "https://sid12g.dev/images/og-image.png",
+    },
+  ],
 };
 
 export default function ProjectsPage() {
