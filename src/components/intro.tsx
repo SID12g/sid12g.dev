@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Intro() {
   return (
     <div className="flex flex-col">
@@ -9,7 +11,14 @@ export default function Intro() {
       <p className="mt-3 text-base leading-normal text-neutral-600 dark:text-neutral-400">
         저는 서울시립대학교에 재학 중이며, 학업과 개발을 병행하며 다양한 분야에
         관심을 가지고 있습니다. 특히 개발, 경제, 금융에 큰 흥미를 두고 있으며,
-        이에 대한 저의 생각을 블로그에서 공유하고 있습니다.
+        이에 대한 저의 생각을{" "}
+        <Link
+          href="https://blog.sid12g.dev"
+          className="text-neutral-900 underline"
+        >
+          블로그
+        </Link>
+        에서 공유하고 있습니다.
       </p>
     </div>
   );
