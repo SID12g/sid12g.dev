@@ -271,6 +271,7 @@ echo "🗑️  원본 PNG 파일 삭제 완료"
 ## 주의 사항 및 엣지 케이스
 
 - **SVG / GIF / JPEG**: 변환 대상에서 제외 (PNG만 처리)
+- **PNG 예외 케이스**: 'thumbnail.png', 'preview.png', 'logo.png', 'og-image.png', 'profile.png'는 변환하지 않는다.
 - **투명도(알파채널)**: WebP는 투명도를 완벽 지원하므로 PNG 투명 이미지도 안전하게 변환됨
 - **파비콘(favicon.png)**: 브라우저 호환성을 위해 변환 목록에서 제외하는 것을 권장
   ```bash
