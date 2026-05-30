@@ -1,6 +1,7 @@
 import Profile from "@/components/profile";
 import Intro from "@/components/intro";
 import Education from "@/components/education";
+import Activities from "@/components/activities";
 import Certifications from "@/components/certifications";
 import ProjectPreview from "@/components/project-preview";
 import PostPreview from "@/components/post-preview";
@@ -16,6 +17,7 @@ export default function Page() {
       <Intro />
       <div className="mt-10" />
       <Education />
+      <Activities />
       <Skills />
       <Certifications />
       <ProjectPreview />
