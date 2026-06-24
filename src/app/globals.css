@@ -14,6 +14,15 @@
 
 @theme inline {
   --color-background: var(--color-background);
+  --color-muted: var(--color-muted);
+  --color-primary: var(--color-primary);
+  --color-faint: var(--color-faint);
+  --color-accent: var(--color-accent);
+  --color-muted-15: var(--color-muted-15);
+  --color-muted-5: var(--color-muted-5);
+  --color-white-10: var(--color-white-10);
+  --color-black: var(--color-black);
+
   --font-pretendard: var(--font-pretendard);
   --font-jetbrains-mono: var(--font-jetbrains-mono);
 }
@@ -21,4 +30,7 @@
 body {
   background: var(--color-background);
   color: var(--color-primary);
+  font-family:
+    var(--font-pretendard), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

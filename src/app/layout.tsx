@@ -44,7 +44,9 @@ export default function RootLayout({
       lang="ko"
       className={`${pretendard.variable} ${jetBrainsMono.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <div className="max-w-[640px] mx-auto px-6 py-10">{children}</div>
+      </body>
     </html>
   );
 }
