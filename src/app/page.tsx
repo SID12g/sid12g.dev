@@ -1,10 +1,13 @@
 import Profile from "@/components/profile";
 import Intro from "@/components/intro";
 import Education from "@/components/education";
-import Skill from "@/components/skill";
+import Activities from "@/components/activities";
+import Certifications from "@/components/certifications";
 import ProjectPreview from "@/components/project-preview";
-import Contribute from "@/components/contribute";
+import PostPreview from "@/components/post-preview";
 import Links from "@/components/links";
+import Skills from "@/components/skills";
+import Contributions from "@/components/contributions";
 
 export default function Page() {
   return (
@@ -14,9 +17,12 @@ export default function Page() {
       <Intro />
       <div className="mt-10" />
       <Education />
-      <Skill />
+      <Activities />
+      <Skills />
+      <Certifications />
       <ProjectPreview />
-      <Contribute />
+      <PostPreview />
+      <Contributions />
       <Links />
     </section>
   );

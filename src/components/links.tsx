@@ -13,7 +13,7 @@ const links = [
     label: "rocketpunch.com/@sid12g",
   },
   {
-    href: "https://sid12g.dev/portfolio.pdf",
+    href: "https://drive.google.com/file/d/1MVw75bZahgLSM66Dn3Iqs2Z7_gmKMUsg/view?usp=sharing",
     emoji: "📄",
     label: "portfolio.pdf",
   },
@@ -21,7 +21,7 @@ const links = [
 
 export default function Links() {
   return (
-    <Section title="Link">
+    <Section title="Links">
       <div className="flex flex-col gap-2.5">
         {links.map((link) => (
           <a

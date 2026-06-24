@@ -1,6 +1,8 @@
+import { getBlurDataUrl } from "next-image-blur";
 import Image from "next/image";
 
-export default function Profile() {
+export default async function Profile() {
+  const blurDataURL = await getBlurDataUrl("/images/profile.png");
   return (
     <div className="flex justify-between items-start gap-8 flex-col-reverse sm:flex-row">
       <div className="flex flex-col">
@@ -48,6 +50,8 @@ export default function Profile() {
           alt="Profile"
           width={256}
           height={256}
+          placeholder="blur"
+          blurDataURL={blurDataURL}
           className="w-full h-full object-cover"
           priority
         />
