@@ -41,6 +41,8 @@ export default function Intro() {
           <Link
             className="text-muted"
             href="https://blog.sid12g.dev/figma-book"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             (자세히 보기)
           </Link>
