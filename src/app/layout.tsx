@@ -21,6 +21,17 @@ const jetBrainsMono = localFont({
 export const metadata: Metadata = {
   title: "sid12g • 조성민",
   description: "안녕하세요, 개발자 조성민입니다.",
+  openGraph: {
+    title: "sid12g • 조성민",
+    description: "안녕하세요, 개발자 조성민입니다.",
+    locale: "ko_KR",
+    type: "website",
+    images: [
+      {
+        url: "https://sid12g.dev/images/og-image.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
