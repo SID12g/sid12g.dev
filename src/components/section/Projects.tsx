@@ -1,40 +1,25 @@
 import Separator from "@/components/Separator";
+import { getProjects } from "@/utils/projects";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Projects() {
+  const projects = getProjects().slice(0, 4);
+
   return (
     <div>
       <Separator title="PROJECTS" />
       <div className="flex flex-col gap-5">
-        <ProjectItemView
-          href="/"
-          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
-          title="RECON"
-          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
-          tags={["Next.js", "Extension"]}
-        />
-        <ProjectItemView
-          href="/"
-          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
-          title="RECON"
-          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
-          tags={["Next.js", "Extension"]}
-        />
-        <ProjectItemView
-          href="/"
-          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
-          title="RECON"
-          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
-          tags={["Next.js", "Extension"]}
-        />
-        <ProjectItemView
-          href="/"
-          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
-          title="RECON"
-          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
-          tags={["Next.js", "Extension"]}
-        />
+        {projects.map((project) => (
+          <ProjectItemView
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            image={project.meta.preview}
+            title={project.meta.title}
+            description={project.meta.description}
+            tags={[project.meta.team]}
+          />
+        ))}
         <Link
           href="/projects"
           className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-white-10 transition-colors duration-150"
