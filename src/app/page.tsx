@@ -3,6 +3,7 @@ import Certifications from "@/components/section/Certifications";
 import Education from "@/components/section/Education";
 import Info from "@/components/section/Info";
 import Intro from "@/components/section/Intro";
+import Posts from "@/components/section/Posts";
 import Profile from "@/components/section/Profile";
 import Stack from "@/components/section/Stacks";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Activities />
       <Stack />
       <Certifications />
+      <Posts />
       <Info />
     </div>
   );
