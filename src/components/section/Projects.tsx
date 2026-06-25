@@ -55,7 +55,7 @@ function ProjectItemView({
         </div>
         <div className="flex flex-col justify-between gap-6">
           <div className="flex flex-col gap-2">
-            <p className="text-base sm:text-lg font-medium">{title}</p>
+            <p className="text-base sm:text-lg font-semibold">{title}</p>
             <p className="text-sm sm:text-base text-muted font-medium">
               {description}
             </p>
