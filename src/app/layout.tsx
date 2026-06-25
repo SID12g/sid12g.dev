@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import QueryProvider from "@/components/providers/QueryProvider";
 
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -46,8 +47,10 @@ export default function RootLayout({
       className={`${pretendard.variable} ${jetBrainsMono.variable} antialiased`}
     >
       <body className="max-w-[640px] mx-auto px-6 py-10">
-        <div>{children}</div>
-        <Footer />
+        <QueryProvider>
+          <div>{children}</div>
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );

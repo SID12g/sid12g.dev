@@ -1,5 +1,8 @@
+"use client";
+
 import Separator from "@/components/Separator";
 import Link from "next/link";
+import { useSuspenseQuery } from "@tanstack/react-query";
 
 interface Post {
   metadata: {
@@ -11,27 +14,19 @@ interface Post {
   slug: string;
 }
 
-async function getLatestPosts(): Promise<Post[]> {
-  const response = await fetch("https://blog.sid12g.dev/api/posts/latest", {
-    next: { revalidate: 3600 },
-  });
-
-  if (!response.ok) {
-    throw new Error(`포스트를 불러오는데 실패했습니다. ${response.status}`);
-  }
-
-  const data: Post[] = await response.json();
+async function fetchLatestPosts(): Promise<Post[]> {
+  const res = await fetch("/api/posts/latest");
+  if (!res.ok) throw new Error("포스트를 불러오는데 실패했습니다.");
+  const data: Post[] = await res.json();
   return data.slice(0, 4);
 }
 
-export default async function Posts() {
-  let posts: Post[] = [];
-
-  try {
-    posts = await getLatestPosts();
-  } catch {
-    return null;
-  }
+export default function Posts() {
+  const { data: posts } = useSuspenseQuery({
+    queryKey: ["posts", "latest"],
+    queryFn: fetchLatestPosts,
+    staleTime: 1000 * 60 * 60,
+  });
 
   return (
     <div>
@@ -51,10 +46,9 @@ export default async function Posts() {
           href="https://blog.sid12g.dev"
           target="_blank"
           rel="noopener noreferrer"
+          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-white-10 transition-colors duration-150"
         >
-          <div className="py-3 rounded-lg border border-faint bg-muted-5 text-center">
-            <p className="text-base font-medium">더보기 →</p>
-          </div>
+          <span className="text-sm font-medium">더보기 →</span>
         </Link>
       </div>
     </div>
@@ -75,24 +69,27 @@ function PostItem({
   href: string;
 }) {
   return (
-    <Link href={href} target="_blank" rel="noopener noreferrer">
-      <div className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5">
-        <div className="flex flex-col gap-2">
-          <p className="text-base font-medium">{title}</p>
-          <p className="text-sm text-muted">{description}</p>
-        </div>
-        <div className="flex flew-row items-center justify-between">
-          <p className="text-sm text-muted font-jetbrains-mono">{date}</p>
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <div
-                className="text-xs text-muted font-jetbrains-mono px-3 py-[6px] bg-muted-15 rounded-full border border-faint w-fit"
-                key={tag}
-              >
-                {tag}
-              </div>
-            ))}
-          </div>
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5 hover:border-accent hover:bg-white-10 transition-colors duration-150"
+    >
+      <div className="flex flex-col gap-2">
+        <span className="text-sm font-medium">{title}</span>
+        <span className="text-xs text-muted">{description}</span>
+      </div>
+      <div className="flex flex-row items-center justify-between">
+        <span className="text-xs text-muted font-jetbrains-mono">{date}</span>
+        <div className="flex flex-wrap gap-2 justify-end">
+          {tags.map((tag) => (
+            <span
+              className="text-xs text-muted font-jetbrains-mono px-3 py-[6px] bg-muted-15 rounded-full border border-faint w-fit"
+              key={tag}
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
     </Link>
