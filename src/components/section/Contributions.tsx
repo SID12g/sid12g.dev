@@ -1,78 +1,54 @@
 import Image from "next/image";
 import Separator from "../Separator";
 import Link from "next/link";
+import { contributions, type ContributionItem } from "@/data/contributions";
 
 export default function Contributions() {
   return (
     <div>
       <Separator title="CONTRIBUTIONS" />
       <div className="flex flex-col gap-5">
-        <ContributionsItem
-          image="https://avatars.githubusercontent.com/u/25682207?s=128&v=4"
-          repository="toss/suspensive"
-          repositoryHref="https://github.com/toss/suspensive"
-          title="docs(suspensive.org): add punctuation marks to a document #1168"
-          href="https://github.com/toss/suspensive/pull/1168"
-          date="2024-08-01"
-        />
-        <ContributionsItem
-          image="https://avatars.githubusercontent.com/u/25682207?s=128&v=4"
-          repository="toss/suspensive"
-          repositoryHref="https://github.com/toss/suspensive"
-          title="docs(suspensive.org): modify punctuation marks and spaces in the document #1179"
-          href="https://github.com/toss/suspensive/pull/1179"
-          date="2024-08-03"
-        />
-        <ContributionsItem
-          image="https://avatars.githubusercontent.com/u/3676859?s=128&v=4"
-          repository="shuding/nextra"
-          repositoryHref="https://github.com/shuding/nextra"
-          title="docs: fix meta tag theme color #3214"
-          href="https://github.com/shuding/nextra/pull/3214"
-          date="2024-09-09"
-        />
+        {contributions.map((item) => (
+          <ContributionItemView key={item.href} item={item} />
+        ))}
       </div>
     </div>
   );
 }
 
-function ContributionsItem({
-  image,
-  repository,
-  repositoryHref,
-  title,
-  href,
-  date,
-}: {
-  image: string;
-  repository: string;
-  repositoryHref: string;
-  title: string;
-  href: string;
-  date: string;
-}) {
+function ContributionItemView({ item }: { item: ContributionItem }) {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-row justify-between">
-        <Link href={repositoryHref} target="_blank" rel="noopener noreferrer">
-          <div className="flex flex-row items-center gap-1.5">
-            <div className="w-6 h-6 rounded-full overflow-hidden shrink-0">
-              <Image
-                src={image}
-                alt={`${repository} owner`}
-                width={64}
-                height={64}
-              />
-            </div>
-            <p className="font-jetbrains-mono text-accent">{repository}</p>
+        <Link
+          href={item.repositoryHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row items-center gap-1.5 group"
+        >
+          <div className="w-5 h-5 rounded-full overflow-hidden shrink-0">
+            <Image
+              src={item.image}
+              alt={`${item.repository} owner`}
+              width={64}
+              height={64}
+            />
           </div>
+          <span className="font-jetbrains-mono text-sm text-accent group-hover:underline transition-all duration-150">
+            {item.repository}
+          </span>
         </Link>
-        <p className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
-          {date}
-        </p>
+        <span className="font-jetbrains-mono text-muted text-xs whitespace-nowrap">
+          {item.date}
+        </span>
       </div>
-      <Link href={href} target="_blank" rel="noopener noreferrer">
-        <p className="font-jetbrains-mono">{title}</p>
+      <Link
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-jetbrains-mono text-sm hover:text-accent transition-colors duration-150"
+      >
+        {item.title}
       </Link>
     </div>
   );

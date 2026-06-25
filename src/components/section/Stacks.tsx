@@ -1,15 +1,14 @@
 import Separator from "@/components/Separator";
+import { stacks } from "@/data/stacks";
 
 export default function Stacks() {
   return (
     <div>
       <Separator title="STACKS" />
       <div className="flex flex-row flex-wrap gap-4">
-        <StackItem stack="Next.js" />
-        <StackItem stack="React" />
-        <StackItem stack="React Native" />
-        <StackItem stack="Nest.js" />
-        <StackItem stack="Spring Boot" />
+        {stacks.map((stack) => (
+          <StackItem key={stack} stack={stack} />
+        ))}
       </div>
     </div>
   );
@@ -17,9 +16,9 @@ export default function Stacks() {
 
 function StackItem({ stack }: { stack: string }) {
   return (
-    <div className="flex flex-row items-center gap-2 py-2 px-4 bg-muted-15 border-faint border rounded-full w-fit">
+    <div className="flex flex-row items-center gap-2 py-2 px-4 bg-muted-15 border-faint border rounded-full w-fit hover:border-accent hover:bg-white-10 transition-colors duration-150 cursor-default">
       <div className="bg-accent w-[8px] h-[8px] rounded-full" />
-      <p className="font-jetbrains-mono text-sm text-muted">{stack}</p>
+      <span className="font-jetbrains-mono text-sm text-muted">{stack}</span>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Separator from "@/components/Separator";
+import { education, type EducationItem } from "@/data/education";
 import Link from "next/link";
 
 export default function Education() {
@@ -6,51 +7,34 @@ export default function Education() {
     <div>
       <Separator title="EDUCATION" />
       <div className="flex flex-col gap-5">
-        <EducationItem
-          school="서울시립대학교"
-          href="https://www.uos.ac.kr"
-          major="통계학과"
-          period={
-            <>
-              2026.03 ~ <span className="text-accent">재학 중</span>
-            </>
-          }
-        />
-        <EducationItem
-          school="한국디지털미디어고등학교"
-          href="https://dimigo-h.goeas.kr"
-          major="웹프로그래밍과"
-          period="2023.03 ~ 2026.01"
-        />
+        {education.map((item) => (
+          <EducationItemView key={item.school} item={item} />
+        ))}
       </div>
     </div>
   );
 }
 
-function EducationItem({
-  school,
-  href,
-  major,
-  period,
-}: {
-  school: string;
-  href: string;
-  major: string;
-  period: React.ReactNode;
-}) {
+function EducationItemView({ item }: { item: EducationItem }) {
   return (
-    <div className="flex flex-row justify-between items-top">
+    <div className="flex flex-row justify-between items-start">
       <div className="flex flex-col gap-1">
-        <p className="font-medium">
-          <Link href={href} target="_blank" rel="noopener noreferrer">
-            {school}
-          </Link>
-        </p>
-        <p className="font-medium text-muted">{major}</p>
+        <Link
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium hover:text-accent transition-colors duration-150"
+        >
+          {item.school}
+        </Link>
+        <span className="font-medium text-muted">{item.major}</span>
       </div>
-      <p className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
-        {period}
-      </p>
+      <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+        {item.period}
+        {item.current && (
+          <span className="text-accent"> 재학 중</span>
+        )}
+      </span>
     </div>
   );
 }
