@@ -39,7 +39,7 @@ export default function Posts() {
             description={post.metadata.summary}
             date={post.metadata.publishedAt}
             tags={post.metadata.tag}
-            href={`https://blog.sid12g.dev/posts/${post.slug}`}
+            href={`https://blog.sid12g.dev/${post.slug}`}
           />
         ))}
         <Link
