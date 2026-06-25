@@ -30,4 +30,9 @@ export const info: InfoItem[] = [
     content: "rocketpunch.com/@sid12g",
     href: "https://rocketpunch.com/@sid12g",
   },
+  {
+    label: "PORTFOLIO",
+    content: "porfolio.pdf",
+    href: "https://drive.google.com/file/d/1MVw75bZahgLSM66Dn3Iqs2Z7_gmKMUsg/view?usp=sharing",
+  },
 ];
