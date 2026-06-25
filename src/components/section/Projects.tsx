@@ -1,13 +1,93 @@
 import Separator from "@/components/Separator";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Projects() {
   return (
     <div>
       <Separator title="PROJECTS" />
+      <div className="flex flex-col gap-5">
+        <ProjectItemView
+          href="/"
+          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
+          title="RECON"
+          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
+          tags={["Next.js", "Extension"]}
+        />
+        <ProjectItemView
+          href="/"
+          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
+          title="RECON"
+          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
+          tags={["Next.js", "Extension"]}
+        />
+        <ProjectItemView
+          href="/"
+          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
+          title="RECON"
+          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
+          tags={["Next.js", "Extension"]}
+        />
+        <ProjectItemView
+          href="/"
+          image="https://sid12g.dev/_next/image?url=%2Fprojects%2Frecon%2Fpreview.png&w=256&q=75"
+          title="RECON"
+          description="피싱 여부를 실시간으로 판별하는 브라우저 확장 서비스"
+          tags={["Next.js", "Extension"]}
+        />
+        <Link
+          href="/projects"
+          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-white-10 transition-colors duration-150"
+        >
+          <span className="text-sm font-medium">더보기 →</span>
+        </Link>
+      </div>
     </div>
   );
 }
 
-function PostItemView() {
-  return <div></div>;
+function ProjectItemView({
+  href,
+  image,
+  title,
+  description,
+  tags,
+}: {
+  href: string;
+  image: string;
+  title: string;
+  description: string;
+  tags: string[];
+}) {
+  return (
+    <Link
+      href={href}
+      className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5 hover:border-accent hover:bg-white-10 transition-colors duration-150"
+    >
+      <div className="flex flex-row gap-4">
+        <div className="w-[120px] h-[120px] rounded-md overflow-hidden">
+          <Image src={image} alt="Project Image" width={256} height={256} />
+        </div>
+        <div className="flex flex-col justify-between gap-6">
+          <div className="flex flex-col gap-2">
+            <p className="text-base sm:text-lg font-medium">{title}</p>
+            <p className="text-sm sm:text-base text-muted font-medium">
+              {description}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span
+                className="text-xs text-muted font-jetbrains-mono px-3 py-[6px] bg-muted-15 rounded-full border border-faint w-fit flex flex-row gap-2 items-center"
+                key={tag}
+              >
+                <div className="bg-accent w-[6px] h-[6px] rounded-full" />
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
 }
