@@ -2,7 +2,7 @@ import Separator from "@/components/Separator";
 import Link from "next/link";
 
 export default function Intro() {
-  const textStyle = `font-medium`;
+  const textStyle = `font-medium text-sm sm:text-base`;
   return (
     <div>
       <Separator title="INTRO" />
@@ -39,7 +39,7 @@ export default function Intro() {
           수업을 수강하며 이러한 시각을 더욱 넓혀가고 있습니다. 고등학생 때
           피그마를 사용하여 책을 만든 경험도 가지고 있습니다.{" "}
           <Link
-            className="text-muted"
+            className="text-muted hover:text-accent transition-colors duration-150"
             href="https://blog.sid12g.dev/figma-book"
             target="_blank"
             rel="noopener noreferrer"
