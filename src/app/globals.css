@@ -74,10 +74,16 @@ html {
 
 .prose-custom blockquote {
   border-left: 3px solid var(--color-faint);
-  padding-left: 1rem;
+  padding: 0.75rem 1rem;
   margin: 1.5rem 0;
   color: var(--color-muted);
-  font-style: italic;
+  font-style: normal;
+  background: var(--color-muted-5);
+  border-radius: 0 8px 8px 0;
+}
+
+.prose-custom blockquote p {
+  margin: 0;
 }
 
 .prose-custom ul,
