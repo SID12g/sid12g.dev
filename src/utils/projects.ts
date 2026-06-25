@@ -2,6 +2,37 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+export type AssetType = "image" | "video" | "pdf" | "other";
+
+export interface ProjectAsset {
+  name: string;
+  url: string;
+  type: AssetType;
+}
+
+const IMAGE_EXTS = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"]);
+const VIDEO_EXTS = new Set([".mp4", ".webm", ".mov", ".avi"]);
+
+export function getProjectAssets(slug: string): ProjectAsset[] {
+  const assetsDir = path.join(process.cwd(), "public", "projects", slug, "assets");
+  if (!fs.existsSync(assetsDir)) return [];
+
+  return fs
+    .readdirSync(assetsDir)
+    .filter((f) => !f.startsWith("."))
+    .map((file) => {
+      const ext = path.extname(file).toLowerCase();
+      const type: AssetType = IMAGE_EXTS.has(ext)
+        ? "image"
+        : VIDEO_EXTS.has(ext)
+          ? "video"
+          : ext === ".pdf"
+            ? "pdf"
+            : "other";
+      return { name: file, url: `/projects/${slug}/assets/${file}`, type };
+    });
+}
+
 interface ProjectMeta {
   title: string;
   description: string;

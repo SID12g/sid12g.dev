@@ -34,3 +34,130 @@ html {
     var(--font-pretendard), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.prose-custom {
+  line-height: 1.75;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.prose-custom h1,
+.prose-custom h2,
+.prose-custom h3,
+.prose-custom h4 {
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+}
+
+.prose-custom h1 {
+  font-size: 1.5rem;
+}
+.prose-custom h2 {
+  font-size: 1.25rem;
+}
+.prose-custom h3 {
+  font-size: 1.1rem;
+}
+
+.prose-custom p {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.prose-custom a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-custom blockquote {
+  border-left: 3px solid var(--color-faint);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.prose-custom ul,
+.prose-custom ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.prose-custom ul {
+  list-style-type: disc;
+}
+.prose-custom ol {
+  list-style-type: decimal;
+}
+
+.prose-custom li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-custom code {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.85em;
+  background: var(--color-muted-15);
+  border: 1px solid var(--color-faint);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  margin-right: 6px;
+}
+
+.prose-custom pre {
+  background: var(--color-muted-5);
+  border: 1px solid var(--color-faint);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.prose-custom pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.prose-custom table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.prose-custom th,
+.prose-custom td {
+  border: 1px solid var(--color-faint);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose-custom th {
+  background: var(--color-muted-15);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.prose-custom td {
+  color: var(--color-primary);
+}
+
+.prose-custom img {
+  border-radius: 12px;
+  border: 1px solid var(--color-faint);
+  margin: 1rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.prose-custom hr {
+  border: none;
+  border-top: 1px solid var(--color-faint);
+  margin: 2rem 0;
+}
