@@ -373,13 +373,18 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
             {current.type === "link" && (
               <div className="w-[320px] h-[200px] rounded-2xl border border-white/20 bg-faint flex flex-col items-center justify-center gap-4 text-white">
                 <LinkIcon />
-                <span className="text-sm font-medium">{current.name}</span>
-                <button
-                  onClick={handleNavigate}
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-sm font-medium">{current.name}</span>
+                  <span className="text-xs text-white/50 font-jetbrains-mono truncate max-w-[260px]">{current.src}</span>
+                </div>
+                <a
+                  href={current.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs font-medium px-5 py-2 bg-white/15 border border-white/30 rounded-lg hover:bg-white/25 hover:border-white/50 transition-colors duration-150"
                 >
                   링크 이동하기 ↗
-                </button>
+                </a>
               </div>
             )}
           </div>
