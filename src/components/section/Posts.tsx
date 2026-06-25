@@ -76,8 +76,8 @@ function PostItem({
       className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5 hover:border-accent hover:bg-white-10 transition-colors duration-150"
     >
       <div className="flex flex-col gap-2">
-        <span className="text-sm font-medium">{title}</span>
-        <span className="text-xs text-muted">{description}</span>
+        <span className="text-sm sm:text-base font-medium">{title}</span>
+        <span className="text-xs sm:text-sm text-muted">{description}</span>
       </div>
       <div className="flex flex-row items-center justify-between">
         <span className="text-xs text-muted font-jetbrains-mono">{date}</span>
