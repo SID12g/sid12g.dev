@@ -1,5 +1,5 @@
 import { mdxComponents } from "@/components/mdx-components";
-import MediaPreview from "@/components/MediaPreview";
+import { MediaGallery } from "@/components/MediaPreview";
 import Separator from "@/components/Separator";
 import { getProjectAssets, getProjects } from "@/utils/projects";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -172,15 +172,10 @@ export default async function ProjectPage({
       {assets.length > 0 && (
         <div>
           <Separator title="ASSETS" />
-          <div className="flex flex-row overflow-x-auto gap-x-6 scrollbar-thumb-primary">
-            {assets.map((asset) => (
-              <MediaPreview
-                key={asset.url}
-                src={asset.url}
-                name={asset.name}
-                type={asset.type}
-              />
-            ))}
+          <div className="overflow-x-auto scrollbar-thumb-primary">
+            <MediaGallery
+              items={assets.map((a) => ({ src: a.url, name: a.name, type: a.type }))}
+            />
           </div>
         </div>
       )}

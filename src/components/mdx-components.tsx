@@ -1,5 +1,5 @@
 import React from "react";
-import MediaPreview from "./MediaPreview";
+import MediaPreview, { MediaGallery } from "./MediaPreview";
 import type { AssetType } from "@/utils/projects";
 
 const IMAGE_EXTS = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"]);
@@ -31,7 +31,15 @@ function CustomParagraph({ children }: { children: React.ReactNode }) {
     );
 
   if (allMedia) {
-    return <div className="flex flex-row flex-wrap gap-3 my-4">{children}</div>;
+    const items = nonWhitespace.map((child) => {
+      const el = child as React.ReactElement<{
+        src: string;
+        name: string;
+        type: AssetType;
+      }>;
+      return { src: el.props.src, name: el.props.name, type: el.props.type };
+    });
+    return <MediaGallery items={items} />;
   }
 
   return <p className="mb-4">{children}</p>;
