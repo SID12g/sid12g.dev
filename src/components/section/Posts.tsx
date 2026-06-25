@@ -52,7 +52,7 @@ export default async function Posts() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="py-[14px] rounded-lg border border-faint bg-muted-5 text-center">
+          <div className="py-3 rounded-lg border border-faint bg-muted-5 text-center">
             <p className="text-base font-medium">더보기 →</p>
           </div>
         </Link>

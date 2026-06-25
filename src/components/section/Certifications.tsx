@@ -44,7 +44,9 @@ function CertificationItem({
           </Link>
         </p>
       </div>
-      <p className="font-jetbrains-mono text-muted text-sm">{period}</p>
+      <p className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+        {period}
+      </p>
     </div>
   );
 }

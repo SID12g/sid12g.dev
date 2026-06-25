@@ -48,7 +48,9 @@ function EducationItem({
         </p>
         <p className="font-medium text-muted">{major}</p>
       </div>
-      <p className="font-jetbrains-mono text-muted text-sm">{period}</p>
+      <p className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+        {period}
+      </p>
     </div>
   );
 }
