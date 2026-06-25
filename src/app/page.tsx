@@ -4,9 +4,10 @@ import Contributions from "@/components/section/Contributions";
 import Education from "@/components/section/Education";
 import Info from "@/components/section/Info";
 import Intro from "@/components/section/Intro";
-import PostsLoader from "@/components/section/PostsLoader";
+import PostsLoader from "@/components/PostsLoader";
 import Profile from "@/components/section/Profile";
 import Stack from "@/components/section/Stacks";
+import Projects from "@/components/section/Projects";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Activities />
       <Stack />
       <Certifications />
+      <Projects />
       <PostsLoader />
       <Contributions />
       <Info />
