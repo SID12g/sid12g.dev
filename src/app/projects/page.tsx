@@ -13,6 +13,13 @@ export default function ProjectsPage() {
 
   return (
     <div>
+      <Link
+        href="/"
+        className="text-sm text-muted font-jetbrains-mono hover:text-primary transition-colors duration-150"
+      >
+        ← HOME
+      </Link>
+      <div className="h-8" />
       <Separator title="PROJECTS" />
       <div className="flex flex-col gap-5">
         {projects.map((project) => (
