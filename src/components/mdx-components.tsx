@@ -1,5 +1,17 @@
 import React from "react";
 import MediaPreview from "./MediaPreview";
+import type { AssetType } from "@/utils/projects";
+
+const IMAGE_EXTS = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"]);
+const VIDEO_EXTS = new Set([".mp4", ".webm", ".mov", ".avi"]);
+
+function inferType(src: string): AssetType {
+  const ext = src.split(".").pop()?.toLowerCase() ?? "";
+  if (IMAGE_EXTS.has(`.${ext}`)) return "image";
+  if (VIDEO_EXTS.has(`.${ext}`)) return "video";
+  if (ext === "pdf") return "pdf";
+  return "other";
+}
 
 function CustomParagraph({ children }: { children: React.ReactNode }) {
   const childArray = React.Children.toArray(children);
@@ -28,8 +40,9 @@ function CustomParagraph({ children }: { children: React.ReactNode }) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const mdxComponents: Record<string, React.ComponentType<any>> = {
   p: CustomParagraph,
-  img: ({ src, alt }: { src?: string; alt?: string }) => {
+  img: ({ src }: { src?: string; alt?: string }) => {
     if (!src) return null;
-    return <MediaPreview src={src} alt={alt} />;
+    const name = src.split("/").pop() ?? src;
+    return <MediaPreview src={src} name={name} type={inferType(src)} />;
   },
 };
