@@ -42,6 +42,7 @@ interface ProjectMeta {
   team: string;
   date: string;
   source: string;
+  stacks: string;
   order: string;
 }
 
