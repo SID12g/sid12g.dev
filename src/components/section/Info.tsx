@@ -6,7 +6,7 @@ export default function Info() {
   return (
     <div>
       <Separator title="INFO" />
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-4">
         {info.map((item) => (
           <InfoItemView key={item.label} item={item} />
         ))}
@@ -17,7 +17,7 @@ export default function Info() {
 
 function InfoItemView({ item }: { item: InfoItem }) {
   return (
-    <div className="flex flex-row gap-5">
+    <div className="flex flex-row gap-4">
       <div className="w-20 shrink-0">
         <span className="text-sm text-muted font-jetbrains-mono">
           {item.label}
