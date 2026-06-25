@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Separator from "../Separator";
+import Separator from "@/components/Separator";
 import Link from "next/link";
 import { contributions, type ContributionItem } from "@/data/contributions";
 
