@@ -9,6 +9,23 @@ interface MediaPreviewProps {
   type: AssetType;
 }
 
+const ExternalLinkIcon = () => (
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+);
+
 const DownloadIcon = () => (
   <svg
     width="14"
@@ -97,6 +114,22 @@ const FileIcon = () => (
   </svg>
 );
 
+const LinkIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+  </svg>
+);
+
 const ChevronLeftIcon = () => (
   <svg
     width="20"
@@ -157,11 +190,11 @@ function Thumbnail({ src, name, type }: MediaPreviewProps) {
     );
   }
 
-  if (type === "pdf") {
+  if (type === "pdf" || type === "link") {
     return (
       <div className="w-full h-full text-muted flex flex-col justify-end px-6 py-6">
         <div className="flex flex-col items-start justify-center gap-2">
-          <FileIcon />
+          {type === "pdf" ? <FileIcon /> : <LinkIcon />}
           <span className="text-sm font-jetbrains-mono text-center line-clamp-2 break-all">
             {name}
           </span>
@@ -175,6 +208,12 @@ function Thumbnail({ src, name, type }: MediaPreviewProps) {
       {name}
     </div>
   );
+}
+
+function toEmbedUrl(url: string): string {
+  const gdrive = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+  if (gdrive) return `https://drive.google.com/file/d/${gdrive[1]}/preview`;
+  return url;
 }
 
 const btnClass =
@@ -212,12 +251,19 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
     a.click();
   };
 
+  const shareUrl = (src: string) =>
+    src.startsWith("http") ? src : window.location.origin + src;
+
   const handleShare = async () => {
     if (!current) return;
-    const url = window.location.origin + current.src;
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(shareUrl(current.src));
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleNavigate = () => {
+    if (!current) return;
+    window.open(shareUrl(current.src), "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -275,12 +321,21 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
               >
                 {copied ? <CheckIcon /> : <CopyIcon />}
               </button>
+              {current.type !== "pdf" && current.type !== "link" && (
+                <button
+                  onClick={handleDownload}
+                  className={btnClass}
+                  title="다운로드"
+                >
+                  <DownloadIcon />
+                </button>
+              )}
               <button
-                onClick={handleDownload}
+                onClick={handleNavigate}
                 className={btnClass}
-                title="다운로드"
+                title="새 탭에서 열기"
               >
-                <DownloadIcon />
+                <ExternalLinkIcon />
               </button>
               <button
                 onClick={() => setOpenIndex(null)}
@@ -310,10 +365,22 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
             )}
             {current.type === "pdf" && (
               <iframe
-                src={current.src}
+                src={toEmbedUrl(current.src)}
                 title={current.name}
                 className="w-[80vw] h-[80vh] rounded-2xl border border-faint bg-white"
               />
+            )}
+            {current.type === "link" && (
+              <div className="w-[320px] h-[200px] rounded-2xl border border-white/20 bg-faint flex flex-col items-center justify-center gap-4 text-white">
+                <LinkIcon />
+                <span className="text-sm font-medium">{current.name}</span>
+                <button
+                  onClick={handleNavigate}
+                  className="text-xs font-medium px-5 py-2 bg-white/15 border border-white/30 rounded-lg hover:bg-white/25 hover:border-white/50 transition-colors duration-150"
+                >
+                  링크 이동하기 ↗
+                </button>
+              </div>
             )}
           </div>
 
@@ -422,7 +489,7 @@ export default function MediaPreview({ src, name, type }: MediaPreviewProps) {
             )}
             {type === "pdf" && (
               <iframe
-                src={src}
+                src={toEmbedUrl(src)}
                 title={name}
                 className="w-[80vw] h-[80vh] rounded-2xl border border-faint bg-white"
               />

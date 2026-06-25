@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-export type AssetType = "image" | "video" | "pdf" | "other";
+export type AssetType = "image" | "video" | "pdf" | "link" | "other";
 
 export interface ProjectAsset {
   name: string;
@@ -20,8 +20,18 @@ export function getProjectAssets(slug: string): ProjectAsset[] {
   return fs
     .readdirSync(assetsDir)
     .filter((f) => !f.startsWith("."))
-    .map((file) => {
+    .flatMap((file) => {
       const ext = path.extname(file).toLowerCase();
+
+      if (ext === ".json") {
+        const raw = fs.readFileSync(path.join(assetsDir, file), "utf-8");
+        const json = JSON.parse(raw) as { type?: string; name?: string; href?: string };
+        if ((json.type === "pdf" || json.type === "link") && json.href && json.name) {
+          return [{ name: json.name, url: json.href, type: json.type as AssetType }];
+        }
+        return [];
+      }
+
       const type: AssetType = IMAGE_EXTS.has(ext)
         ? "image"
         : VIDEO_EXTS.has(ext)
@@ -29,7 +39,7 @@ export function getProjectAssets(slug: string): ProjectAsset[] {
           : ext === ".pdf"
             ? "pdf"
             : "other";
-      return { name: file, url: `/projects/${slug}/assets/${file}`, type };
+      return [{ name: file, url: `/projects/${slug}/assets/${file}`, type }];
     });
 }
 
