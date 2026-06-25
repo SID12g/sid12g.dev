@@ -27,7 +27,7 @@
   --font-jetbrains-mono: var(--font-jetbrains-mono);
 }
 
-body {
+html {
   background: var(--color-background);
   color: var(--color-primary);
   font-family:

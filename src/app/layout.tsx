@@ -46,10 +46,8 @@ export default function RootLayout({
       className={`${pretendard.variable} ${jetBrainsMono.variable} antialiased`}
     >
       <body>
-        <div className="max-w-[640px] mx-auto px-6 py-10">
-          {children}
-          <Footer />
-        </div>
+        <div className="max-w-[640px] mx-auto px-6 py-10">{children}</div>
+        <Footer />
       </body>
     </html>
   );
