@@ -268,7 +268,7 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
 
   return (
     <>
-      <div className="flex flex-row flex-wrap gap-3 my-4">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(140px,100%),1fr))] gap-3 my-4">
         {items.map((item, i) => (
           <button
             key={item.src}
@@ -276,7 +276,7 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
               setOpenIndex(i);
               setCopied(false);
             }}
-            className="w-[180px] h-[180px] rounded-xl overflow-hidden border border-faint flex-shrink-0 relative group cursor-pointer bg-muted-5"
+            className="w-full aspect-square rounded-xl overflow-hidden border border-faint relative group cursor-pointer bg-muted-5"
           >
             <Thumbnail src={item.src} name={item.name} type={item.type} />
             {item.type !== "other" && (
@@ -431,7 +431,7 @@ export default function MediaPreview({ src, name, type }: MediaPreviewProps) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="w-[180px] h-[180px] rounded-xl overflow-hidden border border-faint flex-shrink-0 relative group cursor-pointer bg-muted-5"
+        className="w-full max-w-[180px] aspect-square rounded-xl overflow-hidden border border-faint relative group cursor-pointer bg-muted-5"
       >
         <Thumbnail src={src} name={name} type={type} />
         {type !== "other" && (

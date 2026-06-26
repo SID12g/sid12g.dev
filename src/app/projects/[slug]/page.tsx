@@ -172,11 +172,9 @@ export default async function ProjectPage({
       {assets.length > 0 && (
         <div>
           <Separator title="ASSETS" />
-          <div className="overflow-x-auto scrollbar-thumb-primary">
-            <MediaGallery
-              items={assets.map((a) => ({ src: a.url, name: a.name, type: a.type }))}
-            />
-          </div>
+          <MediaGallery
+            items={assets.map((a) => ({ src: a.url, name: a.name, type: a.type }))}
+          />
         </div>
       )}
     </div>
