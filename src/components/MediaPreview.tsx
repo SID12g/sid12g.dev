@@ -195,7 +195,7 @@ function Thumbnail({ src, name, type }: MediaPreviewProps) {
       <div className="w-full h-full text-muted flex flex-col justify-end px-6 py-6">
         <div className="flex flex-col items-start justify-center gap-2">
           {type === "pdf" ? <FileIcon /> : <LinkIcon />}
-          <span className="text-sm font-jetbrains-mono text-center line-clamp-2 break-all">
+          <span className="text-sm font-jetbrains-mono text-start line-clamp-2 break-all">
             {name}
           </span>
         </div>
@@ -204,7 +204,7 @@ function Thumbnail({ src, name, type }: MediaPreviewProps) {
   }
 
   return (
-    <div className="w-full h-full flex items-center justify-center text-muted text-xs px-2 text-center break-all">
+    <div className="w-full h-full flex items-center justify-center text-muted text-xs px-2 text-start break-all">
       {name}
     </div>
   );
