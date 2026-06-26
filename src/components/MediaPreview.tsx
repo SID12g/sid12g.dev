@@ -217,7 +217,7 @@ function toEmbedUrl(url: string): string {
 }
 
 const btnClass =
-  "w-8 h-8 bg-muted-15 border border-faint rounded-lg flex items-center justify-center hover:border-accent transition-colors duration-150 text-primary";
+  "cursor-pointer w-8 h-8 bg-muted-15 border border-faint rounded-lg flex items-center justify-center hover:border-accent transition-colors duration-150 text-primary";
 
 interface GalleryItem {
   src: string;
@@ -302,7 +302,7 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
               setOpenIndex(openIndex - 1);
             }}
             disabled={openIndex === 0}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-faint opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
+            className="cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-faint opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
             title="이전"
           >
             <ChevronLeftIcon />
@@ -375,7 +375,9 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
                 <LinkIcon />
                 <div className="flex flex-col items-center gap-1">
                   <span className="text-sm font-medium">{current.name}</span>
-                  <span className="text-xs text-white/50 font-jetbrains-mono truncate max-w-[260px]">{current.src}</span>
+                  <span className="text-xs text-white/50 font-jetbrains-mono truncate max-w-[260px]">
+                    {current.src}
+                  </span>
                 </div>
                 <a
                   href={current.src}
@@ -396,7 +398,7 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
               setOpenIndex(openIndex + 1);
             }}
             disabled={openIndex === items.length - 1}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-faint opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
+            className="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-faint opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
             title="다음"
           >
             <ChevronRightIcon />
