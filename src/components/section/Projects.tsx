@@ -24,7 +24,7 @@ export default function Projects() {
           href="/projects"
           className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-white-10 transition-colors duration-150"
         >
-          <span className="text-sm font-medium">더보기 →</span>
+          <span className="text-sm sm:text-base font-medium">더보기 →</span>
         </Link>
       </div>
     </div>
