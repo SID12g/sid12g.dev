@@ -17,8 +17,8 @@ export default function Education() {
 
 function EducationItemView({ item }: { item: EducationItem }) {
   return (
-    <div className="flex flex-row justify-between items-start">
-      <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1">
+      <div className="w-full flex flex-row justify-between items-center">
         <Link
           href={item.href}
           target="_blank"
@@ -27,14 +27,12 @@ function EducationItemView({ item }: { item: EducationItem }) {
         >
           {item.school}
         </Link>
-        <span className="font-medium text-muted">{item.major}</span>
+        <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+          {item.period}
+          {item.current && <span className="text-accent"> 재학 중</span>}
+        </span>
       </div>
-      <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
-        {item.period}
-        {item.current && (
-          <span className="text-accent"> 재학 중</span>
-        )}
-      </span>
+      <span className="font-medium text-muted">{item.major}</span>
     </div>
   );
 }
