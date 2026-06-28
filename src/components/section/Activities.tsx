@@ -17,24 +17,22 @@ export default function Activities() {
 
 function ActivityItemView({ item }: { item: ActivityItem }) {
   return (
-    <div className="flex flex-row justify-between items-start">
-      <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1">
+      <div className="w-full flex flex-row justify-between items-center">
         <span className="font-medium">{item.role}</span>
-        <Link
-          href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-muted hover:text-accent transition-colors duration-150"
-        >
-          {item.organization}
-        </Link>
+        <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+          {item.period}
+          {item.current && <span className="text-accent"> 활동 중</span>}
+        </span>
       </div>
-      <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
-        {item.period}
-        {item.current && (
-          <span className="text-accent"> 재학 중</span>
-        )}
-      </span>
+      <Link
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-muted hover:text-accent transition-colors duration-150"
+      >
+        {item.organization}
+      </Link>
     </div>
   );
 }
