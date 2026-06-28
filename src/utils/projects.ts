@@ -53,7 +53,7 @@ interface ProjectMeta {
   date: string;
   source: string;
   stacks: string;
-  order: string;
+  order: number;
 }
 
 interface Project {
@@ -84,6 +84,6 @@ export function getProjects(): Project[] {
     });
 
   return allProjects.sort((a, b) => {
-    return b.meta.order.localeCompare(a.meta.order);
+    return b.meta.order - a.meta.order;
   });
 }
