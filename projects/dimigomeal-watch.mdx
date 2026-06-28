@@ -1,0 +1,90 @@
+---
+title: 디미고 급식 For Watch
+description: 디미고 급식을 Apple Watch에서
+image: /projects/dimigomeal-watch/thumbnail.png
+logo: /projects/dimigomeal-watch/logo.png
+preview: /projects/dimigomeal-watch/preview.png
+team: Personal
+date: 2024
+source: https://github.com/SID12g/dimigomeal-watch
+stacks: Swift, Swift UI
+order: "5"
+---
+
+> 본 프로젝트는 [디미고 급식](https://github.com/dimigomeal)의 웹 페이지, iOS 앱을 참고하여 만든 [디미고 급식](https://github.com/dimigomeal)과 별개의 프로젝트입니다.
+
+### 1. 개요
+
+`React Native`를 사용한 프로젝트 개발을 계속 하면서, Native 언어를 사용한 앱 개발 경험이 있다면 앞으로의 `React Native` 개발에서 큰 도움이 될 것 같다고 판단했습니다.
+
+이러한 이유로 `Swift`를 사용한 앱에 대한 개발을 고민하고 있었고, 평소 사용하던 Apple Watch에서 사용할 수 있는 앱을 만들면 좋겠다고 생각하였습니다.
+
+어떤 앱이 Apple Watch에서 구동되면 좋을지에 대해 고민했고, 개발 당시 하루에 높은 빈도로 사용했던 앱 중 하나인 급식 메뉴 조회 앱을 개발하기로 결정하였습니다.
+
+한국디지털미디어고등학교에는 급식 메뉴를 조회할 수 있는 서비스인 [디미고 급식](https://github.com/dimigomeal)이 [웹](https://xn--299a1v27nvthhjj.com)과 [iOS 앱](https://github.com/dimigomeal/ios)의 형태로 제공되고 있었습니다.
+
+이를 Apple Watch 용 앱으로도 제공한다면, Apple Watch를 착용하고 있는 학생이 많은 본교 특성 상 Apple Watch의 활용도가 및 학생들의 편의가 높아질 것이라고 생각하여 개발하였습니다.
+
+### 2. 시스템 구성
+
+프로젝트에서 가장 중요한 급식 내용을 가져오기 위해 [디미고 급식](https://github.com/dimigomeal)에서 제공하고 있는 [디미고 급식 API](https://api.xn--299a1v27nvthhjj.com/)를 사용하였습니다.
+
+[https://api.디미고급식.com/meal/YYYY-MM-DD](https://api.xn--299a1v27nvthhjj.com/meal/2025-04-15) 형식으로 요청을 보냈을 때, 아래와 같은 값이 반환됩니다.
+
+```json
+{
+  "breakfast": "미니새우버거/쌀밥/순두부찌개/비엔나소세지케찹조림/들깨궁채나물볶음/포기김치/망고그린샐러드/크런치오트,콘푸레이크/우유,저지방우유,락토프리우유,두유,엑티비아유산균음료1택/비타씨",
+  "date": "2025-04-15",
+  "dinner": "콘치즈떡갈비오븐구이/들기름묵은지곤드레밥/쌀밥/소고기무국/진미채쪽파무침/파래금구이&양념장/갓김치/수정과/바나나/샐러드바/비빔코너/훈제오리샐러드+고구마/닭가슴살찜닭맛/선식",
+  "lunch": "어묵국/백미밥/로제순살찜닭/당면만두튀김&고구마튀김/마늘쫑버섯볶음/배추겉절이/토핑요거트"
+}
+```
+
+위 응답 결과를 `Swift UI`를 통해 표시할 수 있도록 하였습니다.
+
+```Swift
+func fetchMeal() {
+        let formattedDate = formatDateToYYYYMMDD(date: date)
+        guard let url = URL(string: "https://api.xn--299a1v27nvthhjj.com/meal/\(formattedDate)") else {
+            print("잘못된 Request")
+            return
+        }
+
+        isLoading = true
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                do {
+                    let decodedData = try JSONDecoder().decode(MealData.self, from: data)
+                    DispatchQueue.main.async {
+                        self.meal = decodedData
+                        self.isLoading = false
+                    }
+                } catch {
+                    print("JSON 변환 실패: \(error.localizedDescription)")
+                    DispatchQueue.main.async {
+                        self.isLoading = false
+                    }
+                }
+            } else if let error = error {
+                print("오류: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
+            }
+        }.resume()
+    }
+}
+```
+
+### 3. 프로젝트 회고
+
+`Swift`와 `Swift UI`에 대한 지식이 개발 당시에는 부족하여 처음부터 학습해야 했습니다. 남는 시간 마다 Swift 관련 문서와 다양한 강좌를 찾아보며 새로운 언어와 프레임워크를 익혀나갔고, 이 과정에서 iOS 개발 생태계에 대한 이해도 함께 넓힐 수 있었습니다.
+
+그리고 프로젝트 주제를 정할 때 학습한 내용을 실제로 적용할 수 있으면서도, 프로젝트 자체에 실용적인 가치가 있었으면 좋겠다고 생각했었는데, 이러한 목표에 잘 부합하는 프로젝트 였던 것 같습니다.
+
+실제로 Apple Watch를 착용하는 친구들에게 좋은 반응이 있었습니다.
+
+하지만 고등학생이 부담하기에는 조금 부담스러운 Apple Developer 가격과 메뉴에 대한 시인성을 위하여 시간 표시를 없애버린 것에서 문제가 발생하여 실제 출시로 이어지지 못한 점이 아쉽습니다.
+
+Apple Watch 앱 개발 시 항상 위에 시간이 표시되어야 한다는 점을 사전에 알지 못했고, 이를 고려할 경우 새로운 디자인이 필요할 것 같다고 판단하였습니다.
