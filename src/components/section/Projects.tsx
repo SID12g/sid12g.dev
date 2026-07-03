@@ -2,9 +2,12 @@ import Separator from "@/components/Separator";
 import { getProjects } from "@/utils/projects";
 import Image from "next/image";
 import Link from "next/link";
+import { localizePath, type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
 
-export default function Projects() {
-  const projects = getProjects().slice(0, 4);
+export default function Projects({ lang }: { lang: Locale }) {
+  const projects = getProjects(lang).slice(0, 4);
+  const dict = getDictionary(lang).common;
 
   return (
     <div>
@@ -13,7 +16,7 @@ export default function Projects() {
         {projects.map((project) => (
           <ProjectItemView
             key={project.slug}
-            href={`/projects/${project.slug}`}
+            href={localizePath(lang, `/projects/${project.slug}`)}
             image={project.meta.preview}
             title={project.meta.title}
             description={project.meta.description}
@@ -21,10 +24,10 @@ export default function Projects() {
           />
         ))}
         <Link
-          href="/projects"
+          href={localizePath(lang, "/projects")}
           className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-hover transition-colors duration-150"
         >
-          <span className="text-sm sm:text-base font-medium">더보기 →</span>
+          <span className="text-sm sm:text-base font-medium">{dict.more}</span>
         </Link>
       </div>
     </div>
