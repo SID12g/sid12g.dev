@@ -46,7 +46,7 @@ export default function Posts() {
           href="https://blog.sid12g.dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-white-10 transition-colors duration-150"
+          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-hover transition-colors duration-150"
         >
           <span className="text-sm sm:text-base font-medium">더보기 →</span>
         </Link>
@@ -73,7 +73,7 @@ function PostItem({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5 hover:border-accent hover:bg-white-10 transition-colors duration-150"
+      className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5 hover:border-accent hover:bg-hover transition-colors duration-150"
     >
       <div className="flex flex-col gap-2">
         <span className="text-sm sm:text-base font-medium">{title}</span>

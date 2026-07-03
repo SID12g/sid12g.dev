@@ -302,7 +302,7 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
               setOpenIndex(openIndex - 1);
             }}
             disabled={openIndex === 0}
-            className="cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-faint opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
+            className="cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#323232] opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
             title="이전"
           >
             <ChevronLeftIcon />
@@ -371,7 +371,7 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
               />
             )}
             {current.type === "link" && (
-              <div className="w-[320px] h-[200px] rounded-2xl border border-white/20 bg-faint flex flex-col items-center justify-center gap-4 text-white">
+              <div className="w-[320px] h-[200px] rounded-2xl border border-white/20 bg-[#323232] flex flex-col items-center justify-center gap-4 text-white">
                 <LinkIcon />
                 <div className="flex flex-col items-center gap-1">
                   <span className="text-sm font-medium">{current.name}</span>
@@ -398,7 +398,7 @@ export function MediaGallery({ items }: { items: GalleryItem[] }) {
               setOpenIndex(openIndex + 1);
             }}
             disabled={openIndex === items.length - 1}
-            className="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-faint opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
+            className="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#323232] opacity-100 flex items-center justify-center text-white hover:opacity-50 transition-opacity duration-150 disabled:opacity-0 disabled:pointer-events-none"
             title="다음"
           >
             <ChevronRightIcon />

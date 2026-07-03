@@ -22,7 +22,7 @@ export default function Projects() {
         ))}
         <Link
           href="/projects"
-          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-white-10 transition-colors duration-150"
+          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-hover transition-colors duration-150"
         >
           <span className="text-sm sm:text-base font-medium">더보기 →</span>
         </Link>
@@ -47,7 +47,7 @@ function ProjectItemView({
   return (
     <Link
       href={href}
-      className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5 hover:border-accent hover:bg-white-10 transition-colors duration-150"
+      className="flex flex-col gap-4 px-5 py-6 rounded-2xl border border-faint bg-muted-5 hover:border-accent hover:bg-hover transition-colors duration-150"
     >
       <div className="flex flex-row">
         <div className="w-[120px] h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4">

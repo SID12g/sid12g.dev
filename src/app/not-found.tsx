@@ -32,7 +32,7 @@ export default function NotFound() {
       <div className="flex flex-col items-center gap-4">
         <button
           onClick={() => router.push("/")}
-          className="px-6 py-3 rounded-lg border border-faint bg-muted-5 hover:border-accent hover:bg-white-10 transition-colors duration-150 text-sm font-medium cursor-pointer"
+          className="px-6 py-3 rounded-lg border border-faint bg-muted-5 hover:border-accent hover:bg-hover transition-colors duration-150 text-sm font-medium cursor-pointer"
         >
           홈으로 이동 →
         </button>
