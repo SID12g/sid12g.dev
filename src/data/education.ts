@@ -22,7 +22,7 @@ export const education: EducationItem[] = [
       en: "Korea Digital Media High School",
     },
     href: "https://dimigo-h.goeas.kr",
-    major: { ko: "웹프로그래밍과", en: "Web Programming" },
+    major: { ko: "웹프로그래밍과", en: "Department of Web Programming" },
     period: "2023.03 ~ 2026.01",
   },
 ];

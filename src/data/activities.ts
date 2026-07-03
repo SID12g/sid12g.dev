@@ -20,7 +20,7 @@ export const activities: ActivityItem[] = [
     role: "Supporter",
     organization: {
       ko: "서울시립대학교 빅데이터혁신융합대학사업단",
-      en: "University of Seoul Big Data Innovation Convergence University Program",
+      en: "University of Seoul BIGDATAHUB UNIVERSITY",
     },
     href: "https://bigdatahub.ac.kr",
     period: "2026.04 ~",
