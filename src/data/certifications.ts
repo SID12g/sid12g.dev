@@ -21,7 +21,7 @@ export const certifications: CertificationItem[] = [
     name: { ko: "리눅스마스터 2급", en: "Linux Master Level 2" },
     issuer: {
       ko: "한국정보통신진흥협회",
-      en: "Korea Association for ICT Promotion",
+      en: "Korea Association for AI & ICT Promotion",
     },
     href: "https://www.kait.or.kr",
     date: "2023.10",
