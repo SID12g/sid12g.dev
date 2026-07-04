@@ -61,16 +61,16 @@ export const dictionaries = {
     },
     intro: {
       paragraphs: [
-        "I'm a junior developer who graduated from the Web Programming department at Korea Digital Media High School, and am now growing steadily while balancing my studies in Statistics at the University of Seoul with development work.",
-        "I have a strong interest in development as well as economics and finance, so I read a lot of books and articles on those topics and enjoy discussing them with people around me. Lately I've been interested in investing and asset management, and I like sharing my perspective on economics and finance with others while broadening my own thinking through those conversations.",
-        "I frequently work with Next.js and React Native. I first encountered web programming in high school, where I learned React through specialized major coursework and went on to learn Next.js and React Native as well. Beyond frontend, I'm interested in development and IT as a whole, including backend frameworks like Nest.js and Spring Boot.",
-        "Since high school, I've worked on many projects and built up my collaboration skills. I've handled not just development but also planning, design, and other aspects of building a product, which has given me a more mature perspective when looking at a product as a whole.",
+        "I'm a junior developer who majored in web programming at Korea Digital Media High School. I’m now pursuing my ongoing interests in development projects along with my studies in Statistics at the University of Seoul.",
+        "I have been dedicated to economics and finance as well, as I get to read books and articles regarding these topics and discuss them with colleagues. Lately I've been interested in investment and asset management. Sharing my perspective on those fields with others has let me effectively deepen my thinking.",
+        "I frequently utilize Next.js and React Native. My first encounter with web development was in high school, where I learned React through specialized coursework and acquired skills in Next.js and React Native as well. Beyond just frontend fields, I'm pursuing my passion for development and IT as a whole, including backend frameworks like Nest.js and Spring Boot.",
+        "Since high school, I've worked on multiple projects and built up my collaboration skills. I've handled not just development but also planning, design, and other aspects of building products, which has provided a more mature perspective when looking at a product as a whole.",
       ],
       figma:
-        "I'm especially interested in UI/UX design with Figma. I believe developers should be able to understand and execute design for good UX, so I've been learning Figma since high school, and I'm continuing to broaden that perspective by taking web design courses in university. I even made a book using Figma back in high school.",
+        "When it comes to fields of design, I'm especially interested in UI/UX design with Figma. As I believe that developers should be able to understand and execute their own design for good UX, I've been learning Figma myself since high school, and I’m continuing to expand my viewpoint by taking web design courses in university. One of my significant experiences here was making a book using Figma back in high school. ",
       learnMore: "(Learn more)",
       closing:
-        "Right now, as a Statistics major, I'm studying statistics while thinking about how development and statistics can work well together, and building new products based on what I learn.",
+        "Right now, majoring in Statistics, I'm studying it while constantly wondering how my development work could evolve when combined with it. Building new products based on what I learn is what drives me.",
     },
     notFound: {
       label: "404 Not Found",
