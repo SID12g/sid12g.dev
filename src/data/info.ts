@@ -35,4 +35,9 @@ export const info: InfoItem[] = [
     content: "porfolio.pdf",
     href: "/portfolio",
   },
+  {
+    label: "RESUME",
+    content: "resume.pdf",
+    href: "/resume",
+  },
 ];
