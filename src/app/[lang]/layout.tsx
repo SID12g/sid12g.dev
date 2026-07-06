@@ -4,6 +4,9 @@ import "../globals.css";
 import Footer from "@/components/Footer";
 import QueryProvider from "@/components/providers/QueryProvider";
 import { locales, type Locale } from "@/i18n/config";
+import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const pretendard = localFont({
   src: "../fonts/PretendardVariable.woff2",
@@ -86,10 +89,25 @@ export default async function RootLayout({
     >
       <body className="max-w-[640px] mx-auto px-6 py-10">
         <QueryProvider>
+          <Analytics />
+          <SpeedInsights />
           <div>{children}</div>
           <Footer lang={lang} />
         </QueryProvider>
       </body>
+
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-YT26FKWLMH"
+      />
+      <Script id="google-analytics">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YT26FKWLMH');
+          `}
+      </Script>
     </html>
   );
 }
