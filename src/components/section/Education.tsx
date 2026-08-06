@@ -32,16 +32,23 @@ function EducationItemView({
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium hover:text-accent transition-colors duration-150"
+          className="font-medium hover:text-accent transition-colors duration-150 text-sm sm:text-base"
         >
           {item.school[lang]}
         </Link>
-        <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+        <span className="font-jetbrains-mono text-muted text-xs sm:text-sm whitespace-nowrap">
           {item.period}
-          {item.current && <span className="text-accent"> {dict.current}</span>}
+          {item.current && (
+            <span className="text-accent text-xs sm:text-sm">
+              {" "}
+              {dict.current}
+            </span>
+          )}
         </span>
       </div>
-      <span className="font-medium text-muted">{item.major[lang]}</span>
+      <span className="font-medium text-muted text-sm sm:text-base">
+        {item.major[lang]}
+      </span>
     </div>
   );
 }

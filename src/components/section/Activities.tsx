@@ -10,7 +10,11 @@ export default function Activities({ lang }: { lang: Locale }) {
       <Separator title="ACTIVITIES" />
       <div className="flex flex-col gap-5">
         {activities.map((item) => (
-          <ActivityItemView key={item.organization.en} item={item} lang={lang} />
+          <ActivityItemView
+            key={item.organization.en}
+            item={item}
+            lang={lang}
+          />
         ))}
       </div>
     </div>
@@ -28,17 +32,22 @@ function ActivityItemView({
   return (
     <div className="flex flex-col gap-1">
       <div className="w-full flex flex-row justify-between items-center">
-        <span className="font-medium">{item.role}</span>
-        <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+        <span className="font-medium text-sm sm:text-base">{item.role}</span>
+        <span className="font-jetbrains-mono text-muted text-xs sm:text-sm whitespace-nowrap">
           {item.period}
-          {item.current && <span className="text-accent"> {dict.current}</span>}
+          {item.current && (
+            <span className="text-accent text-xs sm:text-sm">
+              {" "}
+              {dict.current}
+            </span>
+          )}
         </span>
       </div>
       <Link
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium text-muted hover:text-accent transition-colors duration-150"
+        className="font-medium text-muted hover:text-accent transition-colors duration-150 text-sm sm:text-base"
       >
         {item.organization[lang]}
       </Link>

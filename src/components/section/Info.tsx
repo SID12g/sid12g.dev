@@ -23,8 +23,8 @@ function InfoItemView({ item, lang }: { item: InfoItem; lang: Locale }) {
 
   return (
     <div className="flex flex-row gap-4">
-      <div className="w-20 shrink-0">
-        <span className="text-sm text-muted font-jetbrains-mono">
+      <div className="w-18 sm:w-20 shrink-0">
+        <span className="text-xs sm:text-sm text-muted font-jetbrains-mono">
           {item.label}
         </span>
       </div>
@@ -32,7 +32,7 @@ function InfoItemView({ item, lang }: { item: InfoItem; lang: Locale }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-primary font-jetbrains-mono hover:text-accent transition-colors duration-150"
+        className="text-xs sm:text-sm text-primary font-jetbrains-mono hover:text-accent transition-colors duration-150"
       >
         {item.content}
       </Link>

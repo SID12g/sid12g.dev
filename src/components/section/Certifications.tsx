@@ -26,8 +26,10 @@ function CertificationItemView({
   return (
     <div className="flex flex-col gap-1">
       <div className="w-full flex flex-row justify-between items-center">
-        <span className="font-medium">{item.name[lang]}</span>
-        <span className="font-jetbrains-mono text-muted text-sm whitespace-nowrap">
+        <span className="font-medium text-sm sm:text-base">
+          {item.name[lang]}
+        </span>
+        <span className="font-jetbrains-mono text-muted text-xs sm:text-sm whitespace-nowrap">
           {item.date}
         </span>
       </div>
@@ -35,7 +37,7 @@ function CertificationItemView({
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium text-muted hover:text-accent transition-colors duration-150"
+        className="font-medium text-muted hover:text-accent transition-colors duration-150 text-sm sm:text-base "
       >
         {item.issuer[lang]}
       </Link>
