@@ -6,7 +6,7 @@ export default function Footer({ lang }: { lang: Locale }) {
   const year = new Date().getFullYear();
   return (
     <footer className="mt-14 mb-3 flex flex-row items-center justify-between gap-4">
-      <p className="text-sm text-primary font-jetbrains-mono">
+      <p className="text-sm text-muted font-jetbrains-mono">
         © {year}{" "}
         <Link
           href={localizePath(lang, "/")}
