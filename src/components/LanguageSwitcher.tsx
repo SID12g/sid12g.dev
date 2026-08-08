@@ -15,7 +15,7 @@ export default function LanguageSwitcher({ lang }: { lang: Locale }) {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-row items-center gap-1.5 font-jetbrains-mono text-sm">
+    <div className="flex flex-row items-center gap-1.5 font-jetbrains-mono text-xs sm:text-sm">
       <Link
         href={switchPath(pathname, "ko")}
         className={

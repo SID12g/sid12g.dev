@@ -89,7 +89,7 @@ function PostItem({
         <div className="flex flex-wrap gap-2 justify-end">
           {tags.map((tag) => (
             <span
-              className="text-xs text-muted font-jetbrains-mono px-3 py-[6px] bg-muted-15 rounded-full border border-faint w-fit"
+              className="text-[10px] sm:text-xs text-muted font-jetbrains-mono px-3 py-[6px] bg-muted-15 rounded-full border border-faint w-fit"
               key={tag}
             >
               {tag}
