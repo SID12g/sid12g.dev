@@ -22,7 +22,7 @@ function InfoItemView({ item, lang }: { item: InfoItem; lang: Locale }) {
     : item.href;
 
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex flex-row gap-4 items-center">
       <div className="w-18 sm:w-20 shrink-0">
         <span className="text-xs sm:text-sm text-muted font-jetbrains-mono">
           {item.label}
