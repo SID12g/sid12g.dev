@@ -149,15 +149,14 @@ export default async function ProjectPage({
 
       {/* 스택 태그 */}
       {meta.stacks && (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-3">
           {meta.stacks.split(",").map((stack) => (
-            <span
-              className="text-xs text-muted font-jetbrains-mono px-3 py-[6px] bg-muted-15 rounded-full border border-faint w-fit flex flex-row gap-2 items-center"
-              key={stack.trim()}
-            >
-              <div className="bg-accent w-[6px] h-[6px] rounded-full" />
+            <div key={stack.trim()} className="flex flex-row items-center gap-2 py-[6px] px-3 bg-muted-15 border-faint border rounded-full w-fit hover:border-accent hover:bg-hover transition-colors duration-150 cursor-default">
+            <div className="bg-accent w-[6px] h-[6px] sm:w-[8px] sm:h-[8px] rounded-full" />
+            <span className="font-jetbrains-mono text-[10px] sm:text-xs text-muted">
               {stack.trim()}
             </span>
+          </div>
           ))}
         </div>
       )}
