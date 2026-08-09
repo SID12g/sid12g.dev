@@ -1,6 +1,7 @@
 "use client";
 
 import Separator from "@/components/Separator";
+import MoreLink from "@/components/MoreLink";
 import Link from "next/link";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import type { Locale } from "@/i18n/config";
@@ -45,16 +46,11 @@ export default function Posts({ lang }: { lang: Locale }) {
             href={`https://blog.sid12g.dev/${post.slug}`}
           />
         ))}
-        <Link
+        <MoreLink
           href="https://blog.sid12g.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-hover transition-colors duration-150"
-        >
-          <span className="text-sm sm:text-base font-medium">
-            {dict.common.more}
-          </span>
-        </Link>
+          label={dict.common.more}
+          external
+        />
       </div>
     </div>
   );
@@ -85,7 +81,9 @@ function PostItem({
         <span className="text-xs sm:text-sm text-muted">{description}</span>
       </div>
       <div className="flex flex-row items-center justify-between">
-        <span className="text-xs text-muted font-jetbrains-mono">{date}</span>
+        <span className="text-[10px] sm:text-xs text-muted font-jetbrains-mono">
+          {date}
+        </span>
         <div className="flex flex-wrap gap-2 justify-end">
           {tags.map((tag) => (
             <span

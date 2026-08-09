@@ -1,4 +1,6 @@
 import Separator from "@/components/Separator";
+import Tag from "@/components/Tag";
+import MoreLink from "@/components/MoreLink";
 import { getProjects } from "@/utils/projects";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,12 +25,7 @@ export default function Projects({ lang }: { lang: Locale }) {
             tags={project.meta.stacks.split(",")}
           />
         ))}
-        <Link
-          href={localizePath(lang, "/projects")}
-          className="py-3 rounded-lg border border-faint bg-muted-5 text-center hover:border-accent hover:bg-hover transition-colors duration-150"
-        >
-          <span className="text-sm sm:text-base font-medium">{dict.more}</span>
-        </Link>
+        <MoreLink href={localizePath(lang, "/projects")} label={dict.more} />
       </div>
     </div>
   );
@@ -71,12 +68,7 @@ function ProjectItemView({
           </div>
           <div className="flex flex-wrap gap-3">
             {tags.map((tag) => (
-              <div key={tag} className="flex flex-row items-center gap-2 py-[6px] px-3 sm:px-4 bg-muted-15 border-faint border rounded-full w-fit hover:border-accent hover:bg-hover transition-colors duration-150 cursor-default">
-              <div className="bg-accent w-[6px] h-[6px] sm:w-[8px] sm:h-[8px] rounded-full" />
-              <span className="font-jetbrains-mono text-[10px] sm:text-xs text-muted">
-                {tag}
-              </span>
-            </div>
+              <Tag key={tag} label={tag} />
             ))}
           </div>
         </div>
