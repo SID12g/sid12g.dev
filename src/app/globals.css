@@ -53,6 +53,11 @@ html {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+::selection {
+  background: #f54e00;
+  color: #ffffff;
+}
+
 .prose-custom {
   line-height: 1.75;
   color: var(--color-primary);
