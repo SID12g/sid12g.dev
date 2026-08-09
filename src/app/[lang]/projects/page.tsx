@@ -1,4 +1,5 @@
 import Separator from "@/components/Separator";
+import Tag from "@/components/Tag";
 import { getProjects } from "@/utils/projects";
 import Image from "next/image";
 import Link from "next/link";
@@ -64,13 +65,7 @@ export default async function ProjectsPage({
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {project.meta.stacks.split(",").map((tag) => (
-                    <span
-                      className="text-xs text-muted font-jetbrains-mono px-3 py-[6px] bg-muted-15 rounded-full border border-faint w-fit flex flex-row gap-3 items-center"
-                      key={tag}
-                    >
-                      <div className="bg-accent w-[6px] h-[6px] rounded-full" />
-                      {tag}
-                    </span>
+                    <Tag key={tag} label={tag} />
                   ))}
                 </div>
               </div>
