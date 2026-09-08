@@ -9,6 +9,15 @@ export interface CertificationItem {
 
 export const certifications: CertificationItem[] = [
   {
+    name: { ko: "육상무선통신사", en: "Land Radio Communications Operator" },
+    issuer: {
+      ko: "한국방송통신전파진흥원",
+      en: "Korea Communication Agency",
+    },
+    href: "https://www.kca.kr",
+    date: "2026.09",
+  },
+  {
     name: { ko: "프로그래밍기능사", en: "Craftsman Programming" },
     issuer: {
       ko: "한국산업인력공단",
